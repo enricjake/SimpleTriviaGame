@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Trivia Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Trivia Challenge</h1>
+        <div class="game-container" id="gameContainer">
+            <div class="loading" id="loading">
+                <p>Loading questions...</p>
+            </div>
+            <div class="game" id="game">
+                <div class="question-container" id="questionContainer">
+                    <h2 id="question">Loading question...</h2>
+                    <div class="options" id="options"></div>
+                </div>
+                <div class="controls">
+                    <button id="nextBtn" disabled>Next Question</button>
+                    <div class="score-container">
+                        <p>Score: <span id="score">0</span></p>
+                        <p>Question: <span id="questionNumber">0</span>/10</p>
+                    </div>
+                </div>
+            </div>
+            <div class="game-over" id="gameOver">
+                <h2>Game Over!</h2>
+                <p>Your final score: <span id="finalScore">0</span>/10</p>
+                <button id="playAgainBtn">Play Again</button>
+                <button id="goodbyeBtn">Quit</button>
+            </div>
+            <div class="goodbye-message" id="goodbyeMessage" style="display: none;">
+                <h2>Thank You for Playing!</h2>
+                <p>We hope you enjoyed the trivia challenge. Come back soon for more fun!</p>
+                <p>Goodbye!</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
