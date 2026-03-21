@@ -9,28 +9,94 @@
 <body>
     <div class="container">
         <h1>Trivia Challenge</h1>
-        <div class="game-container" id="gameContainer">
-            <div class="loading" id="loading">
+        <div class="top-controls">
+            <button id="themeToggle" class="theme-btn" aria-label="Toggle Dark/Light Mode">🌙</button>
+            <button id="settingsBtn" class="settings-btn">⚙️ Settings</button>
+        </div>
+        <div class="settings-panel" id="settingsPanel">
+            <h3>Game Settings</h3>
+            <div class="setting-group">
+                <label for="questionCount">Number of Questions:</label>
+                <select id="questionCount">
+                    <option value="5">5</option>
+                    <option value="10" selected>10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+            <div class="setting-group">
+                <label for="difficulty">Difficulty:</label>
+                <select id="difficulty">
+                    <option value="any">Any</option>
+                    <option value="easy">Easy</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+            <div class="setting-group">
+                <label for="category">Category:</label>
+                <select id="category">
+                    <option value="">Any Category</option>
+                    <option value="9">General Knowledge</option>
+                    <option value="10">Entertainment: Books</option>
+                    <option value="11">Entertainment: Film</option>
+                    <option value="12">Entertainment: Music</option>
+                    <option value="14">Entertainment: Television</option>
+                    <option value="15">Entertainment: Video Games</option>
+                    <option value="17">Science & Nature</option>
+                    <option value="18">Science: Computers</option>
+                    <option value="19">Science: Mathematics</option>
+                    <option value="21">Sports</option>
+                    <option value="22">Geography</option>
+                    <option value="23">History</option>
+                    <option value="27">Animals</option>
+                </select>
+            </div>
+            <button id="saveSettingsBtn" class="save-settings-btn">Save Settings</button>
+        </div>
+        <div class="game-container" id="gameContainer" role="application" aria-label="Trivia Game">
+            <div class="loading" id="loading" role="status" aria-live="polite">
+                <div class="spinner"></div>
                 <p>Loading questions...</p>
             </div>
-            <div class="game" id="game">
-                <div class="question-container" id="questionContainer">
-                    <h2 id="question">Loading question...</h2>
-                    <div class="options" id="options"></div>
-                </div>
-                <div class="controls">
-                    <button id="nextBtn" disabled>Next Question</button>
-                    <div class="score-container">
-                        <p>Score: <span id="score">0</span></p>
-                        <p>Question: <span id="questionNumber">0</span>/10</p>
+            <div class="game" id="game" role="region" aria-label="Quiz Area">
+                <div class="pause-overlay" id="pauseOverlay">
+                    <div class="pause-content">
+                        <h2>Game Paused</h2>
+                        <button id="resumeBtn">Resume Game</button>
                     </div>
                 </div>
+                <div class="progress-container">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+                <div class="question-container" id="questionContainer">
+                    <div class="question-meta">
+                        <span id="questionCategory" class="category-badge"></span>
+                        <span id="questionDifficulty" class="difficulty-badge"></span>
+                    </div>
+                    <h2 id="question" role="heading" aria-level="2">Loading question...</h2>
+                    <div class="options" id="options" role="group" aria-label="Answer options"></div>
+                </div>
+                 <div class="controls">
+                     <button id="pauseBtn" aria-label="Pause Game">⏸️ Pause</button>
+                     <button id="nextBtn" disabled aria-label="Next Question">Next Question</button>
+                 <div class="score-container">
+                     <p>Score: <span id="score">0</span></p>
+                     <p>Question: <span id="questionNumber">0</span>/10</p>
+                     <p>Time: <span id="timer">10</span>s</p>
+                     <p>High Score: <span id="highScore">0</span></p>
+                 </div>
+                 </div>
             </div>
             <div class="game-over" id="gameOver">
                 <h2>Game Over!</h2>
                 <p>Your final score: <span id="finalScore">0</span>/10</p>
-                <button id="playAgainBtn">Play Again</button>
-                <button id="goodbyeBtn">Quit</button>
+                <div class="answer-summary" id="answerSummary"></div>
+                <div class="game-over-buttons">
+                    <button id="playAgainBtn">Play Again</button>
+                    <button id="shareScoreBtn">Share Score</button>
+                    <button id="goodbyeBtn">Quit</button>
+                </div>
             </div>
             <div class="goodbye-message" id="goodbyeMessage" style="display: none;">
                 <h2>Thank You for Playing!</h2>
@@ -39,6 +105,9 @@
             </div>
         </div>
     </div>
+    <!-- Audio elements for sound effects -->
+    <audio id="correctSound" src="https://assets.mixkit.co/sfx/preview/mixkit-achievement-bell-climax-269.mp3"></audio>
+    <audio id="incorrectSound" src="https://assets.mixkit.co/sfx/preview/mixkit-wrong-answer-fail-trombones-268.mp3"></audio>
     <script src="script.js"></script>
 </body>
 </html>
