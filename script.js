@@ -366,6 +366,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function shareScore() {
         const shareText = `I scored ${score}/${questions.length} in the Trivia Challenge! Can you beat my score?`;
         
+        // Copy to clipboard (existing functionality)
         if (navigator.clipboard) {
             navigator.clipboard.writeText(shareText).then(() => {
                 const shareBtn = document.getElementById('shareScoreBtn');
@@ -392,6 +393,154 @@ document.addEventListener('DOMContentLoaded', function() {
             setTimeout(() => {
                 shareBtn.textContent = originalText;
             }, 2000);
+        }
+        
+        // Show social sharing options
+        showSocialSharingOptions(shareText);
+    }
+    
+    // Show social sharing options
+    function showSocialSharingOptions(shareText) {
+        // Create social sharing container
+        let socialContainer = document.getElementById('socialSharingContainer');
+        if (!socialContainer) {
+            socialContainer = document.createElement('div');
+            socialContainer.id = 'socialSharingContainer';
+            socialContainer.className = 'social-sharing-container';
+            socialContainer.innerHTML = `
+                <div class="social-sharing-content">
+                    <h3>Share your score:</h3>
+                    <div class="social-sharing-buttons">
+                         <button onclick="shareToWhatsApp('${encodeURIComponent(shareText)}')" class="social-btn whatsapp">
+                             <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                         </button>
+                         <button onclick="shareToX('${encodeURIComponent(shareText)}')" class="social-btn x">
+                             <i class="fa-brands fa-x-twitter"></i> X
+                         </button>
+                         <button onclick="shareToReddit('${encodeURIComponent(shareText)}')" class="social-btn reddit">
+                             <i class="fa-brands fa-reddit"></i> Reddit
+                         </button>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(socialContainer);
+            
+            // Add CSS styles for social sharing container
+            const style = document.createElement('style');
+            style.textContent = `
+                .social-sharing-container {
+                    display: none;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    justify-content: center;
+                    align-items: center;
+                    z-index: 1000;
+                }
+                .social-sharing-content {
+                    background-color: white;
+                    padding: 20px;
+                    border-radius: 10px;
+                    text-align: center;
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+                    max-width: 90%;
+                    width: 300px;
+                }
+                .social-sharing-content h3 {
+                    margin-top: 0;
+                    margin-bottom: 15px;
+                    color: #333;
+                }
+                .social-sharing-buttons {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                }
+                .social-btn {
+                    padding: 12px;
+                    font-size: 16px;
+                    border: none;
+                    border-radius: 8px;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 8px;
+                    font-weight: bold;
+                    transition: background-color 0.3s ease;
+                }
+                 .social-btn.whatsapp {
+                     background-color: #25d366;
+                     color: white;
+                     gap: 8px;
+                 }
+                 .social-btn.whatsapp:hover {
+                     background-color: #1ebe5d;
+                 }
+                 .social-btn.x {
+                     background-color: #000000;
+                     color: white;
+                     gap: 8px;
+                 }
+                 .social-btn.x:hover {
+                     background-color: #333333;
+                 }
+                 .social-btn.reddit {
+                     background-color: #ff4500;
+                     color: white;
+                     gap: 8px;
+                 }
+                 .social-btn.reddit:hover {
+                     background-color: #e63900;
+                 }
+                .fab {
+                    font-size: 20px;
+                }
+            `;
+            document.head.appendChild(style);
+    }
+
+    // Show the container
+    socialContainer.style.display = 'flex';
+
+    // Hide when clicking outside the content
+    socialContainer.onclick = function(e) {
+        if (e.target === socialContainer) {
+            socialContainer.style.display = 'none';
+        }
+    };
+}
+
+// Social sharing functions
+    // Share to WhatsApp
+    function shareToWhatsApp(text) {
+        const url = `https://wa.me/?text=${text}`;
+        window.open(url, '_blank');
+        hideSocialSharing();
+    }
+    
+    // Share to X (Twitter)
+    function shareToX(text) {
+        const url = `https://x.com/intent/tweet?text=${text}`;
+        window.open(url, '_blank', 'width=500,height=300');
+        hideSocialSharing();
+    }
+    
+    // Share to Reddit
+    function shareToReddit(text) {
+        const url = `https://www.reddit.com/submit?title=My Trivia Score&text=${text}`;
+        window.open(url, '_blank');
+        hideSocialSharing();
+    }
+    
+    // Hide social sharing container
+    function hideSocialSharing() {
+        const socialContainer = document.getElementById('socialSharingContainer');
+        if (socialContainer) {
+            socialContainer.style.display = 'none';
         }
     }
 
