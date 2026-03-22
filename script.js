@@ -366,37 +366,114 @@ document.addEventListener('DOMContentLoaded', function() {
     function shareScore() {
         const shareText = `I scored ${score}/${questions.length} in the Trivia Challenge! Can you beat my score?`;
         
-        // Copy to clipboard (existing functionality)
-        if (navigator.clipboard) {
+        // Try to copy to clipboard with multiple fallback methods
+        let copySuccess = false;
+        
+        // Method 1: Modern Clipboard API (secure contexts only)
+        if (navigator.clipboard && window.isSecureContext) {
             navigator.clipboard.writeText(shareText).then(() => {
-                const shareBtn = document.getElementById('shareScoreBtn');
-                const originalText = shareBtn.textContent;
-                shareBtn.textContent = 'Copied!';
-                setTimeout(() => {
-                    shareBtn.textContent = originalText;
-                }, 2000);
+                updateShareButton('Copied!');
+                copySuccess = true;
             }).catch(err => {
-                console.error('Failed to copy:', err);
+                console.log('Clipboard API failed, trying fallback:', err);
+                tryFallbackCopy(shareText);
             });
         } else {
-            // Fallback for older browsers
-            const textArea = document.createElement('textarea');
-            textArea.value = shareText;
-            document.body.appendChild(textArea);
-            textArea.select();
-            document.execCommand('copy');
-            document.body.removeChild(textArea);
-            
-            const shareBtn = document.getElementById('shareScoreBtn');
-            const originalText = shareBtn.textContent;
-            shareBtn.textContent = 'Copied!';
-            setTimeout(() => {
-                shareBtn.textContent = originalText;
-            }, 2000);
+            // Method 2: Direct fallback for non-secure contexts
+            tryFallbackCopy(shareText);
         }
         
         // Show social sharing options
         showSocialSharingOptions(shareText);
+    }
+
+    // Fallback copy method
+    function tryFallbackCopy(text) {
+        try {
+            // Create a hidden textarea
+            const textArea = document.createElement('textarea');
+            textArea.value = text;
+            textArea.style.position = 'fixed';
+            textArea.style.left = '-999999px';
+            textArea.style.top = '-999999px';
+            document.body.appendChild(textArea);
+            
+            // Select and copy
+            textArea.focus();
+            textArea.select();
+            const successful = document.execCommand('copy');
+            
+            // Clean up
+            document.body.removeChild(textArea);
+            
+            if (successful) {
+                updateShareButton('Copied!');
+            } else {
+                showManualCopyDialog(text);
+            }
+        } catch (err) {
+            console.error('All copy methods failed:', err);
+            showManualCopyDialog(text);
+        }
+    }
+
+    // Update share button with feedback
+    function updateShareButton(message) {
+        const shareBtn = document.getElementById('shareScoreBtn');
+        const originalText = shareBtn.textContent;
+        shareBtn.textContent = message;
+        setTimeout(() => {
+            shareBtn.textContent = originalText;
+        }, 2000);
+    }
+
+    // Show manual copy dialog
+    function showManualCopyDialog(text) {
+        // Create modal dialog
+        const modal = document.createElement('div');
+        modal.style.cssText = `
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+        `;
+        
+        const content = document.createElement('div');
+        content.style.cssText = `
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 400px;
+            text-align: center;
+        `;
+        
+        content.innerHTML = `
+            <h3>Copy Your Score</h3>
+            <p>Automatic copy failed. Please copy the text below manually:</p>
+            <textarea readonly style="width: 100%; height: 60px; margin: 10px 0; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">${text}</textarea>
+            <button onclick="this.parentElement.parentElement.remove()" style="background: #007bff; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Close</button>
+        `;
+        
+        modal.appendChild(content);
+        document.body.appendChild(modal);
+        
+        // Auto-select the text
+        const textarea = content.querySelector('textarea');
+        textarea.select();
+        textarea.focus();
+        
+        // Close on background click
+        modal.onclick = function(e) {
+            if (e.target === modal) {
+                modal.remove();
+            }
+        };
     }
     
     // Show social sharing options
@@ -542,7 +619,9 @@ function hideSocialSharing() {
 
 // Play again
 function playAgain() {
-    initGame();
+    if (typeof window.initGame === 'function') {
+        window.initGame();
+    }
 }
 
 // Show goodbye message
@@ -558,18 +637,22 @@ function showGoodbye() {
 
 // Pause game
 function pauseGame() {
-    if (isPaused) return;
-    isPaused = true;
-    stopTimer();
+    if (window.isPaused) return;
+    window.isPaused = true;
+    if (typeof window.stopTimer === 'function') {
+        window.stopTimer();
+    }
     document.getElementById('pauseOverlay').classList.add('open');
 }
 
 // Resume game
 function resumeGame() {
-    if (!isPaused) return;
-    isPaused = false;
+    if (!window.isPaused) return;
+    window.isPaused = false;
     document.getElementById('pauseOverlay').classList.remove('open');
-    startTimer();
+    if (typeof window.startTimer === 'function') {
+        window.startTimer();
+    }
 }
 
     // Decode HTML entities (convert &quot; to " etc.)
@@ -664,4 +747,13 @@ function resumeGame() {
     loadSettings();
     loadTheme();
     initGame();
+
+    // Expose necessary functions and variables to global scope
+    window.initGame = initGame;
+    window.startTimer = startTimer;
+    window.stopTimer = stopTimer;
+    window.isPaused = isPaused;
+    window.shareToWhatsApp = shareToWhatsApp;
+    window.shareToX = shareToX;
+    window.shareToReddit = shareToReddit;
 });
