@@ -515,64 +515,62 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 
 // Social sharing functions
-    // Share to WhatsApp
-    function shareToWhatsApp(text) {
-        const url = `https://wa.me/?text=${text}`;
-        window.open(url, '_blank');
-        hideSocialSharing();
+function shareToWhatsApp(text) {
+    const url = `https://wa.me/?text=${text}`;
+    window.open(url, '_blank');
+    hideSocialSharing();
+}
+
+function shareToX(text) {
+    const url = `https://x.com/intent/tweet?text=${text}`;
+    window.open(url, '_blank', 'width=500,height=300');
+    hideSocialSharing();
+}
+
+function shareToReddit(text) {
+    const url = `https://www.reddit.com/submit?title=My Trivia Score&text=${text}`;
+    window.open(url, '_blank');
+    hideSocialSharing();
+}
+
+function hideSocialSharing() {
+    const socialContainer = document.getElementById('socialSharingContainer');
+    if (socialContainer) {
+        socialContainer.style.display = 'none';
     }
+}
+
+// Play again
+function playAgain() {
+    initGame();
+}
+
+// Show goodbye message
+function showGoodbye() {
+    const gameOverElement = document.getElementById('gameOver');
+    const goodbyeMessage = document.getElementById('goodbyeMessage');
+    gameOverElement.style.display = 'none';
+    goodbyeMessage.style.display = 'block';
     
-    // Share to X (Twitter)
-    function shareToX(text) {
-        const url = `https://x.com/intent/tweet?text=${text}`;
-        window.open(url, '_blank', 'width=500,height=300');
-        hideSocialSharing();
-    }
-    
-    // Share to Reddit
-    function shareToReddit(text) {
-        const url = `https://www.reddit.com/submit?title=My Trivia Score&text=${text}`;
-        window.open(url, '_blank');
-        hideSocialSharing();
-    }
-    
-    // Hide social sharing container
-    function hideSocialSharing() {
-        const socialContainer = document.getElementById('socialSharingContainer');
-        if (socialContainer) {
-            socialContainer.style.display = 'none';
-        }
-    }
+    // Optional: Add a timeout to automatically close the page after a few seconds
+    // setTimeout(() => window.close(), 5000);
+}
 
-    // Play again
-    function playAgain() {
-        initGame();
-    }
+// Pause game
+function pauseGame() {
+    if (isPaused) return;
+    isPaused = true;
+    stopTimer();
+    document.getElementById('pauseOverlay').classList.add('open');
+}
 
-    // Show goodbye message
-    function showGoodbye() {
-        gameOverElement.style.display = 'none';
-        goodbyeMessage.style.display = 'block';
-        
-        // Optional: Add a timeout to automatically close the page after a few seconds
-        // setTimeout(() => window.close(), 5000);
-    }
-
-    // Pause game
-    function pauseGame() {
-        if (isPaused) return;
-        isPaused = true;
-        stopTimer();
-        document.getElementById('pauseOverlay').classList.add('open');
-    }
-
-    // Resume game
-    function resumeGame() {
-        if (!isPaused) return;
-        isPaused = false;
-        document.getElementById('pauseOverlay').classList.remove('open');
-        startTimer();
-    }
+// Resume game
+function resumeGame() {
+    if (!isPaused) return;
+    isPaused = false;
+    document.getElementById('pauseOverlay').classList.remove('open');
+    startTimer();
+}
 
     // Decode HTML entities (convert &quot; to " etc.)
     function decodeHTMLEntities(text) {
