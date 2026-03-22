@@ -364,7 +364,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Share score
     function shareScore() {
-        const shareText = `I scored ${score}/${questions.length} in the Trivia Challenge! Can you beat my score?`;
+        const shareText = `I scored ${score}/${questions.length} in the Trivia Challenge! Can you beat my score? https://enricjake.github.io/SimpleTriviaGame/`;
         
         // Try to copy to clipboard with multiple fallback methods
         let copySuccess = false;
