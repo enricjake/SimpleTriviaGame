@@ -40,6 +40,69 @@ document.addEventListener('DOMContentLoaded', function() {
     const categorySelect = document.getElementById('category');
     const saveSettingsBtn = document.getElementById('saveSettingsBtn');
 
+    // Web Audio API context for sound effects
+    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    
+    /**
+     * Play a success/positive sound (ascending tones)
+     */
+    function playCorrectSound() {
+        try {
+            // Resume context if suspended (browser autoplay policy)
+            if (audioContext.state === 'suspended') {
+                audioContext.resume();
+            }
+            
+            const oscillator = audioContext.createOscillator();
+            const gainNode = audioContext.createGain();
+            
+            oscillator.connect(gainNode);
+            gainNode.connect(audioContext.destination);
+            
+            // Play two ascending notes (C5 to E5)
+            oscillator.frequency.setValueAtTime(523.25, audioContext.currentTime); // C5
+            oscillator.frequency.setValueAtTime(659.25, audioContext.currentTime + 0.1); // E5
+            
+            gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+            gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
+            
+            oscillator.start(audioContext.currentTime);
+            oscillator.stop(audioContext.currentTime + 0.3);
+        } catch (e) {
+            console.log("Audio playback failed:", e);
+        }
+    }
+    
+    /**
+     * Play an error/negative sound (descending tones)
+     */
+    function playIncorrectSound() {
+        try {
+            // Resume context if suspended
+            if (audioContext.state === 'suspended') {
+                audioContext.resume();
+            }
+            
+            const oscillator = audioContext.createOscillator();
+            const gainNode = audioContext.createGain();
+            
+            oscillator.connect(gainNode);
+            gainNode.connect(audioContext.destination);
+            
+            // Play two descending notes (A4 to F4)
+            oscillator.frequency.setValueAtTime(440, audioContext.currentTime); // A4
+            oscillator.frequency.setValueAtTime(349.23, audioContext.currentTime + 0.15); // F4
+            
+            gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+            gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.35);
+            
+            oscillator.start(audioContext.currentTime);
+            oscillator.stop(audioContext.currentTime + 0.35);
+        } catch (e) {
+            console.log("Audio playback failed:", e);
+        }
+    }
+
     // Toggle settings panel
     function toggleSettings() {
         settingsPanel.classList.toggle('open');
@@ -247,8 +310,25 @@ document.addEventListener('DOMContentLoaded', function() {
                             btn.classList.add('disabled');
                         });
                     }
-                    // Show time's up alert
-                    alert('Time\'s up! Moving to next question.');
+                    // Play incorrect sound for timeout
+                    playIncorrectSound();
+                    
+                    // Store user's answer as incorrect (null/empty indicates no answer)
+                    const currentQuestion = questions[currentQuestionIndex];
+                    userAnswers.push({
+                        question: currentQuestion.question,
+                        userAnswer: 'No answer (timeout)',
+                        correctAnswer: currentQuestion.correct_answer,
+                        isCorrect: false
+                    });
+                    
+                    // Automatically show next question after 2 seconds
+                    const indexAtSelection = currentQuestionIndex;
+                    setTimeout(() => {
+                        if (currentQuestionIndex === indexAtSelection) {
+                            nextQuestion();
+                        }
+                    }, 2000);
                 }
             }
         }, 1000);
@@ -288,11 +368,7 @@ document.addEventListener('DOMContentLoaded', function() {
             scoreElement.textContent = score;
             button.classList.add('correct');
             // Play correct sound
-            const correctSound = document.getElementById('correctSound');
-            if (correctSound) {
-                correctSound.currentTime = 0;
-                correctSound.play().catch(e => console.log("Audio play failed:", e));
-            }
+            playCorrectSound();
         } else {
             button.classList.add('incorrect');
 
@@ -305,11 +381,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
             // Play incorrect sound
-            const incorrectSound = document.getElementById('incorrectSound');
-            if (incorrectSound) {
-                incorrectSound.currentTime = 0;
-                incorrectSound.play().catch(e => console.log("Audio play failed:", e));
-            }
+            playIncorrectSound();
         }
 
         // Update question number
