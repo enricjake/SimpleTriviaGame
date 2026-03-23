@@ -108,14 +108,14 @@ function shuffleAnswers(array) {
 }
 
 // Helper: play correct sound (if available)
-function playCorrectSound() {
+function tryPlayCorrectSound() {
     if (typeof window.playCorrectSound === 'function') {
         window.playCorrectSound();
     }
 }
 
 // Helper: play incorrect sound (if available)
-function playIncorrectSound() {
+function tryPlayIncorrectSound() {
     if (typeof window.playIncorrectSound === 'function') {
         window.playIncorrectSound();
     }
@@ -318,10 +318,10 @@ function displayDailyQuestion(question) {
     const dailyOptionsEl = document.getElementById('dailyOptions');
     const dailyResultEl = document.getElementById('dailyResult');
     const dailyResultTextEl = document.getElementById('dailyResultText');
-    const dailyNextContainer = document.getElementById('dailyNextContainer');
+    const dailySummaryScreen = document.getElementById('dailySummaryScreen');
     
     // Check if all elements exist
-    if (!dailyQuestionEl || !dailyCategoryEl || !dailyDifficultyEl || !dailyOptionsEl || !dailyResultEl || !dailyResultTextEl || !dailyNextContainer) {
+    if (!dailyQuestionEl || !dailyCategoryEl || !dailyDifficultyEl || !dailyOptionsEl || !dailyResultEl || !dailyResultTextEl || !dailySummaryScreen) {
         console.error('Missing daily trivia elements');
         return;
     }
@@ -331,7 +331,8 @@ function displayDailyQuestion(question) {
     
     // Hide result, show question
     dailyResultEl.style.display = 'none';
-    dailyNextContainer.style.display = 'none';
+    dailySummaryScreen.style.display = 'none';
+    document.getElementById('dailyQuestionContainer').style.display = 'block';
     
     // Display question
     const decodedQuestion = decodeHTMLEntities(question.question);
@@ -374,7 +375,7 @@ function selectDailyAnswer(button, selectedOption, correctAnswer) {
     // Show result
     const dailyResultEl = document.getElementById('dailyResult');
     const dailyResultTextEl = document.getElementById('dailyResultText');
-    const dailyNextContainer = document.getElementById('dailyNextContainer');
+    const dailySummaryScreen = document.getElementById('dailySummaryScreen');
     
     dailyResultEl.style.display = 'block';
     dailyResultTextEl.textContent = isCorrect ? '✓ Correct!' : '✗ Incorrect!';
@@ -394,16 +395,19 @@ function selectDailyAnswer(button, selectedOption, correctAnswer) {
     
     // Mark as answered and save
     if (isCorrect) {
-        playCorrectSound();
+        tryPlayCorrectSound();
     } else {
-        playIncorrectSound();
+        tryPlayIncorrectSound();
     }
     
     markDailyAnswered();
     
-    // Show countdown to next question
-    dailyNextContainer.style.display = 'block';
-    startDailyCountdown();
+    // Show summary screen
+    setTimeout(() => {
+        document.getElementById('dailyQuestionContainer').style.display = 'none';
+        dailySummaryScreen.style.display = 'block';
+        startDailyCountdown();
+    }, 2000);
 }
 
 /**
@@ -433,12 +437,16 @@ function updateDailyCountdownDisplay() {
     const formatted = formatTime(timeLeft);
     const dailyTimeLeftEl = document.getElementById('dailyTimeLeft');
     const dailyCountdownEl = document.getElementById('dailyCountdown');
+    const dailySummaryCountdownEl = document.getElementById('dailySummaryCountdown');
     
     if (dailyTimeLeftEl) {
         dailyTimeLeftEl.textContent = formatted;
     }
     if (dailyCountdownEl) {
         dailyCountdownEl.textContent = formatted;
+    }
+    if (dailySummaryCountdownEl) {
+        dailySummaryCountdownEl.textContent = formatted;
     }
 }
 
@@ -470,6 +478,15 @@ function showDailyTrivia() {
         dailyTriviaActive = true;
     } else {
         console.error('Daily trivia element not found');
+        return;
+    }
+
+    if (hasAnsweredDailyToday()) {
+        const dailyQuestionContainer = document.getElementById('dailyQuestionContainer');
+        const dailySummaryScreen = document.getElementById('dailySummaryScreen');
+        if (dailyQuestionContainer) dailyQuestionContainer.style.display = 'none';
+        if (dailySummaryScreen) dailySummaryScreen.style.display = 'block';
+        startDailyTimer();
         return;
     }
     

@@ -483,7 +483,7 @@ body {
     margin-bottom: 20px;
 }
 
-#playAgainBtn, #restartBtn, #goodbyeBtn {
+#homeBtnRegular, #homeBtnDaily, #homeBtnDailySummary, #playAgainBtn, #restartBtn, #goodbyeBtn {
     padding: 12px 20px;
     font-size: 16px;
     background-color: #4caf50;
@@ -629,6 +629,12 @@ body {
     font-size: 14px;
     font-weight: normal;
     opacity: 0.8;
+}
+
+.mode-btn.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    filter: grayscale(80%);
 }
 
 .regular-btn {
@@ -827,4 +833,39 @@ body.dark-mode .daily-next-container {
         padding: 10px 15px;
         font-size: 14px;
     }
+}
+
+/* Daily Summary Screen */
+.daily-summary-screen {
+    padding: 20px;
+    text-align: center;
+}
+
+.summary-content h2 {
+    color: #4caf50;
+    margin-bottom: 15px;
+}
+
+.summary-content p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.summary-content .countdown-text {
+    font-weight: bold;
+    color: #e65100;
+}
+
+body.dark-mode .summary-content h2 {
+    color: #81c784;
+}
+
+body.dark-mode .summary-content p {
+    color: #e0e0e0;
+}
+
+body.dark-mode .summary-content .countdown-text {
+    color: #ffb74d;
 }

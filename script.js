@@ -215,10 +215,39 @@ document.addEventListener('DOMContentLoaded', function() {
         const modeSelection = document.getElementById('modeSelection');
         const gameContainer = document.getElementById('gameContainer');
         const dailyTrivia = document.getElementById('dailyTrivia');
+        const dailyBtn = document.getElementById('dailyTriviaModeBtn');
         
         modeSelection.style.display = 'block';
-        gameContainer.style.display = 'none';
-        dailyTrivia.style.display = 'none';
+        if (gameContainer) gameContainer.style.display = 'none';
+        if (dailyTrivia) dailyTrivia.style.display = 'none';
+        
+        // Update daily button state
+        if (dailyBtn && typeof window.hasAnsweredDailyToday === 'function') {
+            if (window.hasAnsweredDailyToday()) {
+                dailyBtn.classList.add('disabled');
+                dailyBtn.disabled = true;
+                const p = dailyBtn.querySelector('p');
+                if (p) p.textContent = 'Already played today!';
+            } else {
+                dailyBtn.classList.remove('disabled');
+                dailyBtn.disabled = false;
+                const p = dailyBtn.querySelector('p');
+                if (p) p.textContent = "Answer today's special question";
+            }
+        }
+    }
+    
+    // Go Home to mode selection
+    function goHome() {
+        const gameContainer = document.getElementById('gameContainer');
+        const gameOverElement = document.getElementById('gameOver');
+        const dailyTrivia = document.getElementById('dailyTrivia');
+        
+        if (gameContainer) gameContainer.style.display = 'none';
+        if (gameOverElement) gameOverElement.style.display = 'none';
+        if (dailyTrivia) dailyTrivia.style.display = 'none';
+        
+        showModeSelection();
     }
     
     // Start regular trivia game
@@ -990,6 +1019,22 @@ function resumeGame() {
     if (dailyTriviaModeBtn) {
         dailyTriviaModeBtn.addEventListener('click', startDailyTrivia);
     }
+    
+    // Home buttons event listeners
+    const homeBtnRegular = document.getElementById('homeBtnRegular');
+    if (homeBtnRegular) {
+        homeBtnRegular.addEventListener('click', goHome);
+    }
+    
+    const homeBtnDaily = document.getElementById('homeBtnDaily');
+    if (homeBtnDaily) {
+        homeBtnDaily.addEventListener('click', goHome);
+    }
+    
+    const homeBtnDailySummary = document.getElementById('homeBtnDailySummary');
+    if (homeBtnDailySummary) {
+        homeBtnDailySummary.addEventListener('click', goHome);
+    }
 
     // Expose necessary functions and variables to global scope
     window.initGame = initGame;
@@ -1002,4 +1047,6 @@ function resumeGame() {
     window.showModeSelection = showModeSelection;
     window.startRegularTrivia = startRegularTrivia;
     window.startDailyTrivia = startDailyTrivia;
+    window.playCorrectSound = playCorrectSound;
+    window.playIncorrectSound = playIncorrectSound;
 });

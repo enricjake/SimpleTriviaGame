@@ -109,6 +109,7 @@
                 <p>Your final score: <span id="finalScore">0</span>/10</p>
                 <div class="answer-summary" id="answerSummary"></div>
                 <div class="game-over-buttons">
+                    <button id="homeBtnRegular">🏠 Home</button>
                     <button id="playAgainBtn">Play Again</button>
                     <button id="shareScoreBtn">Share Score</button>
                     <button id="goodbyeBtn">Quit</button>
@@ -137,11 +138,17 @@
                 </div>
                 <h3 id="dailyQuestion" class="daily-question"></h3>
                 <div class="options" id="dailyOptions" role="group" aria-label="Daily trivia answer options"></div>
-                <div class="daily-result" id="dailyResult" style="display: none;">
+    <div class="daily-result" id="dailyResult" style="display: none;">
                     <p id="dailyResultText"></p>
-                    <div class="daily-next-container" id="dailyNextContainer" style="display: none;">
-                        <p>Next question available in: <span id="dailyCountdown">24:00:00</span></p>
-                    </div>
+                </div>
+            </div>
+            
+            <div class="daily-summary-screen" id="dailySummaryScreen" style="display: none;">
+                <div class="summary-content">
+                    <h2>Thank you for playing!</h2>
+                    <p>You have already answered the question, new question available 12:00 Midnight Pacific Time.</p>
+                    <p class="countdown-text">Next question available in: <span id="dailySummaryCountdown">24:00:00</span></p>
+                    <button id="homeBtnDailySummary" class="home-btn">🏠 Home</button>
                 </div>
             </div>
         </div>
