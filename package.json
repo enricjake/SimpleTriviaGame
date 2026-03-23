@@ -1,0 +1,24 @@
+{
+  "name": "simpletriviagame",
+  "version": "1.0.0",
+  "description": "A fun and interactive web-based trivia game that tests your knowledge with questions fetched from the Open Trivia Database API. Challenge yourself with various difficulty levels, categories, and customize your gaming experience!",
+  "main": "script.js",
+  "scripts": {
+    "test": "jest --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enricjake/SimpleTriviaGame.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/enricjake/SimpleTriviaGame/issues"
+  },
+  "homepage": "https://github.com/enricjake/SimpleTriviaGame#readme",
+  "devDependencies": {
+    "jest": "^30.3.0",
+    "jest-environment-jsdom": "^30.3.0"
+  }
+}
