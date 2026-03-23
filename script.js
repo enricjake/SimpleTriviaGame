@@ -285,6 +285,9 @@ document.addEventListener('DOMContentLoaded', function() {
         fetch(url)
             .then(response => {
                 if (!response.ok) {
+                    if (response.status === 429) {
+                        throw new Error('Rate limit exceeded (429)');
+                    }
                     throw new Error('Network response was not ok');
                 }
                 return response.json();
@@ -292,9 +295,12 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(data => {
                 console.log('API Response:', data);
                 
-                if (data.response_code === 0 && data.results.length > 0) {
+                // Check data.response_code in case API returns 200 but includes rate limit code (5)
+                if (data.response_code === 0 && data.results && data.results.length > 0) {
                     questions = data.results;
                     showNextQuestion();
+                } else if (data.response_code === 5) {
+                    throw new Error('Rate limit exceeded (Code 5)');
                 } else {
                     console.error('Failed to fetch questions:', data);
                     if (retries > 0) {
@@ -314,15 +320,21 @@ document.addEventListener('DOMContentLoaded', function() {
                         'The trivia game cannot load questions when opened locally (file://). ' +
                         'Please run it using a local web server (e.g. http://localhost).'
                     );
+                    loadingElement.style.display = 'none';
                 } else {
                     if (retries > 0) {
-                        console.log(`Retrying due to network error... ${retries} attempts left`);
-                        setTimeout(() => fetchQuestions(retries - 1, delay * 2), delay);
+                        let waitTime = delay;
+                        // OpenTDB limits requests to 1 every 5 seconds. Delay 5 seconds if rate limited.
+                        if (error.message && error.message.includes('Rate limit')) {
+                            waitTime = 5000;
+                        }
+                        console.log(`Retrying due to network error... ${retries} attempts left. Waiting ${waitTime}ms`);
+                        setTimeout(() => fetchQuestions(retries - 1, waitTime === 5000 ? 5000 : waitTime * 2), waitTime);
                     } else {
                         alert('Failed to connect to the trivia API after multiple attempts. Check your internet connection.');
+                        loadingElement.style.display = 'none';
                     }
                 }
-                loadingElement.style.display = 'none';
             });
     }
 
