@@ -13,6 +13,7 @@
         <div class="top-controls">
             <button id="themeToggle" class="theme-btn" aria-label="Toggle Dark/Light Mode">🌙</button>
             <button id="settingsBtn" class="settings-btn">⚙️ Settings</button>
+            <button id="dailyTriviaBtn" class="daily-btn">🌅 Daily Trivia</button>
         </div>
         <div class="settings-panel" id="settingsPanel">
             <h3>Game Settings</h3>
@@ -103,8 +104,33 @@
                 <p>We hope you enjoyed the trivia challenge. Come back soon for more fun!</p>
                 <p>Goodbye!</p>
             </div>
+            <!-- Daily Trivia Section -->
+            <div class="daily-trivia" id="dailyTrivia" style="display: none;">
+                <div class="daily-header">
+                    <h2>🌅 Trivia of the Day</h2>
+                    <p class="daily-subtitle">Answer today's special question!</p>
+                    <div class="daily-timer" id="dailyTimer">
+                        <span id="dailyTimeLeft">24:00:00</span> until next question
+                    </div>
+                </div>
+                <div class="daily-question-container" id="dailyQuestionContainer">
+                    <div class="question-meta">
+                        <span id="dailyCategory" class="category-badge"></span>
+                        <span id="dailyDifficulty" class="difficulty-badge"></span>
+                    </div>
+                    <h3 id="dailyQuestion" class="daily-question"></h3>
+                    <div class="options" id="dailyOptions" role="group" aria-label="Daily trivia answer options"></div>
+                    <div class="daily-result" id="dailyResult" style="display: none;">
+                        <p id="dailyResultText"></p>
+                        <div class="daily-next-container" id="dailyNextContainer" style="display: none;">
+                            <p>Next question available in: <span id="dailyCountdown">24:00:00</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    <script src="daily-trivia.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

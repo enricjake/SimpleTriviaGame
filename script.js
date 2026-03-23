@@ -903,6 +903,18 @@ function resumeGame() {
     // Settings event listeners
     settingsBtn.addEventListener('click', toggleSettings);
     saveSettingsBtn.addEventListener('click', saveSettings);
+    
+    // Daily trivia button
+    const dailyTriviaBtn = document.getElementById('dailyTriviaBtn');
+    if (dailyTriviaBtn) {
+        dailyTriviaBtn.addEventListener('click', function() {
+            if (typeof window.showDailyTrivia === 'function') {
+                window.showDailyTrivia();
+            } else {
+                console.error('showDailyTrivia function not found');
+            }
+        });
+    }
 
     // Theme toggle
     const themeToggle = document.getElementById('themeToggle');

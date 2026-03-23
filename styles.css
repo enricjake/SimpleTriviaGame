@@ -561,6 +561,140 @@ body {
     color: #c62828;
 }
 
+/* Daily Trivia Styles */
+.daily-btn {
+    padding: 10px 15px;
+    font-size: 18px;
+    background-color: rgba(255, 193, 7, 0.9);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: #333;
+    font-weight: bold;
+}
+
+.daily-btn:hover {
+    background-color: rgba(255, 193, 7, 1);
+}
+
+.daily-trivia {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.daily-header {
+    margin-bottom: 20px;
+}
+
+.daily-header h2 {
+    margin: 0 0 10px 0;
+    color: #ff9800;
+    font-size: 24px;
+}
+
+.daily-subtitle {
+    color: #666;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.daily-timer {
+    background-color: #fff3e0;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    color: #e65100;
+    margin-bottom: 20px;
+}
+
+.daily-question-container {
+    text-align: left;
+}
+
+.daily-question {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.daily-result {
+    text-align: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.daily-result p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.daily-result.correct {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.daily-result.incorrect {
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+.daily-next-container {
+    margin-top: 15px;
+    color: #666;
+    font-size: 14px;
+}
+
+.daily-next-container p {
+    margin: 0;
+}
+
+body.dark-mode .daily-btn {
+    background-color: rgba(255, 193, 7, 0.8);
+    color: #e0e0e0;
+}
+
+body.dark-mode .daily-btn:hover {
+    background-color: rgba(255, 193, 7, 1);
+}
+
+body.dark-mode .daily-trivia {
+    background-color: #2d2d2d;
+    color: #e0e0e0;
+}
+
+body.dark-mode .daily-header h2 {
+    color: #ffb74d;
+}
+
+body.dark-mode .daily-timer {
+    background-color: #3d3d3d;
+    color: #ffb74d;
+}
+
+body.dark-mode .daily-question {
+    color: #e0e0e0;
+}
+
+body.dark-mode .daily-result {
+    background-color: #3d3d3d;
+}
+
+body.dark-mode .daily-next-container {
+    color: #bbb;
+}
+
 @media (max-width: 600px) {
     #gameContainer {
         width: 95%;
