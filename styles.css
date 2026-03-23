@@ -51,6 +51,8 @@
 body.dark-mode {
     background: linear-gradient(-45deg, #1a1a2e, #16213e, #0f3460, #1a1a2e);
     background-size: 400% 400%;
+    --correct-bg-color: #1b5e20;
+    --incorrect-bg-color: #b71c1c;
 }
 
 body.dark-mode #gameContainer {
@@ -66,6 +68,18 @@ body.dark-mode .option {
 
 body.dark-mode .option:hover {
     background-color: #4d4d4d;
+}
+
+body.dark-mode .option.correct {
+    background-color: #1b5e20;
+    color: white;
+    border-color: #1b5e20;
+}
+
+body.dark-mode .option.incorrect {
+    background-color: #b71c1c;
+    color: white;
+    border-color: #b71c1c;
 }
 
 body.dark-mode .setting-group select {
@@ -87,13 +101,26 @@ body.dark-mode .answer-summary {
     background-color: #3d3d3d;
 }
 
+body.dark-mode .answer-item .your-answer {
+    color: #bbb;
+}
+
+body.dark-mode .answer-item .your-answer.correct {
+    color: #a5d6a7;
+}
+
+body.dark-mode .answer-item .your-answer.incorrect {
+    color: #ef9a9a;
+}
+
 body.dark-mode .answer-item.correct {
-    background-color: #1b5e20;
+  background-color: var(--correct-bg-color);
 }
 
 body.dark-mode .answer-item.incorrect {
-    background-color: #b71c1c;
+  background-color: var(--incorrect-bg-color);
 }
+
 
 body.dark-mode .progress-container {
     background-color: #555;
@@ -364,26 +391,6 @@ body {
     cursor: not-allowed;
 }
 
-#nextBtn {
-    padding: 12px 20px;
-    font-size: 16px;
-    background-color: #2196f3;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-#nextBtn:hover {
-    background-color: #0b7dda;
-}
-
-#nextBtn:disabled {
-    background-color: #cccccc;
-    cursor: not-allowed;
-}
-
 #pauseBtn {
     padding: 12px 20px;
     font-size: 16px;
@@ -392,7 +399,8 @@ body {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    margin-right: 10px;
+    margin: 0 auto;
+    display: block;
     transition: background-color 0.3s ease;
 }
 

@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const gameOverElement = document.getElementById('gameOver');
     const questionElement = document.getElementById('question');
     const optionsElement = document.getElementById('options');
-    const nextBtn = document.getElementById('nextBtn');
     const scoreElement = document.getElementById('score');
     const questionNumberElement = document.getElementById('questionNumber');
     const finalScoreElement = document.getElementById('finalScore');
@@ -168,7 +167,6 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Reset answer state
             answerSelected = false;
-            nextBtn.disabled = true;
             
             // Reset timer
             timeLeft = 10;
@@ -242,13 +240,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (!answerSelected) {
                     answerSelected = true;
                     // Disable all option buttons
-                    const allButtons = optionsElement.querySelectorAll('.option');
-                    allButtons.forEach(btn => {
-                        btn.disabled = true;
-                        btn.classList.add('disabled');
-                    });
-                    // Enable next button
-                    nextBtn.disabled = false;
+                    if (optionsElement) {
+                        const allButtons = optionsElement.querySelectorAll('.option');
+                        allButtons.forEach(btn => {
+                            btn.disabled = true;
+                            btn.classList.add('disabled');
+                        });
+                    }
                     // Show time's up alert
                     alert('Time\'s up! Moving to next question.');
                 }
@@ -290,7 +288,11 @@ document.addEventListener('DOMContentLoaded', function() {
             scoreElement.textContent = score;
             button.classList.add('correct');
             // Play correct sound
-            document.getElementById('correctSound').play().catch(e => console.log("Audio play failed:", e));
+            const correctSound = document.getElementById('correctSound');
+            if (correctSound) {
+                correctSound.currentTime = 0;
+                correctSound.play().catch(e => console.log("Audio play failed:", e));
+            }
         } else {
             button.classList.add('incorrect');
 
@@ -303,7 +305,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
             // Play incorrect sound
-            document.getElementById('incorrectSound').play().catch(e => console.log("Audio play failed:", e));
+            const incorrectSound = document.getElementById('incorrectSound');
+            if (incorrectSound) {
+                incorrectSound.currentTime = 0;
+                incorrectSound.play().catch(e => console.log("Audio play failed:", e));
+            }
         }
 
         // Update question number
@@ -316,8 +322,13 @@ document.addEventListener('DOMContentLoaded', function() {
             btn.classList.add('disabled');
         });
 
-        // Enable next button
-        nextBtn.disabled = false;
+        // Automatically show next question after 2 seconds
+        const indexAtSelection = currentQuestionIndex;
+        setTimeout(() => {
+            if (currentQuestionIndex === indexAtSelection) {
+                nextQuestion();
+            }
+        }, 2000);
     }
 
     // Move to next question
@@ -717,7 +728,6 @@ function resumeGame() {
     }
 
     // Event listeners
-    nextBtn.addEventListener('click', nextQuestion);
     playAgainBtn.addEventListener('click', playAgain);
     
     // Add share score event listener
