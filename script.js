@@ -344,23 +344,52 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Display answer summary
-    function displayAnswerSummary() {
-        const summaryContainer = document.getElementById('answerSummary');
-        summaryContainer.innerHTML = '<h3>Your Answers:</h3>';
-        
-        userAnswers.forEach((answer, index) => {
-            const item = document.createElement('div');
-            item.className = 'answer-item ' + (answer.isCorrect ? 'correct' : 'incorrect');
-            item.innerHTML = `
-                <div class="question-text">Q${index + 1}: ${decodeHTMLEntities(answer.question.substring(0, 50))}${answer.question.length > 50 ? '...' : ''}</div>
-                <div class="your-answer ${answer.isCorrect ? 'correct' : 'incorrect'}">
-                    Your answer: ${decodeHTMLEntities(answer.userAnswer)}
-                    ${!answer.isCorrect ? '<br>Correct: ' + decodeHTMLEntities(answer.correctAnswer) : ''}
-                </div>
-            `;
-            summaryContainer.appendChild(item);
-        });
-    }
+  /**
+ * Displays a summary of the user's answers.
+ */
+function displayAnswerSummary() {
+  const summaryContainer = document.getElementById('answerSummary');
+  if (!summaryContainer) {
+    console.error('Element with id "answerSummary" not found.');
+    return;
+  }
+
+  summaryContainer.innerHTML = '<h3>Your Answers:</h3>';
+
+  userAnswers.forEach((answer, index) => {
+    const answerItem = createAnswerItem(answer, index);
+    summaryContainer.appendChild(answerItem);
+  });
+}
+
+/**
+ * Creates a single answer item element.
+ *
+ * @param {Object} answer - The answer object.
+ * @param {number} index - The index of the answer.
+ * @returns {HTMLElement} The answer item element.
+ */
+function createAnswerItem(answer, index) {
+  const item = document.createElement('div');
+  item.className = `answer-item ${answer.isCorrect ? 'correct' : 'incorrect'}`;
+
+  const questionText = document.createElement('div');
+  questionText.className = 'question-text';
+  questionText.innerHTML = `Q${index + 1}: ${decodeHTMLEntities(answer.question.substring(0, 50))}${answer.question.length > 50 ? '...' : ''}`;
+
+  const yourAnswer = document.createElement('div');
+  yourAnswer.className = `your-answer ${answer.isCorrect ? 'correct' : 'incorrect'}`;
+  yourAnswer.innerHTML = `
+    Your answer: ${decodeHTMLEntities(answer.userAnswer)}
+    ${!answer.isCorrect ? '<br>Correct: ' + decodeHTMLEntities(answer.correctAnswer) : ''}
+  `;
+
+  item.appendChild(questionText);
+  item.appendChild(yourAnswer);
+
+  return item;
+}
+
 
     // Share score
     function shareScore() {
