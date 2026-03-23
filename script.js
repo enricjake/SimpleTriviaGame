@@ -74,6 +74,56 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     /**
+     * Play game over sound based on performance (score percentage)
+     * < 50%: Low descending tones (disappointing)
+     * 50-79%: Medium neutral tones
+     * >= 80%: High ascending celebration tones
+     */
+    function playGameOverSound(score, totalQuestions) {
+        try {
+            // Resume context if suspended
+            if (audioContext.state === 'suspended') {
+                audioContext.resume();
+            }
+            
+            const percentage = (score / totalQuestions) * 100;
+            const oscillator = audioContext.createOscillator();
+            const gainNode = audioContext.createGain();
+            
+            oscillator.connect(gainNode);
+            gainNode.connect(audioContext.destination);
+            
+            gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+            
+            if (percentage < 50) {
+                // Low score: descending sad tones (C4 to A3)
+                oscillator.frequency.setValueAtTime(261.63, audioContext.currentTime); // C4
+                oscillator.frequency.setValueAtTime(220.00, audioContext.currentTime + 0.2); // A3
+                gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
+                oscillator.start(audioContext.currentTime);
+                oscillator.stop(audioContext.currentTime + 0.5);
+            } else if (percentage < 80) {
+                // Medium score: neutral repeating tone (E4)
+                oscillator.frequency.setValueAtTime(329.63, audioContext.currentTime); // E4
+                gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.4);
+                oscillator.start(audioContext.currentTime);
+                oscillator.stop(audioContext.currentTime + 0.4);
+            } else {
+                // High score: celebration - ascending arpeggio (C5-E5-G5)
+                oscillator.frequency.setValueAtTime(523.25, audioContext.currentTime); // C5
+                oscillator.frequency.setValueAtTime(659.25, audioContext.currentTime + 0.1); // E5
+                oscillator.frequency.setValueAtTime(783.99, audioContext.currentTime + 0.2); // G5
+                gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
+                oscillator.start(audioContext.currentTime);
+                oscillator.stop(audioContext.currentTime + 0.5);
+            }
+        } catch (e) {
+            console.log("Audio playback failed:", e);
+        }
+    }
+    
+    /**
      * Play an error/negative sound (descending tones)
      */
     function playIncorrectSound() {
@@ -105,7 +155,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Toggle settings panel
     function toggleSettings() {
+        const isOpening = !settingsPanel.classList.contains('open');
         settingsPanel.classList.toggle('open');
+        
+        // Pause game when opening settings, resume when closing
+        if (isOpening) {
+            pauseGame();
+        } else {
+            // Only resume if not paused by other means (check if pause overlay is open)
+            const pauseOverlay = document.getElementById('pauseOverlay');
+            if (pauseOverlay && pauseOverlay.classList.contains('open')) {
+                // Keep it paused if pause overlay is manually opened
+            } else {
+                resumeGame();
+            }
+        }
     }
 
     // Save settings
@@ -119,6 +183,14 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Hide settings panel
         settingsPanel.classList.remove('open');
+        
+        // Resume game if it was paused by settings
+        if (window.isPaused) {
+            const pauseOverlay = document.getElementById('pauseOverlay');
+            if (pauseOverlay && !pauseOverlay.classList.contains('open')) {
+                resumeGame();
+            }
+        }
         
         // Restart game with new settings
         initGame();
@@ -421,6 +493,9 @@ document.addEventListener('DOMContentLoaded', function() {
             localStorage.setItem('triviaHighScore', highScore);
             document.getElementById('highScore').textContent = highScore;
         }
+        
+        // Play game over sound based on score percentage
+        playGameOverSound(score, questions.length);
         
         // Display answer summary
         displayAnswerSummary();
