@@ -5,6 +5,91 @@ let dailyTriviaActive = false;
 let dailyQuestion = null;
 let dailyAnswerSelected = false;
 let dailyTimerInterval = null;
+let apiToken = localStorage.getItem('daily_opentdb_token') || null;
+
+// Fallback questions for when API is unavailable
+const fallbackQuestions = [
+    {
+        category: "General Knowledge",
+        type: "multiple",
+        difficulty: "easy",
+        question: "What is the largest planet in our solar system?",
+        correct_answer: "Jupiter",
+        incorrect_answers: ["Saturn", "Neptune", "Uranus"]
+    },
+    {
+        category: "Science",
+        type: "multiple",
+        difficulty: "medium",
+        question: "What is the chemical symbol for gold?",
+        correct_answer: "Au",
+        incorrect_answers: ["Ag", "Fe", "Cu"]
+    },
+    {
+        category: "Geography",
+        type: "multiple",
+        difficulty: "easy",
+        question: "What is the capital of France?",
+        correct_answer: "Paris",
+        incorrect_answers: ["London", "Berlin", "Madrid"]
+    },
+    {
+        category: "History",
+        type: "multiple",
+        difficulty: "medium",
+        question: "In what year did World War II end?",
+        correct_answer: "1945",
+        incorrect_answers: ["1944", "1946", "1943"]
+    },
+    {
+        category: "Entertainment",
+        type: "multiple",
+        difficulty: "easy",
+        question: "Who painted the Mona Lisa?",
+        correct_answer: "Leonardo da Vinci",
+        incorrect_answers: ["Vincent van Gogh", "Pablo Picasso", "Michelangelo"]
+    },
+    {
+        category: "Sports",
+        type: "multiple",
+        difficulty: "medium",
+        question: "How many players are on a basketball team on the court at one time?",
+        correct_answer: "5",
+        incorrect_answers: ["6", "7", "4"]
+    },
+    {
+        category: "Science",
+        type: "multiple",
+        difficulty: "hard",
+        question: "What is the powerhouse of the cell?",
+        correct_answer: "Mitochondria",
+        incorrect_answers: ["Nucleus", "Ribosome", "Golgi apparatus"]
+    },
+    {
+        category: "General Knowledge",
+        type: "multiple",
+        difficulty: "easy",
+        question: "How many continents are there on Earth?",
+        correct_answer: "7",
+        incorrect_answers: ["6", "5", "8"]
+    },
+    {
+        category: "Geography",
+        type: "multiple",
+        difficulty: "medium",
+        question: "What is the largest ocean on Earth?",
+        correct_answer: "Pacific Ocean",
+        incorrect_answers: ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean"]
+    },
+    {
+        category: "Technology",
+        type: "multiple",
+        difficulty: "medium",
+        question: "What does CPU stand for?",
+        correct_answer: "Central Processing Unit",
+        incorrect_answers: ["Computer Personal Unit", "Central Program Utility", "Computer Processing Unit"]
+    }
+];
 
 // Helper: decode HTML entities
 function decodeHTMLEntities(text) {
@@ -106,11 +191,55 @@ function saveDailyQuestion(question) {
 }
 
 /**
- * Fetch a single random question from the API with retry logic
+ * Get or refresh API token from OpenTDB
  */
-function fetchDailyQuestion(retries = 3, delay = 1000) {
+function getApiToken() {
+    return fetch('https://opentdb.com/api_token.php?command=request')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Failed to get API token');
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (data.response_code === 0 && data.token) {
+                return data.token;
+            }
+            throw new Error('Failed to get API token');
+        })
+        .catch(error => {
+            console.error('Error getting API token:', error);
+            return null;
+        });
+}
+
+/**
+ * Get a random fallback question
+ */
+function getFallbackQuestion() {
+    const today = getPacificDate();
+    // Use day of year for consistent daily rotation
+    const now = new Date();
+    const start = new Date(now.getFullYear(), 0, 0);
+    const diff = now - start;
+    const dayOfYear = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const index = dayOfYear % fallbackQuestions.length;
+    return fallbackQuestions[index];
+}
+
+/**
+ * Fetch a single random question from the API with exponential backoff retry logic
+ */
+function fetchDailyQuestion(retries = 5, delay = 2000) {
     console.log('Fetching daily question from API...');
-    return fetch('https://opentdb.com/api.php?amount=1&type=multiple')
+    
+    // Build API URL with token if available
+    let apiUrl = 'https://opentdb.com/api.php?amount=1&type=multiple';
+    if (apiToken) {
+        apiUrl += `&token=${apiToken}`;
+    }
+    
+    return fetch(apiUrl)
         .then(response => {
             if (response.status === 429) {
                 throw new Error('API rate limit exceeded');
@@ -122,24 +251,45 @@ function fetchDailyQuestion(retries = 3, delay = 1000) {
         })
         .then(data => {
             console.log('Daily API Response:', data);
+            
+            // Handle token-related errors
+            if (data.response_code === 4) {
+                // Token empty - get a new one and retry
+                console.log('Token exhausted, getting new token...');
+                return getApiToken().then(newToken => {
+                    apiToken = newToken;
+                    localStorage.setItem('daily_opentdb_token', newToken);
+                    return fetchDailyQuestion(retries - 1, delay);
+                });
+            }
+            
             if (data.response_code === 0 && data.results.length > 0) {
                 return data.results[0];
             }
+            
+            // Handle rate limit response code
+            if (data.response_code === 5) {
+                throw new Error('API rate limit exceeded');
+            }
+            
             throw new Error('Failed to fetch daily question: ' + (data.response_message || 'Unknown error'));
         })
         .catch(error => {
             console.error('Error fetching daily question:', error);
-            if (retries > 0 && error.message.includes('rate limit')) {
-                console.log(`Retrying daily question fetch... ${retries} attempts left`);
+            if (retries > 0 && (error.message.includes('rate limit') || error.message.includes('Network'))) {
+                const nextDelay = delay * 2; // Exponential backoff
+                console.log(`Retrying daily question fetch in ${delay}ms... ${retries} attempts left`);
                 return new Promise((resolve, reject) => {
                     setTimeout(() => {
-                        fetchDailyQuestion(retries - 1, delay * 2)
+                        fetchDailyQuestion(retries - 1, nextDelay)
                             .then(resolve)
                             .catch(reject);
                     }, delay);
                 });
             }
-            throw error;
+            // If no more retries or not a rate limit error, use fallback
+            console.log('Using fallback question due to API failure');
+            return getFallbackQuestion();
         });
 }
 
@@ -169,6 +319,12 @@ function displayDailyQuestion(question) {
     const dailyResultEl = document.getElementById('dailyResult');
     const dailyResultTextEl = document.getElementById('dailyResultText');
     const dailyNextContainer = document.getElementById('dailyNextContainer');
+    
+    // Check if all elements exist
+    if (!dailyQuestionEl || !dailyCategoryEl || !dailyDifficultyEl || !dailyOptionsEl || !dailyResultEl || !dailyResultTextEl || !dailyNextContainer) {
+        console.error('Missing daily trivia elements');
+        return;
+    }
     
     // Reset state
     dailyAnswerSelected = false;
@@ -312,6 +468,9 @@ function showDailyTrivia() {
     if (dailyTrivia) {
         dailyTrivia.style.display = 'block';
         dailyTriviaActive = true;
+    } else {
+        console.error('Daily trivia element not found');
+        return;
     }
     
     // Load and display the question
@@ -323,6 +482,10 @@ function showDailyTrivia() {
         })
         .catch(error => {
             console.error('Failed to load daily question:', error);
+            const dailyQuestionEl = document.getElementById('dailyQuestion');
+            if (dailyQuestionEl) {
+                dailyQuestionEl.textContent = 'Error loading question. Please try again later.';
+            }
             alert('Unable to load today\'s question. Please try again later.');
             if (dailyTrivia) {
                 dailyTrivia.style.display = 'none';
@@ -343,14 +506,19 @@ window.updateDailyCountdownDisplay = updateDailyCountdownDisplay;
  * Initialize daily trivia on page load
  */
 window.addEventListener('DOMContentLoaded', () => {
+    // Initialize API token for better rate limiting
+    getApiToken().then(token => {
+        if (token) {
+            apiToken = token;
+            localStorage.setItem('daily_opentdb_token', token);
+            console.log('Daily trivia API token initialized');
+        }
+    });
+    
     // Auto-load daily trivia if enabled
     if (localStorage.getItem('dailyTriviaAutoLoad') === 'true') {
         showDailyTrivia();
     }
     
-    // Wire up the daily trivia button click handler
-    const dailyTriviaBtn = document.getElementById('dailyTriviaBtn');
-    if (dailyTriviaBtn) {
-        dailyTriviaBtn.addEventListener('click', showDailyTrivia);
-    }
+    // Note: Daily trivia button event listener is handled in script.js
 });

@@ -230,6 +230,14 @@ body {
     color: #333;
 }
 
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    text-align: center;
+    margin: 20px auto;
+}
+
 #gameContainer {
     background-color: white;
     border-radius: 10px;
@@ -239,6 +247,7 @@ body {
     padding: 20px;
     text-align: center;
     position: relative;
+    margin: 20px auto;
 }
 
 #loading {
@@ -561,23 +570,127 @@ body {
     color: #c62828;
 }
 
-/* Daily Trivia Styles */
-.daily-btn {
-    padding: 10px 15px;
-    font-size: 18px;
-    background-color: rgba(255, 193, 7, 0.9);
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+/* Mode Selection Screen */
+.mode-selection {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    padding: 40px 20px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.mode-selection h2 {
+    margin: 0 0 30px 0;
     color: #333;
+    font-size: 28px;
     font-weight: bold;
 }
 
-.daily-btn:hover {
-    background-color: rgba(255, 193, 7, 1);
+.mode-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
 }
 
+.mode-btn {
+    width: 100%;
+    max-width: 400px;
+    padding: 25px 30px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mode-btn i {
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.mode-btn span {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.mode-btn p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: normal;
+    opacity: 0.8;
+}
+
+.regular-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.regular-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(102, 126, 234, 0.4);
+}
+
+.daily-btn {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+}
+
+.daily-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(245, 87, 108, 0.4);
+}
+
+/* Dark mode for mode selection */
+body.dark-mode .mode-selection {
+    background-color: #2d2d2d;
+    color: #e0e0e0;
+}
+
+body.dark-mode .mode-selection h2 {
+    color: #e0e0e0;
+}
+
+@media (max-width: 600px) {
+    .mode-selection {
+        padding: 30px 15px;
+        margin: 10px auto;
+    }
+    
+    .mode-selection h2 {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+    
+    .mode-btn {
+        padding: 20px 25px;
+        max-width: 300px;
+    }
+    
+    .mode-btn i {
+        font-size: 28px;
+    }
+    
+    .mode-btn span {
+        font-size: 18px;
+    }
+    
+    .mode-btn p {
+        font-size: 13px;
+    }
+}
+
+/* Daily Trivia Styles */
 .daily-trivia {
     width: 90%;
     max-width: 600px;

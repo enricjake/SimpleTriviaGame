@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // DOM elements
+  // DOM elements
     const gameContainer = document.getElementById('gameContainer');
     const loadingElement = document.getElementById('loading');
     const gameElement = document.getElementById('game');
@@ -207,6 +207,41 @@ document.addEventListener('DOMContentLoaded', function() {
             questionCountSelect.value = settings.amount || 10;
             difficultySelect.value = settings.difficulty || 'medium';
             categorySelect.value = settings.category || '';
+        }
+    }
+
+    // Show mode selection screen
+    function showModeSelection() {
+        const modeSelection = document.getElementById('modeSelection');
+        const gameContainer = document.getElementById('gameContainer');
+        const dailyTrivia = document.getElementById('dailyTrivia');
+        
+        modeSelection.style.display = 'block';
+        gameContainer.style.display = 'none';
+        dailyTrivia.style.display = 'none';
+    }
+    
+    // Start regular trivia game
+    function startRegularTrivia() {
+        const modeSelection = document.getElementById('modeSelection');
+        const gameContainer = document.getElementById('gameContainer');
+        
+        modeSelection.style.display = 'none';
+        gameContainer.style.display = 'block';
+        
+        initGame();
+    }
+    
+    // Start daily trivia
+    function startDailyTrivia() {
+        const modeSelection = document.getElementById('modeSelection');
+        const dailyTrivia = document.getElementById('dailyTrivia');
+        
+        modeSelection.style.display = 'none';
+        dailyTrivia.style.display = 'block';
+        
+        if (typeof window.showDailyTrivia === 'function') {
+            window.showDailyTrivia();
         }
     }
 
@@ -806,9 +841,7 @@ function hideSocialSharing() {
 
 // Play again
 function playAgain() {
-    if (typeof window.initGame === 'function') {
-        window.initGame();
-    }
+    showModeSelection();
 }
 
 // Show goodbye message
@@ -903,18 +936,6 @@ function resumeGame() {
     // Settings event listeners
     settingsBtn.addEventListener('click', toggleSettings);
     saveSettingsBtn.addEventListener('click', saveSettings);
-    
-    // Daily trivia button
-    const dailyTriviaBtn = document.getElementById('dailyTriviaBtn');
-    if (dailyTriviaBtn) {
-        dailyTriviaBtn.addEventListener('click', function() {
-            if (typeof window.showDailyTrivia === 'function') {
-                window.showDailyTrivia();
-            } else {
-                console.error('showDailyTrivia function not found');
-            }
-        });
-    }
 
     // Theme toggle
     const themeToggle = document.getElementById('themeToggle');
@@ -941,10 +962,22 @@ function resumeGame() {
     // Keyboard navigation for accessibility
     document.addEventListener('keydown', handleKeyboardNavigation);
 
-    // Load saved settings and theme, then start the game
+    // Load saved settings and theme, then show mode selection
     loadSettings();
     loadTheme();
-    initGame();
+    showModeSelection();
+    
+    // Mode selection event listeners
+    const regularTriviaBtn = document.getElementById('regularTriviaBtn');
+    const dailyTriviaModeBtn = document.getElementById('dailyTriviaModeBtn');
+    
+    if (regularTriviaBtn) {
+        regularTriviaBtn.addEventListener('click', startRegularTrivia);
+    }
+    
+    if (dailyTriviaModeBtn) {
+        dailyTriviaModeBtn.addEventListener('click', startDailyTrivia);
+    }
 
     // Expose necessary functions and variables to global scope
     window.initGame = initGame;
@@ -954,4 +987,7 @@ function resumeGame() {
     window.shareToWhatsApp = shareToWhatsApp;
     window.shareToX = shareToX;
     window.shareToReddit = shareToReddit;
+    window.showModeSelection = showModeSelection;
+    window.startRegularTrivia = startRegularTrivia;
+    window.startDailyTrivia = startDailyTrivia;
 });

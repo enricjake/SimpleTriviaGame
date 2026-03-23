@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Mode Selection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .test-result {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .pass {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .fail {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .info {
+            background-color: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mode Selection Test</h1>
+    <div id="testResults"></div>
+    
+    <script>
+        // Test results container
+        const results = document.getElementById('testResults');
+        
+        function addResult(test, passed, message) {
+            const div = document.createElement('div');
+            div.className = `test-result ${passed ? 'pass' : 'fail'}`;
+            div.innerHTML = `<strong>${test}:</strong> ${passed ? 'PASS' : 'FAIL'} - ${message}`;
+            results.appendChild(div);
+        }
+        
+        function addInfo(message) {
+            const div = document.createElement('div');
+            div.className = 'test-result info';
+            div.innerHTML = `<strong>INFO:</strong> ${message}`;
+            results.appendChild(div);
+        }
+        
+        // Test 1: Check if mode selection elements exist
+        function testModeSelectionElements() {
+            addInfo('Opening main application in new tab...');
+            window.open('index.html', '_blank');
+            
+            setTimeout(() => {
+                // Check if elements exist in the main page
+                const modeSelection = document.getElementById('modeSelection');
+                const regularBtn = document.getElementById('regularTriviaBtn');
+                const dailyBtn = document.getElementById('dailyTriviaModeBtn');
+                
+                if (modeSelection) {
+                    addResult('Mode Selection Element', true, 'Mode selection element found');
+                } else {
+                    addResult('Mode Selection Element', false, 'Mode selection element not found');
+                }
+                
+                if (regularBtn) {
+                    addResult('Regular Trivia Button', true, 'Regular trivia button found');
+                } else {
+                    addResult('Regular Trivia Button', false, 'Regular trivia button not found');
+                }
+                
+                if (dailyBtn) {
+                    addResult('Daily Trivia Button', true, 'Daily trivia button found');
+                } else {
+                    addResult('Daily Trivia Button', false, 'Daily trivia button not found');
+                }
+            }, 1000);
+        }
+        
+        // Run tests
+        addInfo('Starting mode selection tests...');
+        testModeSelectionElements();
+        
+        addInfo('Manual testing instructions:');
+        addInfo('1. Open index.html in browser');
+        addInfo('2. Verify mode selection screen appears');
+        addInfo('3. Click "Regular Trivia" - should start regular game');
+        addInfo('4. Click "Daily Trivia" - should show daily trivia');
+        addInfo('5. After game ends, "Play Again" should return to mode selection');
+    </script>
+</body>
+</html>

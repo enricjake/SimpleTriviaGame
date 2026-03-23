@@ -13,7 +13,6 @@
         <div class="top-controls">
             <button id="themeToggle" class="theme-btn" aria-label="Toggle Dark/Light Mode">🌙</button>
             <button id="settingsBtn" class="settings-btn">⚙️ Settings</button>
-            <button id="dailyTriviaBtn" class="daily-btn">🌅 Daily Trivia</button>
         </div>
         <div class="settings-panel" id="settingsPanel">
             <h3>Game Settings</h3>
@@ -56,7 +55,23 @@
             </div>
             <button id="saveSettingsBtn" class="save-settings-btn">Save Settings</button>
         </div>
-        <div class="game-container" id="gameContainer" role="application" aria-label="Trivia Game">
+        <!-- Game Mode Selection -->
+        <div class="mode-selection" id="modeSelection">
+            <h2>Choose Your Trivia Mode</h2>
+            <div class="mode-buttons">
+                <button id="regularTriviaBtn" class="mode-btn regular-btn">
+                    <i class="fas fa-gamepad"></i>
+                    <span>Regular Trivia</span>
+                    <p>Play with customizable settings</p>
+                </button>
+                <button id="dailyTriviaModeBtn" class="mode-btn daily-btn">
+                    <i class="fas fa-calendar-day"></i>
+                    <span>Daily Trivia</span>
+                    <p>Answer today's special question</p>
+                </button>
+            </div>
+        </div>
+        <div class="game-container" id="gameContainer" role="application" aria-label="Trivia Game" style="display: none;">
             <div class="loading" id="loading" role="status" aria-live="polite">
                 <div class="spinner"></div>
                 <p>Loading questions...</p>
