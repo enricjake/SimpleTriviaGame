@@ -1,0 +1,74 @@
+name: Refresh Daily Trivia Question
+
+on:
+  schedule:
+    # Runs at 08:00 UTC = 00:00 midnight Pacific Time (PT = UTC-8)
+    - cron: '0 8 * * *'
+  # Allow manual trigger from the GitHub Actions UI for testing
+  workflow_dispatch:
+
+jobs:
+  refresh-question:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Fetch today's trivia question from OpenTDB
+        id: fetch
+        run: |
+          # Retry up to 5 times with exponential backoff
+          for i in 1 2 3 4 5; do
+            RESPONSE=$(curl -sf "https://opentdb.com/api.php?amount=1&type=multiple" || true)
+            CODE=$(echo "$RESPONSE" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('response_code', -1))" 2>/dev/null || echo "-1")
+            if [ "$CODE" = "0" ]; then
+              echo "Successfully fetched question (attempt $i)"
+              echo "$RESPONSE" > daily-question.json
+              break
+            fi
+            echo "Attempt $i failed (response_code=$CODE), retrying in $((i * 5))s..."
+            sleep $((i * 5))
+          done
+
+          # Verify the file was written with valid JSON
+          if ! python3 -c "import json; f=open('daily-question.json'); d=json.load(f); assert d['response_code']==0 and len(d['results'])==1" 2>/dev/null; then
+            echo "ERROR: Failed to fetch a valid question after 5 attempts."
+            exit 1
+          fi
+
+      - name: Flatten to single question object
+        run: |
+          python3 -c "
+          import json, datetime, pytz
+
+          with open('daily-question.json') as f:
+              data = json.load(f)
+
+          question = data['results'][0]
+
+          # Add metadata
+          pt = pytz.timezone('America/Los_Angeles')
+          now_pt = datetime.datetime.now(pt)
+          question['date'] = now_pt.strftime('%Y-%m-%d')
+          question['generated_at'] = now_pt.isoformat()
+
+          with open('daily-question.json', 'w') as f:
+              json.dump(question, f, indent=2, ensure_ascii=False)
+
+          print('Saved question:', question['question'][:80])
+          "
+
+      - name: Install pytz if needed
+        run: pip install pytz -q
+
+      - name: Commit and push daily-question.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add daily-question.json
+          # Only commit if there are changes
+          git diff --cached --quiet || git commit -m "chore: refresh daily trivia question [skip ci]"
+          git push

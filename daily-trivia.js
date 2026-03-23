@@ -294,18 +294,47 @@ function fetchDailyQuestion(retries = 5, delay = 2000) {
 }
 
 /**
- * Load or fetch today's daily question
+ * Fetch today's shared question from the committed daily-question.json file.
+ * This file is updated daily by GitHub Actions so all users get the same question.
+ */
+function fetchSharedDailyQuestion() {
+    return fetch('daily-question.json?v=' + getPacificDate())
+        .then(response => {
+            if (!response.ok) throw new Error('daily-question.json not available');
+            return response.json();
+        })
+        .then(data => {
+            // Validate the file is for today
+            const today = getPacificDate();
+            if (data.date !== today) {
+                throw new Error(`daily-question.json is dated ${data.date}, expected ${today}`);
+            }
+            console.log('Loaded shared daily question from daily-question.json');
+            return data;
+        });
+}
+
+/**
+ * Load today's daily question:
+ * 1. Return localStorage cache if already loaded today
+ * 2. Try daily-question.json (shared by GitHub Actions — same for all users)
+ * 3. Fall back to direct OpenTDB API call
  */
 function loadDailyQuestion() {
-    let question = getTodaysDailyQuestion();
-    if (!question) {
-        return fetchDailyQuestion()
-            .then(newQuestion => {
-                saveDailyQuestion(newQuestion);
-                return newQuestion;
-            });
+    const cached = getTodaysDailyQuestion();
+    if (cached) {
+        return Promise.resolve(cached);
     }
-    return Promise.resolve(question);
+
+    return fetchSharedDailyQuestion()
+        .catch(err => {
+            console.warn('Shared daily-question.json unavailable, falling back to API:', err.message);
+            return fetchDailyQuestion();
+        })
+        .then(question => {
+            saveDailyQuestion(question);
+            return question;
+        });
 }
 
 /**
