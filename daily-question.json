@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "hard",
-  "category": "Entertainment: Musicals &amp; Theatres",
-  "question": "In Macbeth, the eyes of what animals were used in the Witches&#039; cauldron?",
-  "correct_answer": "Newts",
+  "difficulty": "medium",
+  "category": "Entertainment: Television",
+  "question": "In the Doctor Who universe, how many times can a time lord normally regenerate?",
+  "correct_answer": "12",
   "incorrect_answers": [
-    "Humans",
-    "Sharks",
-    "Squids"
+    "11",
+    "13",
+    "15"
   ],
-  "date": "2026-03-25",
-  "generated_at": "2026-03-25T01:59:39.692088-07:00"
+  "date": "2026-03-26",
+  "generated_at": "2026-03-26T02:06:31.514839-07:00"
 }
