@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "General Knowledge",
-  "question": "The Fields Medal, one of the most sought after awards in mathematics, is awarded every how many years?",
-  "correct_answer": "4",
+  "difficulty": "easy",
+  "category": "Entertainment: Japanese Anime &amp; Manga",
+  "question": "The characters of &quot;Log Horizon&quot; are trapped in what game?",
+  "correct_answer": "Elder Tale",
   "incorrect_answers": [
-    "3",
-    "5",
-    "6"
+    "Sword Art Online",
+    "Tower Unite",
+    "Yggdrasil"
   ],
-  "date": "2026-03-28",
-  "generated_at": "2026-03-28T01:50:52.283950-07:00"
+  "date": "2026-03-29",
+  "generated_at": "2026-03-29T01:51:37.100442-07:00"
 }
