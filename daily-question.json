@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "easy",
-  "category": "Entertainment: Japanese Anime &amp; Manga",
-  "question": "The characters of &quot;Log Horizon&quot; are trapped in what game?",
-  "correct_answer": "Elder Tale",
+  "difficulty": "hard",
+  "category": "Science &amp; Nature",
+  "question": "What is isobutylphenylpropanoic acid more commonly known as?",
+  "correct_answer": "Ibuprofen",
   "incorrect_answers": [
-    "Sword Art Online",
-    "Tower Unite",
-    "Yggdrasil"
+    "Morphine",
+    "Ketamine",
+    "Aspirin"
   ],
-  "date": "2026-03-29",
-  "generated_at": "2026-03-29T01:51:37.100442-07:00"
+  "date": "2026-03-30",
+  "generated_at": "2026-03-30T02:21:49.182564-07:00"
 }
