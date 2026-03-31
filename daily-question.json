@@ -1,14 +1,14 @@
 {
   "type": "multiple",
   "difficulty": "hard",
-  "category": "Science &amp; Nature",
-  "question": "What is isobutylphenylpropanoic acid more commonly known as?",
-  "correct_answer": "Ibuprofen",
+  "category": "History",
+  "question": "In what year did the Battle of Verdun take place?",
+  "correct_answer": "1916",
   "incorrect_answers": [
-    "Morphine",
-    "Ketamine",
-    "Aspirin"
+    "1917",
+    "1915",
+    "1918"
   ],
-  "date": "2026-03-30",
-  "generated_at": "2026-03-30T02:21:49.182564-07:00"
+  "date": "2026-03-31",
+  "generated_at": "2026-03-31T02:10:20.883855-07:00"
 }
