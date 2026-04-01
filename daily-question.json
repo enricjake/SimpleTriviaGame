@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "hard",
-  "category": "History",
-  "question": "In what year did the Battle of Verdun take place?",
-  "correct_answer": "1916",
+  "difficulty": "medium",
+  "category": "Entertainment: Film",
+  "question": "Darth Vader&#039;s famous reveal to Luke is iconic. But which of these is the right one?",
+  "correct_answer": "&quot;No. I am your father.&quot;",
   "incorrect_answers": [
-    "1917",
-    "1915",
-    "1918"
+    "&quot;Luke, I am your father.&quot;",
+    "&quot;You&#039;re wrong. I am your father.&quot;",
+    "&quot;The truth is that I am your father.&quot;"
   ],
-  "date": "2026-03-31",
-  "generated_at": "2026-03-31T02:10:20.883855-07:00"
+  "date": "2026-04-01",
+  "generated_at": "2026-04-01T02:16:54.721710-07:00"
 }
