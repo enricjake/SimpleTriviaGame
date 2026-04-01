@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const gameOverElement = document.getElementById('gameOver');
     const questionElement = document.getElementById('question');
     const optionsElement = document.getElementById('options');
+    const nextBtn = document.getElementById('nextBtn');
     const scoreElement = document.getElementById('score');
     const questionNumberElement = document.getElementById('questionNumber');
     const finalScoreElement = document.getElementById('finalScore');
@@ -18,10 +19,6 @@ document.addEventListener('DOMContentLoaded', function() {
     let questions = [];
     let answerSelected = false;
     let userAnswers = [];
-    let isPaused = false;
-    let timer = null;
-    let timeLeft = 10;
-    let highScore = 0;
 
     // API Config
     const API_URL = 'https://opentdb.com/api.php';
@@ -155,21 +152,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Toggle settings panel
     function toggleSettings() {
-        const isOpening = !settingsPanel.classList.contains('open');
         settingsPanel.classList.toggle('open');
-        
-        // Pause game when opening settings, resume when closing
-        if (isOpening) {
-            pauseGame();
-        } else {
-            // Only resume if not paused by other means (check if pause overlay is open)
-            const pauseOverlay = document.getElementById('pauseOverlay');
-            if (pauseOverlay && pauseOverlay.classList.contains('open')) {
-                // Keep it paused if pause overlay is manually opened
-            } else {
-                resumeGame();
-            }
-        }
     }
 
     // Save settings
@@ -183,14 +166,6 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Hide settings panel
         settingsPanel.classList.remove('open');
-        
-        // Resume game if it was paused by settings
-        if (window.isPaused) {
-            const pauseOverlay = document.getElementById('pauseOverlay');
-            if (pauseOverlay && !pauseOverlay.classList.contains('open')) {
-                resumeGame();
-            }
-        }
         
         // Restart game with new settings
         initGame();
@@ -279,14 +254,8 @@ document.addEventListener('DOMContentLoaded', function() {
         currentQuestionIndex = 0;
         score = 0;
         answerSelected = false;
-        timeLeft = 10;
-        
-        // Load high score from localStorage
-        const savedHighScore = localStorage.getItem('triviaHighScore');
-        if (savedHighScore !== null) {
-            highScore = parseInt(savedHighScore);
-        }
-        
+        userAnswers = [];
+
         // Show loading screen
         loadingElement.style.display = 'block';
         gameElement.style.display = 'none';
@@ -296,8 +265,6 @@ document.addEventListener('DOMContentLoaded', function() {
         // Reset score display
         scoreElement.textContent = '0';
         questionNumberElement.textContent = '0';
-        document.getElementById('timer').textContent = timeLeft;
-        document.getElementById('highScore').textContent = highScore;
         
         // Fetch questions from API
         fetchQuestions();
@@ -378,11 +345,10 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Reset answer state
             answerSelected = false;
-            
-            // Reset timer
-            timeLeft = 10;
-            document.getElementById('timer').textContent = timeLeft;
-            startTimer();
+            hideSelectionMessage();
+
+            // Disable next button until an answer is selected
+            if (nextBtn) nextBtn.disabled = true;
 
             // Display question number
             questionNumberElement.textContent = currentQuestionIndex + 1;
@@ -436,65 +402,12 @@ document.addEventListener('DOMContentLoaded', function() {
         return shuffled;
     }
 
-    // Timer functions
-    function startTimer() {
-        if (timer) {
-            clearInterval(timer);
-        }
-        timer = setInterval(() => {
-            timeLeft--;
-            document.getElementById('timer').textContent = timeLeft;
-            
-            if (timeLeft <= 0) {
-                stopTimer();
-                // Time's up - automatically select an answer as incorrect
-                if (!answerSelected) {
-                    answerSelected = true;
-                    // Disable all option buttons
-                    if (optionsElement) {
-                        const allButtons = optionsElement.querySelectorAll('.option');
-                        allButtons.forEach(btn => {
-                            btn.disabled = true;
-                            btn.classList.add('disabled');
-                        });
-                    }
-                    // Play incorrect sound for timeout
-                    playIncorrectSound();
-                    
-                    // Store user's answer as incorrect (null/empty indicates no answer)
-                    const currentQuestion = questions[currentQuestionIndex];
-                    userAnswers.push({
-                        question: currentQuestion.question,
-                        userAnswer: 'No answer (timeout)',
-                        correctAnswer: currentQuestion.correct_answer,
-                        isCorrect: false
-                    });
-                    
-                    // Automatically show next question after 2 seconds
-                    const indexAtSelection = currentQuestionIndex;
-                    setTimeout(() => {
-                        if (currentQuestionIndex === indexAtSelection) {
-                            nextQuestion();
-                        }
-                    }, 2000);
-                }
-            }
-        }, 1000);
-    }
-
-    function stopTimer() {
-        if (timer) {
-            clearInterval(timer);
-            timer = null;
-        }
-    }
-
     // Select an answer
     function selectAnswer(button, selectedOption, correctAnswer) {
         if (answerSelected) return;
 
         answerSelected = true;
-        stopTimer();
+        hideSelectionMessage();
 
         // Mark selected button as yellow (pending verification)
         button.classList.add('selected');
@@ -521,10 +434,10 @@ document.addEventListener('DOMContentLoaded', function() {
             button.classList.add('incorrect');
 
             // Show correct answer
+            const decodedCorrect = decodeHTMLEntities(correctAnswer);
             const allButtons = optionsElement.querySelectorAll('.option');
             allButtons.forEach(btn => {
-                let decodedText = decodeHTMLEntities(btn.textContent);
-                if (decodedText === correctAnswer) {
+                if (btn.textContent === decodedCorrect) {
                     btn.classList.add('correct');
                 }
             });
@@ -542,17 +455,60 @@ document.addEventListener('DOMContentLoaded', function() {
             btn.classList.add('disabled');
         });
 
-        // Automatically show next question after 2 seconds
-        const indexAtSelection = currentQuestionIndex;
-        setTimeout(() => {
-            if (currentQuestionIndex === indexAtSelection) {
-                nextQuestion();
-            }
-        }, 2000);
+        // Enable next button
+        if (nextBtn) nextBtn.disabled = false;
+    }
+
+    // Show selection message
+    function showSelectionMessage() {
+        const msgEl = document.getElementById('selectionMessage');
+        if (msgEl) msgEl.style.display = 'block';
+    }
+
+    // Hide selection message
+    function hideSelectionMessage() {
+        const msgEl = document.getElementById('selectionMessage');
+        if (msgEl) msgEl.style.display = 'none';
     }
 
     // Move to next question
     function nextQuestion() {
+        if (!answerSelected) {
+            // No answer selected - show message and highlight correct answer
+            const question = questions[currentQuestionIndex];
+            const correctAnswer = question.correct_answer;
+
+            // Store as incorrect/no-answer
+            userAnswers.push({
+                question: question.question,
+                userAnswer: '(No answer)',
+                correctAnswer: correctAnswer,
+                isCorrect: false
+            });
+
+            // Highlight the correct answer
+            const decodedCorrect = decodeHTMLEntities(correctAnswer);
+            const allButtons = optionsElement.querySelectorAll('.option');
+            allButtons.forEach(btn => {
+                btn.disabled = true;
+                btn.classList.add('disabled');
+                if (btn.textContent === decodedCorrect) {
+                    btn.classList.add('highlighted-correct');
+                }
+            });
+
+            // Play incorrect sound
+            playIncorrectSound();
+
+            // Show selection message
+            showSelectionMessage();
+
+            // Mark as answered so next click advances
+            answerSelected = true;
+            if (nextBtn) nextBtn.disabled = false;
+            return;
+        }
+
         currentQuestionIndex++;
         showNextQuestion();
     }
@@ -562,14 +518,7 @@ document.addEventListener('DOMContentLoaded', function() {
         gameElement.style.display = 'none';
         gameOverElement.style.display = 'block';
         finalScoreElement.textContent = score;
-        
-        // Update and save high score
-        if (score > highScore) {
-            highScore = score;
-            localStorage.setItem('triviaHighScore', highScore);
-            document.getElementById('highScore').textContent = highScore;
-        }
-        
+
         // Play game over sound based on score percentage
         playGameOverSound(score, questions.length);
         
@@ -607,9 +556,10 @@ function createAnswerItem(answer, index) {
   const item = document.createElement('div');
   item.className = `answer-item ${answer.isCorrect ? 'correct' : 'incorrect'}`;
 
+  const decodedQuestion = decodeHTMLEntities(answer.question);
   const questionText = document.createElement('div');
   questionText.className = 'question-text';
-  questionText.innerHTML = `Q${index + 1}: ${decodeHTMLEntities(answer.question.substring(0, 50))}${answer.question.length > 50 ? '...' : ''}`;
+  questionText.innerHTML = `Q${index + 1}: ${decodedQuestion.substring(0, 50)}${decodedQuestion.length > 50 ? '...' : ''}`;
 
   const yourAnswer = document.createElement('div');
   yourAnswer.className = `your-answer ${answer.isCorrect ? 'correct' : 'incorrect'}`;
@@ -882,7 +832,7 @@ function hideSocialSharing() {
 
 // Play again
 function playAgain() {
-    showModeSelection();
+    startRegularTrivia();
 }
 
 // Show goodbye message
@@ -896,24 +846,18 @@ function showGoodbye() {
     // setTimeout(() => window.close(), 5000);
 }
 
-// Pause game
-function pauseGame() {
-    if (window.isPaused) return;
-    window.isPaused = true;
-    if (typeof window.stopTimer === 'function') {
-        window.stopTimer();
-    }
-    document.getElementById('pauseOverlay').classList.add('open');
+// Quit game confirmation
+function showQuitConfirmation() {
+    document.getElementById('quitOverlay').classList.add('open');
 }
 
-// Resume game
-function resumeGame() {
-    if (!window.isPaused) return;
-    window.isPaused = false;
-    document.getElementById('pauseOverlay').classList.remove('open');
-    if (typeof window.startTimer === 'function') {
-        window.startTimer();
-    }
+function confirmQuit() {
+    document.getElementById('quitOverlay').classList.remove('open');
+    goHome();
+}
+
+function cancelQuit() {
+    document.getElementById('quitOverlay').classList.remove('open');
 }
 
     // Decode HTML entities (convert &quot; to " etc.)
@@ -941,15 +885,16 @@ function resumeGame() {
                 nextBtn.click();
             }
             
-            // Handle Escape key to show goodbye message
+            // Handle Escape key to show quit confirmation
             if (event.key === 'Escape') {
-                showGoodbye();
+                showQuitConfirmation();
             }
         }
     }
 
     // Event listeners
     playAgainBtn.addEventListener('click', playAgain);
+    if (nextBtn) nextBtn.addEventListener('click', nextQuestion);
     
     // Add share score event listener
     const shareScoreBtn = document.getElementById('shareScoreBtn');
@@ -957,21 +902,19 @@ function resumeGame() {
         shareScoreBtn.addEventListener('click', shareScore);
     }
 
-    // Add pause/resume event listeners
-    const pauseBtn = document.getElementById('pauseBtn');
-    const resumeBtn = document.getElementById('resumeBtn');
+    // Add quit button event listeners
+    const quitBtn = document.getElementById('quitBtn');
+    const confirmQuitBtn = document.getElementById('confirmQuitBtn');
+    const cancelQuitBtn = document.getElementById('cancelQuitBtn');
     
-    if (pauseBtn) {
-        pauseBtn.addEventListener('click', pauseGame);
+    if (quitBtn) {
+        quitBtn.addEventListener('click', showQuitConfirmation);
     }
-    if (resumeBtn) {
-        resumeBtn.addEventListener('click', resumeGame);
+    if (confirmQuitBtn) {
+        confirmQuitBtn.addEventListener('click', confirmQuit);
     }
-
-    // Add event listener for goodbye button
-    const goodbyeBtn = document.getElementById('goodbyeBtn');
-    if (goodbyeBtn) {
-        goodbyeBtn.addEventListener('click', showGoodbye);
+    if (cancelQuitBtn) {
+        cancelQuitBtn.addEventListener('click', cancelQuit);
     }
 
     // Settings event listeners
@@ -1038,9 +981,6 @@ function resumeGame() {
 
     // Expose necessary functions and variables to global scope
     window.initGame = initGame;
-    window.startTimer = startTimer;
-    window.stopTimer = stopTimer;
-    window.isPaused = isPaused;
     window.shareToWhatsApp = shareToWhatsApp;
     window.shareToX = shareToX;
     window.shareToReddit = shareToReddit;

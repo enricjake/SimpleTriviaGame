@@ -77,12 +77,6 @@
                 <p>Loading questions...</p>
             </div>
             <div class="game" id="game" role="region" aria-label="Quiz Area">
-                <div class="pause-overlay" id="pauseOverlay">
-                    <div class="pause-content">
-                        <h2>Game Paused</h2>
-                        <button id="resumeBtn">Resume Game</button>
-                    </div>
-                </div>
                 <div class="progress-container">
                     <div class="progress-bar" id="progressBar"></div>
                 </div>
@@ -94,15 +88,15 @@
                     <h2 id="question" role="heading" aria-level="2">Loading question...</h2>
                     <div class="options" id="options" role="group" aria-label="Answer options"></div>
                 </div>
+                  <p id="selectionMessage" class="selection-message" style="display: none;">Please select an answer</p>
                   <div class="controls">
-                      <button id="pauseBtn" aria-label="Pause Game">⏸️ Pause</button>
+                      <button id="quitBtn" class="quit-btn" aria-label="Quit Game">Quit</button>
+                      <button id="nextBtn" disabled aria-label="Next Question">Next Question</button>
                   <div class="score-container">
                      <p>Score: <span id="score">0</span></p>
                      <p>Question: <span id="questionNumber">0</span>/10</p>
-                     <p>Time: <span id="timer">10</span>s</p>
-                     <p>High Score: <span id="highScore">0</span></p>
                  </div>
-                 </div>
+                  </div>
             </div>
             <div class="game-over" id="gameOver">
                 <h2>Game Over!</h2>
@@ -112,7 +106,6 @@
                     <button id="homeBtnRegular">🏠 Home</button>
                     <button id="playAgainBtn">Play Again</button>
                     <button id="shareScoreBtn">Share Score</button>
-                    <button id="goodbyeBtn">Quit</button>
                 </div>
             </div>
             <div class="goodbye-message" id="goodbyeMessage" style="display: none;">
@@ -153,6 +146,20 @@
             </div>
         </div>
     </div>
+    <!-- Quit Confirmation Dialog -->
+    <div class="quit-overlay" id="quitOverlay">
+        <div class="quit-dialog">
+            <h3>Quit Game?</h3>
+            <p>Are you sure you want to quit? Your progress will be lost.</p>
+            <div class="quit-dialog-buttons">
+                <button id="confirmQuitBtn" class="quit-confirm-btn">Confirm</button>
+                <button id="cancelQuitBtn" class="quit-cancel-btn">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <!-- Audio elements for sound effects -->
+    <audio id="correctSound" src="https://assets.mixkit.co/sfx/preview/mixkit-achievement-bell-climax-269.mp3"></audio>
+    <audio id="incorrectSound" src="https://assets.mixkit.co/sfx/preview/mixkit-wrong-answer-fail-trombones-268.mp3"></audio>
     <script src="daily-trivia.js"></script>
     <script src="script.js"></script>
 </body>
