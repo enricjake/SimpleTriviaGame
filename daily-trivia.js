@@ -368,7 +368,7 @@ function displayDailyQuestion(question) {
     dailyQuestionEl.textContent = decodedQuestion;
     
     // Display category and difficulty
-    dailyCategoryEl.textContent = question.category;
+    dailyCategoryEl.textContent = decodeHTMLEntities(question.category);
     dailyDifficultyEl.textContent = question.difficulty;
     dailyDifficultyEl.className = 'difficulty-badge ' + question.difficulty;
     

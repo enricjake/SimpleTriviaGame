@@ -193,6 +193,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const dailyBtn = document.getElementById('dailyTriviaModeBtn');
         
         modeSelection.style.display = 'block';
+        modeSelection.classList.add('fade-in');
         if (gameContainer) gameContainer.style.display = 'none';
         if (dailyTrivia) dailyTrivia.style.display = 'none';
         
@@ -232,6 +233,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         modeSelection.style.display = 'none';
         gameContainer.style.display = 'block';
+        gameContainer.classList.add('fade-in');
         
         initGame();
     }
@@ -243,6 +245,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         modeSelection.style.display = 'none';
         dailyTrivia.style.display = 'block';
+        dailyTrivia.classList.add('fade-in');
         
         if (typeof window.showDailyTrivia === 'function') {
             window.showDailyTrivia();
@@ -364,7 +367,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Display category and difficulty
             const categoryElement = document.getElementById('questionCategory');
             const difficultyElement = document.getElementById('questionDifficulty');
-            categoryElement.textContent = question.category;
+            categoryElement.textContent = decodeHTMLEntities(question.category);
             difficultyElement.textContent = question.difficulty;
             difficultyElement.className = 'difficulty-badge ' + question.difficulty;
 
