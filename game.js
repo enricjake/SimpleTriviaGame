@@ -11,9 +11,6 @@ const TriviaGame = (function() {
     let answerSelected = false;
     let userAnswers = [];
     let focusedOptionIndex = -1;
-    let timerInterval = null;
-    let timeLeft = 30;
-    const QUESTION_TIME = 30;
     let streak = 0;
     let maxStreak = 0;
     let fiftyFiftyUsed = false;
@@ -49,19 +46,6 @@ const TriviaGame = (function() {
         elements.answerSummary = document.getElementById('answerSummary');
         elements.goodbyeMessage = document.getElementById('goodbyeMessage');
         elements.quitOverlay = document.getElementById('quitOverlay');
-        
-        // Create timer element if it doesn't exist
-        elements.timer = document.getElementById('questionTimer');
-        if (!elements.timer) {
-            const timerEl = document.createElement('div');
-            timerEl.id = 'questionTimer';
-            timerEl.className = 'question-timer';
-            const questionContainer = document.getElementById('questionContainer');
-            if (questionContainer && questionContainer.parentNode) {
-                questionContainer.parentNode.insertBefore(timerEl, questionContainer);
-            }
-            elements.timer = timerEl;
-        }
         
         // Create streak element if it doesn't exist
         elements.streak = document.getElementById('streakDisplay');
@@ -127,7 +111,6 @@ const TriviaGame = (function() {
         maxStreak = 0;
         fiftyFiftyCount = 0;
         fiftyFiftyUsed = false;
-        stopTimer();
         
         updateScoreDisplay();
         resetFiftyFifty();
@@ -275,92 +258,34 @@ const TriviaGame = (function() {
                 elements.options.appendChild(button);
             });
         }
-        
-        // Start timer
-        startTimer();
     }
 
     /**
      * Start question timer
      */
     function startTimer() {
-        stopTimer();
-        timeLeft = QUESTION_TIME;
-        updateTimerDisplay();
-        
-        timerInterval = setInterval(() => {
-            timeLeft--;
-            updateTimerDisplay();
-            
-            if (timeLeft <= 5 && timeLeft > 0) {
-                TriviaAudio.playTimerWarning();
-            }
-            
-            if (timeLeft <= 0) {
-                stopTimer();
-                handleTimeUp();
-            }
-        }, 1000);
+        // Timer removed - no longer used
     }
 
     /**
      * Stop question timer
      */
     function stopTimer() {
-        if (timerInterval) {
-            clearInterval(timerInterval);
-            timerInterval = null;
-        }
+        // Timer removed - no longer used
     }
 
     /**
      * Update timer display
      */
     function updateTimerDisplay() {
-        if (elements.timer) {
-            elements.timer.textContent = `Time: ${timeLeft}s`;
-            elements.timer.className = 'question-timer' + 
-                (timeLeft <= 5 ? ' timer-critical' : timeLeft <= 10 ? ' timer-warning' : '');
-        }
+        // Timer removed - no longer used
     }
 
     /**
      * Handle time up (no answer selected)
      */
     function handleTimeUp() {
-        if (answerSelected) return;
-        
-        const question = questions[currentQuestionIndex];
-        const correctAnswer = question.correct_answer;
-        
-        // Store as incorrect/no-answer
-        userAnswers.push({
-            question: question.question,
-            userAnswer: '(Time out)',
-            correctAnswer: correctAnswer,
-            isCorrect: false,
-            timeExpired: true
-        });
-        
-        // Reset streak
-        streak = 0;
-        updateScoreDisplay();
-        
-        // Highlight correct answer
-        const decodedCorrect = TriviaUtils.decodeHTMLEntities(correctAnswer);
-        const allButtons = elements.options.querySelectorAll('.option');
-        allButtons.forEach(btn => {
-            btn.disabled = true;
-            btn.classList.add('disabled');
-            if (btn.textContent === decodedCorrect) {
-                btn.classList.add('highlighted-correct');
-            }
-        });
-        
-        TriviaAudio.playIncorrect();
-        
-        answerSelected = true;
-        if (elements.nextBtn) elements.nextBtn.disabled = false;
+        // Timer removed - no longer used
     }
 
     /**
@@ -369,7 +294,6 @@ const TriviaGame = (function() {
     const debouncedSelectAnswer = TriviaUtils.debounce(function(button, selectedOption, correctAnswer) {
         if (answerSelected) return;
         
-        stopTimer();
         answerSelected = true;
         hideSelectionMessage();
         
@@ -385,13 +309,8 @@ const TriviaGame = (function() {
         });
         
         if (isCorrect) {
-            // Calculate points based on difficulty and time bonus
-            const difficulty = questions[currentQuestionIndex].difficulty;
-            const difficultyMultiplier = difficulty === 'hard' ? 3 : difficulty === 'medium' ? 2 : 1;
-            const timeBonus = Math.ceil(timeLeft / 5);
-            const points = difficultyMultiplier + (timeBonus > 0 ? 1 : 0);
-            
-            score += points;
+            // Simple scoring: 1 point per correct answer
+            score += 1;
             streak++;
             if (streak > maxStreak) maxStreak = streak;
             
@@ -567,16 +486,15 @@ const TriviaGame = (function() {
      * End game
      */
     function endGame() {
-        stopTimer();
-        
         if (elements.game) elements.game.style.display = 'none';
         if (elements.gameOver) elements.gameOver.style.display = 'block';
         
-        // Count correct answers for display (score contains total points with multipliers)
+        // Count correct answers for display and audio
         const correctAnswers = userAnswers.filter(a => a.isCorrect).length;
         if (elements.finalScore) elements.finalScore.textContent = correctAnswers;
         
-        TriviaAudio.playGameOver(score, questions.length);
+        // Pass correct answer count (not total points) to audio
+        TriviaAudio.playGameOver(correctAnswers, questions.length);
         
         displayAnswerSummary();
         saveHighScore();
@@ -780,12 +698,6 @@ const TriviaGame = (function() {
             return;
         }
         
-        // H key for 50/50 hint
-        if (event.key.toLowerCase() === 'h' && !answerSelected && !fiftyFiftyUsed) {
-            useFiftyFifty();
-            return;
-        }
-        
         // Enter to proceed to next question
         if (event.key === 'Enter' && elements.nextBtn && !elements.nextBtn.disabled) {
             nextQuestion();
@@ -822,7 +734,6 @@ const TriviaGame = (function() {
         if (elements.quitOverlay) {
             elements.quitOverlay.classList.remove('open');
         }
-        stopTimer();
         goHome();
     }
 
@@ -839,8 +750,6 @@ const TriviaGame = (function() {
      * Go home to mode selection
      */
     function goHome() {
-        stopTimer();
-        
         const modeSelection = document.getElementById('modeSelection');
         if (elements.gameContainer) elements.gameContainer.style.display = 'none';
         if (elements.gameOver) elements.gameOver.style.display = 'none';

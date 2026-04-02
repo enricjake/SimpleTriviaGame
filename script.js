@@ -31,6 +31,39 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     /**
+     * Get time until next midnight Pacific Time
+     */
+    function getTimeUntilNextMidnightPacific() {
+        const now = new Date();
+        const pacificTime = new Date(now.toLocaleString('en-US', { timeZone: 'America/Los_Angeles' }));
+        const nextMidnight = new Date(pacificTime);
+        nextMidnight.setHours(24, 0, 0, 0);
+        return nextMidnight.getTime() - pacificTime.getTime();
+    }
+
+    /**
+     * Format time in HH:MM:SS
+     */
+    function formatTime(ms) {
+        const seconds = Math.floor(ms / 1000);
+        const hours = Math.floor(seconds / 3600);
+        const minutes = Math.floor((seconds % 3600) / 60);
+        const secs = seconds % 60;
+        return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+    }
+
+    /**
+     * Update daily countdown on homepage
+     */
+    function updateHomeDailyCountdown() {
+        const countdownEl = document.getElementById('homeDailyCountdown');
+        if (!countdownEl) return;
+        
+        const timeLeft = getTimeUntilNextMidnightPacific();
+        countdownEl.textContent = `Next question in: ${formatTime(timeLeft)}`;
+    }
+
+    /**
      * Show mode selection screen
      */
     function showModeSelection() {
@@ -58,6 +91,9 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Update high scores display
         displayHighScores();
+        
+        // Update daily countdown
+        updateHomeDailyCountdown();
     }
 
     /**
@@ -275,6 +311,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize
     loadTheme();
     showModeSelection();
+    
+    // Update daily countdown every second
+    setInterval(updateHomeDailyCountdown, 1000);
 
     // Expose functions for daily trivia module
     window.showModeSelection = showModeSelection;
