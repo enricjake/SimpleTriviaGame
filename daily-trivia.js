@@ -607,11 +607,6 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     });
     
-    // Auto-load daily trivia if enabled
-    if (localStorage.getItem('dailyTriviaAutoLoad') === 'true') {
-        showDailyTrivia();
-    }
-    
     // Note: Daily trivia button event listener is handled in script.js
 
     // Add keyboard navigation for daily trivia

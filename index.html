@@ -8,7 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
 </head>
 <body>
     <div class="container">
@@ -73,6 +74,13 @@
                     <p>Answer today's special question</p>
                 </button>
             </div>
+            <!-- High Scores Display -->
+            <div class="high-scores-section" id="highScoresSection">
+                <h3>🏆 High Scores</h3>
+                <div class="high-scores-list" id="highScoresList">
+                    <p class="no-scores">No scores yet. Play to set a record!</p>
+                </div>
+            </div>
         </div>
         <div class="game-container" id="gameContainer" role="application" aria-label="Trivia Game" style="display: none;">
             <div class="loading" id="loading" role="status" aria-live="polite">
@@ -91,19 +99,20 @@
                     <h2 id="question" role="heading" aria-level="2">Loading question...</h2>
                     <div class="options" id="options" role="group" aria-label="Answer options"></div>
                 </div>
-                  <p id="selectionMessage" class="selection-message" style="display: none;">Please select an answer</p>
-                  <div class="controls">
-                      <button id="quitBtn" class="quit-btn" aria-label="Quit Game">Quit</button>
-                      <button id="nextBtn" disabled aria-label="Next Question">Next Question</button>
-                  <div class="score-container">
-                     <p>Score: <span id="score">0</span></p>
-                     <p>Question: <span id="questionNumber">0</span>/<span id="totalQuestions">10</span></p>
-                 </div>
-                  </div>
+                <p id="selectionMessage" class="selection-message" style="display: none;">Please select an answer</p>
+                <div class="controls">
+                    <button id="quitBtn" class="quit-btn" aria-label="Quit Game">Quit</button>
+                    <button id="nextBtn" disabled aria-label="Next Question">Next Question</button>
+                </div>
+                <div class="score-container">
+                    <p>Score: <span id="score">0</span></p>
+                    <p>Question: <span id="questionNumber">0</span>/<span id="totalQuestions">10</span></p>
+                </div>
             </div>
             <div class="game-over" id="gameOver">
                 <h2>Game Over!</h2>
                 <p>Your final score: <span id="finalScore">0</span>/<span id="totalQuestionsFinal">10</span></p>
+                <div class="final-stats" id="finalStats"></div>
                 <div class="answer-summary" id="answerSummary"></div>
                 <div class="game-over-buttons">
                     <button id="homeBtnRegular">🏠 Home</button>
@@ -117,7 +126,6 @@
                 <p>Goodbye!</p>
             </div>
         </div>
-        
         <!-- Daily Trivia Section -->
         <div class="daily-trivia" id="dailyTrivia" style="display: none;">
             <div class="daily-header">
@@ -134,11 +142,10 @@
                 </div>
                 <h3 id="dailyQuestion" class="daily-question"></h3>
                 <div class="options" id="dailyOptions" role="group" aria-label="Daily trivia answer options"></div>
-    <div class="daily-result" id="dailyResult" style="display: none;">
+                <div class="daily-result" id="dailyResult" style="display: none;">
                     <p id="dailyResultText"></p>
                 </div>
             </div>
-            
             <div class="daily-summary-screen" id="dailySummaryScreen" style="display: none;">
                 <div class="summary-content">
                     <h2>Thank you for playing!</h2>
@@ -160,9 +167,15 @@
             </div>
         </div>
     </div>
-    <!-- Audio elements for sound effects -->
-    <audio id="correctSound" src="https://assets.mixkit.co/sfx/preview/mixkit-achievement-bell-climax-269.mp3"></audio>
-    <audio id="incorrectSound" src="https://assets.mixkit.co/sfx/preview/mixkit-wrong-answer-fail-trombones-268.mp3"></audio>
+    <!-- Audio elements for sound effects (fallback) -->
+    <audio id="correctSound" src="https://assets.mixkit.co/sfx/preview/mixkit-achievement-bell-climax-269.mp3" preload="none"></audio>
+    <audio id="incorrectSound" src="https://assets.mixkit.co/sfx/preview/mixkit-wrong-answer-fail-trombones-268.mp3" preload="none"></audio>
+    <!-- Load modules in order: Utils -> Audio -> Settings -> Share -> Game -> Daily Trivia -> Main -->
+    <script src="utils.js"></script>
+    <script src="audio.js"></script>
+    <script src="settings.js"></script>
+    <script src="share.js"></script>
+    <script src="game.js"></script>
     <script src="daily-trivia.js"></script>
     <script src="script.js"></script>
 </body>
