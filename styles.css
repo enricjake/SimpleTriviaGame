@@ -77,6 +77,12 @@ body.dark-mode .option:hover {
     background-color: #4d4d4d;
 }
 
+body.dark-mode .option.focused {
+    background-color: #1565c0;
+    border-color: #42a5f5;
+    outline-color: #42a5f5;
+}
+
 body.dark-mode .option.correct {
     background-color: #1b5e20;
     color: white;
@@ -173,17 +179,19 @@ body.dark-mode .theme-btn:hover {
     opacity: 0;
     background-color: white;
     border-radius: 10px;
-    margin-bottom: 0;
+    margin: 0 auto;
     text-align: left;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 90%;
+    max-width: 600px;
 }
 
 .settings-panel.open {
     max-height: 500px;
     opacity: 1;
     padding: 20px;
-    margin-bottom: 20px;
+    margin: 0 auto 20px;
 }
 
 .settings-panel h3 {
@@ -391,6 +399,15 @@ body {
 .option:active {
     transform: translateY(0);
     transform: scale(0.98);
+}
+
+.option.focused {
+    outline: 3px solid #2196f3;
+    outline-offset: 2px;
+    background-color: #e3f2fd;
+    border-color: #2196f3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .option.selected {

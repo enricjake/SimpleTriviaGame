@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let questions = [];
     let answerSelected = false;
     let userAnswers = [];
+    let focusedOptionIndex = -1;
 
     // API Config
     const API_URL = 'https://opentdb.com/api.php';
@@ -348,6 +349,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Reset answer state
             answerSelected = false;
+            focusedOptionIndex = -1;
             hideSelectionMessage();
 
             // Disable next button until an answer is selected
@@ -871,27 +873,55 @@ function cancelQuit() {
 
     // Keyboard navigation for accessibility
     function handleKeyboardNavigation(event) {
-        // Only handle keyboard events when a question is active and answer can be selected
-        if (gameElement.style.display === 'block' && !answerSelected && optionsElement.children.length > 0) {
-            const options = Array.from(optionsElement.querySelectorAll('.option'));
-            
-            // Handle number keys 1-4 to select options
-            if (event.key >= '1' && event.key <= '4') {
-                const index = parseInt(event.key) - 1;
-                if (options[index]) {
-                    options[index].click();
-                }
+        if (gameElement.style.display !== 'block' || optionsElement.children.length === 0) return;
+
+        const options = Array.from(optionsElement.querySelectorAll('.option'));
+
+        // Handle up/down arrow keys to navigate options
+        if (event.key === 'ArrowUp' || event.key === 'ArrowDown') {
+            event.preventDefault();
+            if (options.length === 0) return;
+
+            // Remove previous focus
+            options.forEach(btn => btn.classList.remove('focused'));
+
+            if (event.key === 'ArrowUp') {
+                focusedOptionIndex = focusedOptionIndex <= 0 ? options.length - 1 : focusedOptionIndex - 1;
+            } else {
+                focusedOptionIndex = focusedOptionIndex >= options.length - 1 ? 0 : focusedOptionIndex + 1;
             }
-            
-            // Handle Enter key to proceed to next question if button is enabled
-            if (event.key === 'Enter' && !nextBtn.disabled) {
-                nextBtn.click();
+
+            options[focusedOptionIndex].classList.add('focused');
+            options[focusedOptionIndex].scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+            return;
+        }
+
+        // Handle Enter on a focused option (before answer is selected)
+        if (event.key === 'Enter' && focusedOptionIndex >= 0 && !answerSelected) {
+            options[focusedOptionIndex].click();
+            focusedOptionIndex = -1;
+            return;
+        }
+
+        // Handle number keys 1-4 to select options
+        if (!answerSelected && event.key >= '1' && event.key <= '4') {
+            const index = parseInt(event.key) - 1;
+            if (options[index]) {
+                options[index].click();
+                focusedOptionIndex = -1;
             }
-            
-            // Handle Escape key to show quit confirmation
-            if (event.key === 'Escape') {
-                showQuitConfirmation();
-            }
+            return;
+        }
+
+        // Handle Enter key to proceed to next question (works after answering)
+        if (event.key === 'Enter' && !nextBtn.disabled) {
+            nextBtn.click();
+            return;
+        }
+
+        // Handle Escape key to show quit confirmation
+        if (event.key === 'Escape') {
+            showQuitConfirmation();
         }
     }
 

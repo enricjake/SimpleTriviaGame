@@ -6,6 +6,7 @@ let dailyQuestion = null;
 let dailyAnswerSelected = false;
 let dailyTimerInterval = null;
 let apiToken = localStorage.getItem('daily_opentdb_token') || null;
+let focusedDailyOptionIndex = -1;
 
 // Fallback questions for when API is unavailable
 const fallbackQuestions = [
@@ -357,6 +358,7 @@ function displayDailyQuestion(question) {
     
     // Reset state
     dailyAnswerSelected = false;
+    focusedDailyOptionIndex = -1;
     
     // Hide result, show question
     dailyResultEl.style.display = 'none';
@@ -549,6 +551,50 @@ window.stopDailyTimer = stopDailyTimer;
 window.updateDailyCountdownDisplay = updateDailyCountdownDisplay;
 
 /**
+ * Handle keyboard navigation for daily trivia
+ */
+function handleDailyKeyboardNavigation(event) {
+    const dailyTrivia = document.getElementById('dailyTrivia');
+    if (!dailyTrivia || dailyTrivia.style.display !== 'block') return;
+
+    const dailyOptionsEl = document.getElementById('dailyOptions');
+    if (!dailyOptionsEl || dailyOptionsEl.children.length === 0) return;
+
+    const options = Array.from(dailyOptionsEl.querySelectorAll('.option'));
+
+    if (event.key === 'ArrowUp' || event.key === 'ArrowDown') {
+        event.preventDefault();
+        if (options.length === 0) return;
+
+        options.forEach(btn => btn.classList.remove('focused'));
+
+        if (event.key === 'ArrowUp') {
+            focusedDailyOptionIndex = focusedDailyOptionIndex <= 0 ? options.length - 1 : focusedDailyOptionIndex - 1;
+        } else {
+            focusedDailyOptionIndex = focusedDailyOptionIndex >= options.length - 1 ? 0 : focusedDailyOptionIndex + 1;
+        }
+
+        options[focusedDailyOptionIndex].classList.add('focused');
+        options[focusedDailyOptionIndex].scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+        return;
+    }
+
+    if (event.key === 'Enter' && focusedDailyOptionIndex >= 0 && !dailyAnswerSelected) {
+        options[focusedDailyOptionIndex].click();
+        focusedDailyOptionIndex = -1;
+        return;
+    }
+
+    if (!dailyAnswerSelected && event.key >= '1' && event.key <= '4') {
+        const index = parseInt(event.key) - 1;
+        if (options[index]) {
+            options[index].click();
+            focusedDailyOptionIndex = -1;
+        }
+    }
+}
+
+/**
  * Initialize daily trivia on page load
  */
 window.addEventListener('DOMContentLoaded', () => {
@@ -567,4 +613,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
     
     // Note: Daily trivia button event listener is handled in script.js
+
+    // Add keyboard navigation for daily trivia
+    document.addEventListener('keydown', handleDailyKeyboardNavigation);
 });
