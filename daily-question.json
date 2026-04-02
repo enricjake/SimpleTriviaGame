@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "Entertainment: Film",
-  "question": "Darth Vader&#039;s famous reveal to Luke is iconic. But which of these is the right one?",
-  "correct_answer": "&quot;No. I am your father.&quot;",
+  "difficulty": "hard",
+  "category": "Entertainment: Japanese Anime &amp; Manga",
+  "question": "Which one of these characters is from &quot;Legendz : Tale of the Dragon Kings&quot;?",
+  "correct_answer": "Shiron",
   "incorrect_answers": [
-    "&quot;Luke, I am your father.&quot;",
-    "&quot;You&#039;re wrong. I am your father.&quot;",
-    "&quot;The truth is that I am your father.&quot;"
+    "Jack",
+    "Axia",
+    "Drum"
   ],
-  "date": "2026-04-01",
-  "generated_at": "2026-04-01T02:16:54.721710-07:00"
+  "date": "2026-04-02",
+  "generated_at": "2026-04-02T02:08:22.871173-07:00"
 }
