@@ -17,7 +17,7 @@
             <button id="themeToggle" class="theme-btn" aria-label="Toggle Dark/Light Mode">🌙</button>
             <button id="settingsBtn" class="settings-btn">⚙️ Settings</button>
         </div>
-        <div class="settings-panel" id="settingsPanel">
+        <div class="settings-panel" id="settingsPanel" tabindex="-1">
             <h3>Game Settings</h3>
             <div class="setting-group">
                 <label for="questionCount">Number of Questions:</label>
@@ -97,13 +97,13 @@
                       <button id="nextBtn" disabled aria-label="Next Question">Next Question</button>
                   <div class="score-container">
                      <p>Score: <span id="score">0</span></p>
-                     <p>Question: <span id="questionNumber">0</span>/10</p>
+                     <p>Question: <span id="questionNumber">0</span>/<span id="totalQuestions">10</span></p>
                  </div>
                   </div>
             </div>
             <div class="game-over" id="gameOver">
                 <h2>Game Over!</h2>
-                <p>Your final score: <span id="finalScore">0</span>/10</p>
+                <p>Your final score: <span id="finalScore">0</span>/<span id="totalQuestionsFinal">10</span></p>
                 <div class="answer-summary" id="answerSummary"></div>
                 <div class="game-over-buttons">
                     <button id="homeBtnRegular">🏠 Home</button>

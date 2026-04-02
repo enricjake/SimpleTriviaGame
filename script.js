@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const scoreElement = document.getElementById('score');
     const questionNumberElement = document.getElementById('questionNumber');
     const finalScoreElement = document.getElementById('finalScore');
+    const totalQuestionsElement = document.getElementById('totalQuestions');
+    const totalQuestionsFinalElement = document.getElementById('totalQuestionsFinal');
     const playAgainBtn = document.getElementById('playAgainBtn');
     const goodbyeMessage = document.getElementById('goodbyeMessage');
 
@@ -73,9 +75,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     /**
      * Play game over sound based on performance (score percentage)
-     * < 50%: Low descending tones (disappointing)
-     * 50-79%: Medium neutral tones
-     * >= 80%: High ascending celebration tones
+     * < 50%: Losing tone (descending minor thirds, deflating)
+     * >= 50%: Winning tone (ascending major arpeggio, celebratory)
      */
     function playGameOverSound(score, totalQuestions) {
         try {
@@ -83,38 +84,40 @@ document.addEventListener('DOMContentLoaded', function() {
             if (audioContext.state === 'suspended') {
                 audioContext.resume();
             }
-            
+
             const percentage = (score / totalQuestions) * 100;
-            const oscillator = audioContext.createOscillator();
-            const gainNode = audioContext.createGain();
-            
-            oscillator.connect(gainNode);
-            gainNode.connect(audioContext.destination);
-            
-            gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
-            
+
             if (percentage < 50) {
-                // Low score: descending sad tones (C4 to A3)
-                oscillator.frequency.setValueAtTime(261.63, audioContext.currentTime); // C4
-                oscillator.frequency.setValueAtTime(220.00, audioContext.currentTime + 0.2); // A3
-                gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
-                oscillator.start(audioContext.currentTime);
-                oscillator.stop(audioContext.currentTime + 0.5);
-            } else if (percentage < 80) {
-                // Medium score: neutral repeating tone (E4)
-                oscillator.frequency.setValueAtTime(329.63, audioContext.currentTime); // E4
-                gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
-                gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.4);
-                oscillator.start(audioContext.currentTime);
-                oscillator.stop(audioContext.currentTime + 0.4);
+                // Losing tone: three descending notes with minor feel (E4 → C4 → A3)
+                const osc = audioContext.createOscillator();
+                const gain = audioContext.createGain();
+                osc.type = 'triangle';
+                osc.connect(gain);
+                gain.connect(audioContext.destination);
+
+                gain.gain.setValueAtTime(0.35, audioContext.currentTime);
+                osc.frequency.setValueAtTime(329.63, audioContext.currentTime);      // E4
+                osc.frequency.setValueAtTime(261.63, audioContext.currentTime + 0.2); // C4
+                osc.frequency.setValueAtTime(220.00, audioContext.currentTime + 0.4); // A3
+                gain.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.7);
+                osc.start(audioContext.currentTime);
+                osc.stop(audioContext.currentTime + 0.7);
             } else {
-                // High score: celebration - ascending arpeggio (C5-E5-G5)
-                oscillator.frequency.setValueAtTime(523.25, audioContext.currentTime); // C5
-                oscillator.frequency.setValueAtTime(659.25, audioContext.currentTime + 0.1); // E5
-                oscillator.frequency.setValueAtTime(783.99, audioContext.currentTime + 0.2); // G5
-                gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
-                oscillator.start(audioContext.currentTime);
-                oscillator.stop(audioContext.currentTime + 0.5);
+                // Winning tone: bright ascending arpeggio (C5 → E5 → G5 → C6)
+                const osc = audioContext.createOscillator();
+                const gain = audioContext.createGain();
+                osc.type = 'triangle';
+                osc.connect(gain);
+                gain.connect(audioContext.destination);
+
+                gain.gain.setValueAtTime(0.35, audioContext.currentTime);
+                osc.frequency.setValueAtTime(523.25, audioContext.currentTime);       // C5
+                osc.frequency.setValueAtTime(659.25, audioContext.currentTime + 0.12); // E5
+                osc.frequency.setValueAtTime(783.99, audioContext.currentTime + 0.24); // G5
+                osc.frequency.setValueAtTime(1046.50, audioContext.currentTime + 0.36); // C6
+                gain.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.65);
+                osc.start(audioContext.currentTime);
+                osc.stop(audioContext.currentTime + 0.65);
             }
         } catch (e) {
             console.log("Audio playback failed:", e);
@@ -165,6 +168,10 @@ document.addEventListener('DOMContentLoaded', function() {
         // Save to localStorage
         localStorage.setItem('triviaSettings', JSON.stringify(settings));
         
+        // Update question total displays
+        if (totalQuestionsElement) totalQuestionsElement.textContent = settings.amount;
+        if (totalQuestionsFinalElement) totalQuestionsFinalElement.textContent = settings.amount;
+        
         // Hide settings panel
         settingsPanel.classList.remove('open');
         
@@ -183,6 +190,10 @@ document.addEventListener('DOMContentLoaded', function() {
             questionCountSelect.value = settings.amount || 10;
             difficultySelect.value = settings.difficulty || 'medium';
             categorySelect.value = settings.category || '';
+            
+            // Update question total displays
+            if (totalQuestionsElement) totalQuestionsElement.textContent = settings.amount || 10;
+            if (totalQuestionsFinalElement) totalQuestionsFinalElement.textContent = settings.amount || 10;
         }
     }
 
@@ -953,6 +964,14 @@ function cancelQuit() {
     // Settings event listeners
     settingsBtn.addEventListener('click', toggleSettings);
     saveSettingsBtn.addEventListener('click', saveSettings);
+
+    // Enter key triggers save settings when settings panel is open
+    settingsPanel.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault();
+            saveSettings();
+        }
+    });
 
     // Theme toggle
     const themeToggle = document.getElementById('themeToggle');
