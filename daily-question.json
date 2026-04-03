@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "hard",
-  "category": "Entertainment: Japanese Anime &amp; Manga",
-  "question": "Which one of these characters is from &quot;Legendz : Tale of the Dragon Kings&quot;?",
-  "correct_answer": "Shiron",
+  "difficulty": "easy",
+  "category": "History",
+  "question": "What country joined the EU in 2013?",
+  "correct_answer": "Croatia",
   "incorrect_answers": [
-    "Jack",
-    "Axia",
-    "Drum"
+    "Bulgaria",
+    "Slovenia",
+    "Turkey"
   ],
-  "date": "2026-04-02",
-  "generated_at": "2026-04-02T02:08:22.871173-07:00"
+  "date": "2026-04-03",
+  "generated_at": "2026-04-03T02:03:52.294560-07:00"
 }
