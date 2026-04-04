@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "easy",
-  "category": "History",
-  "question": "What country joined the EU in 2013?",
-  "correct_answer": "Croatia",
+  "difficulty": "medium",
+  "category": "Politics",
+  "question": "Who was the only president to not be in office in Washington D.C?",
+  "correct_answer": "George Washington",
   "incorrect_answers": [
-    "Bulgaria",
-    "Slovenia",
-    "Turkey"
+    "Abraham Lincoln",
+    "Richard Nixon",
+    "Thomas Jefferson"
   ],
-  "date": "2026-04-03",
-  "generated_at": "2026-04-03T02:03:52.294560-07:00"
+  "date": "2026-04-04",
+  "generated_at": "2026-04-04T01:51:44.983200-07:00"
 }
