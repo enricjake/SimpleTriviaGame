@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "hard",
-  "category": "Geography",
-  "question": "Where is the fast food chain &quot;Panda Express&quot; headquartered?",
-  "correct_answer": "Rosemead, California",
+  "difficulty": "medium",
+  "category": "Mythology",
+  "question": "In Greek mythology, Persephone must return to the underworld because she had eaten what kind of seeds?",
+  "correct_answer": "Pomegranate",
   "incorrect_answers": [
-    "Sacramento, California",
-    "Fresno, California",
-    "San Diego, California"
+    "Sunflower",
+    "Orange",
+    "Fig"
   ],
-  "date": "2026-04-07",
-  "generated_at": "2026-04-07T02:12:47.341720-07:00"
+  "date": "2026-04-08",
+  "generated_at": "2026-04-08T02:12:05.516416-07:00"
 }
