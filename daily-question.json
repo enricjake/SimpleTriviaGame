@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "Mythology",
-  "question": "In Greek mythology, Persephone must return to the underworld because she had eaten what kind of seeds?",
-  "correct_answer": "Pomegranate",
+  "difficulty": "easy",
+  "category": "Science &amp; Nature",
+  "question": "What produces the green colour of most plant leaves?",
+  "correct_answer": "Chlorophyll",
   "incorrect_answers": [
-    "Sunflower",
-    "Orange",
-    "Fig"
+    "Light refraction",
+    "Natural pigments",
+    "UV radiation"
   ],
-  "date": "2026-04-08",
-  "generated_at": "2026-04-08T02:12:05.516416-07:00"
+  "date": "2026-04-09",
+  "generated_at": "2026-04-09T02:17:59.715712-07:00"
 }
