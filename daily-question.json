@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "hard",
-  "category": "Entertainment: Video Games",
-  "question": "What is the name of the alien species introduced in Shadow the Hedgehog (2005)?",
-  "correct_answer": "Black Arms",
+  "difficulty": "medium",
+  "category": "History",
+  "question": "Who was the last Roman emperor in the Year of Four Emperors (69 AD)?",
+  "correct_answer": "Vespasian",
   "incorrect_answers": [
-    "The Swarm",
-    "Black Hive",
-    "The Eclipse"
+    "Vitellius",
+    "Otho",
+    "Galba"
   ],
-  "date": "2026-04-10",
-  "generated_at": "2026-04-10T02:17:58.433675-07:00"
+  "date": "2026-04-11",
+  "generated_at": "2026-04-11T01:54:57.481532-07:00"
 }
