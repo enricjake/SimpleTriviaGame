@@ -1,14 +1,14 @@
 {
   "type": "multiple",
   "difficulty": "medium",
-  "category": "History",
-  "question": "Who was the last Roman emperor in the Year of Four Emperors (69 AD)?",
-  "correct_answer": "Vespasian",
+  "category": "Entertainment: Music",
+  "question": "Which Iron Maiden album did the song &quot;Dream of Mirrors&quot; feature in?",
+  "correct_answer": "Brave New World",
   "incorrect_answers": [
-    "Vitellius",
-    "Otho",
-    "Galba"
+    "Dance of Death",
+    "A Matter of Life and Death",
+    "Somewhere in Time"
   ],
-  "date": "2026-04-11",
-  "generated_at": "2026-04-11T01:54:57.481532-07:00"
+  "date": "2026-04-12",
+  "generated_at": "2026-04-12T01:57:59.941790-07:00"
 }
