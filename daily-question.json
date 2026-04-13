@@ -1,14 +1,14 @@
 {
   "type": "multiple",
   "difficulty": "medium",
-  "category": "Entertainment: Music",
-  "question": "Which Iron Maiden album did the song &quot;Dream of Mirrors&quot; feature in?",
-  "correct_answer": "Brave New World",
+  "category": "History",
+  "question": "Who was the Prime Minister of the United Kingdom for most of World War II?",
+  "correct_answer": "Winston Churchill",
   "incorrect_answers": [
-    "Dance of Death",
-    "A Matter of Life and Death",
-    "Somewhere in Time"
+    "Neville Chamberlain",
+    "Harold Macmillan",
+    "Edward Heath"
   ],
-  "date": "2026-04-12",
-  "generated_at": "2026-04-12T01:57:59.941790-07:00"
+  "date": "2026-04-13",
+  "generated_at": "2026-04-13T03:01:56.559054-07:00"
 }
