@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "History",
-  "question": "Who was the Prime Minister of the United Kingdom for most of World War II?",
-  "correct_answer": "Winston Churchill",
+  "difficulty": "easy",
+  "category": "Entertainment: Film",
+  "question": "In the movie &quot;Blade Runner&quot;, what is the term used for human-like androids ?",
+  "correct_answer": "Replicants",
   "incorrect_answers": [
-    "Neville Chamberlain",
-    "Harold Macmillan",
-    "Edward Heath"
+    "Cylons",
+    "Synthetics",
+    "Skinjobs"
   ],
-  "date": "2026-04-13",
-  "generated_at": "2026-04-13T03:01:56.559054-07:00"
+  "date": "2026-04-14",
+  "generated_at": "2026-04-14T02:26:19.751621-07:00"
 }
