@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "easy",
-  "category": "Entertainment: Film",
-  "question": "In the movie &quot;Blade Runner&quot;, what is the term used for human-like androids ?",
-  "correct_answer": "Replicants",
+  "difficulty": "medium",
+  "category": "Entertainment: Video Games",
+  "question": "Which ones of these Mario Kart games was made for the Gameboy Advance?",
+  "correct_answer": "Mario Kart: Super Circuit",
   "incorrect_answers": [
-    "Cylons",
-    "Synthetics",
-    "Skinjobs"
+    "Mario Kart: Double Dash",
+    "Mario Kart 64",
+    "Super Mario Kart"
   ],
-  "date": "2026-04-14",
-  "generated_at": "2026-04-14T02:26:19.751621-07:00"
+  "date": "2026-04-15",
+  "generated_at": "2026-04-15T02:27:30.345876-07:00"
 }
