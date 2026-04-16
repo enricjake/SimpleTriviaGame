@@ -1,14 +1,14 @@
 {
   "type": "multiple",
   "difficulty": "medium",
-  "category": "Entertainment: Video Games",
-  "question": "Which ones of these Mario Kart games was made for the Gameboy Advance?",
-  "correct_answer": "Mario Kart: Super Circuit",
+  "category": "Art",
+  "question": "Who painted &quot;The Scream&quot;?",
+  "correct_answer": "Edvard Munch",
   "incorrect_answers": [
-    "Mario Kart: Double Dash",
-    "Mario Kart 64",
-    "Super Mario Kart"
+    "Vincent Van Gogh",
+    "Picasso",
+    "Henri Matisse"
   ],
-  "date": "2026-04-15",
-  "generated_at": "2026-04-15T02:27:30.345876-07:00"
+  "date": "2026-04-16",
+  "generated_at": "2026-04-16T02:26:11.913973-07:00"
 }
