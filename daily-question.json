@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "easy",
-  "category": "Entertainment: Music",
-  "question": "A classic 1976 song by Blue Oyster Cult features the advice &ldquo;Don&rsquo;t Fear The&rdquo; what?",
-  "correct_answer": "Reaper",
+  "difficulty": "medium",
+  "category": "Entertainment: Japanese Anime &amp; Manga",
+  "question": "In the anime Assassination Classroom what is the class that Korosensei teaches?",
+  "correct_answer": "Class 3-E",
   "incorrect_answers": [
-    "Dark",
-    "Silence",
-    "Clowns"
+    "Class 3-A",
+    "Class 3-B",
+    "Class 3-D"
   ],
-  "date": "2026-04-17",
-  "generated_at": "2026-04-17T02:25:42.212600-07:00"
+  "date": "2026-04-18",
+  "generated_at": "2026-04-18T01:59:08.392988-07:00"
 }
