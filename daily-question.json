@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "Animals",
-  "question": "What is the fastest animal?",
-  "correct_answer": "Peregrine Falcon",
+  "difficulty": "hard",
+  "category": "General Knowledge",
+  "question": "What does the Latin phrase &quot;Veni, vidi, vici&quot; translate into English?",
+  "correct_answer": "I came, I saw, I conquered",
   "incorrect_answers": [
-    "Golden Eagle",
-    "Cheetah",
-    "Horsefly"
+    "See no evil, hear no evil, speak no evil",
+    "Life, liberty, and happiness",
+    "Past, present, and future"
   ],
-  "date": "2026-04-19",
-  "generated_at": "2026-04-19T02:01:21.969011-07:00"
+  "date": "2026-04-20",
+  "generated_at": "2026-04-20T03:04:51.026032-07:00"
 }
