@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "hard",
-  "category": "General Knowledge",
-  "question": "What does the Latin phrase &quot;Veni, vidi, vici&quot; translate into English?",
-  "correct_answer": "I came, I saw, I conquered",
+  "difficulty": "easy",
+  "category": "Science: Computers",
+  "question": "What kind of memory is used on memory cache?",
+  "correct_answer": "SRAM",
   "incorrect_answers": [
-    "See no evil, hear no evil, speak no evil",
-    "Life, liberty, and happiness",
-    "Past, present, and future"
+    "DRAM",
+    "ROM",
+    "Flash"
   ],
-  "date": "2026-04-20",
-  "generated_at": "2026-04-20T03:04:51.026032-07:00"
+  "date": "2026-04-21",
+  "generated_at": "2026-04-21T02:45:50.047172-07:00"
 }
