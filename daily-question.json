@@ -1,14 +1,14 @@
 {
   "type": "multiple",
   "difficulty": "easy",
-  "category": "Science: Computers",
-  "question": "What kind of memory is used on memory cache?",
-  "correct_answer": "SRAM",
+  "category": "Mythology",
+  "question": "In most traditions, who was the wife of Zeus?",
+  "correct_answer": "Hera",
   "incorrect_answers": [
-    "DRAM",
-    "ROM",
-    "Flash"
+    "Aphrodite",
+    "Athena",
+    "Hestia"
   ],
-  "date": "2026-04-21",
-  "generated_at": "2026-04-21T02:45:50.047172-07:00"
+  "date": "2026-04-22",
+  "generated_at": "2026-04-22T02:27:26.092267-07:00"
 }
