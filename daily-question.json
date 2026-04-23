@@ -1,14 +1,14 @@
 {
   "type": "multiple",
   "difficulty": "easy",
-  "category": "Mythology",
-  "question": "In most traditions, who was the wife of Zeus?",
-  "correct_answer": "Hera",
+  "category": "Entertainment: Board Games",
+  "question": "Carcassonne is based on which French town?",
+  "correct_answer": "Carcassonne",
   "incorrect_answers": [
-    "Aphrodite",
-    "Athena",
-    "Hestia"
+    "Paris",
+    "Marseille",
+    "Clermont-Ferrand"
   ],
-  "date": "2026-04-22",
-  "generated_at": "2026-04-22T02:27:26.092267-07:00"
+  "date": "2026-04-23",
+  "generated_at": "2026-04-23T02:50:33.371336-07:00"
 }
