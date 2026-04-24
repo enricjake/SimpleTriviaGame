@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "easy",
-  "category": "Entertainment: Board Games",
-  "question": "Carcassonne is based on which French town?",
-  "correct_answer": "Carcassonne",
+  "difficulty": "medium",
+  "category": "Entertainment: Japanese Anime &amp; Manga",
+  "question": "In &quot;Toriko&quot;, which of the following Heavenly Kings has an enhanced sense of Hearing?",
+  "correct_answer": "Zebra",
   "incorrect_answers": [
-    "Paris",
-    "Marseille",
-    "Clermont-Ferrand"
+    "Coco",
+    "Sunny",
+    "Toriko"
   ],
-  "date": "2026-04-23",
-  "generated_at": "2026-04-23T02:50:33.371336-07:00"
+  "date": "2026-04-24",
+  "generated_at": "2026-04-24T02:50:20.699539-07:00"
 }
