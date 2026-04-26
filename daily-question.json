@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "Entertainment: Video Games",
-  "question": "Which of these was NOT a launch title for the Nintendo 64?",
-  "correct_answer": "Mario Kart 64",
+  "difficulty": "hard",
+  "category": "Politics",
+  "question": "Which major bank&#039;s collapse was notable as one of the causes of the Financal Crisis of 2008?",
+  "correct_answer": "Lehman Brothers",
   "incorrect_answers": [
-    "Super Mario 64",
-    "Pilotwings 64",
-    "Saikyō Habu Shōgi"
+    "HSBC",
+    "Barclays",
+    "Lloyds"
   ],
-  "date": "2026-04-25",
-  "generated_at": "2026-04-25T02:02:29.243157-07:00"
+  "date": "2026-04-26",
+  "generated_at": "2026-04-26T02:08:51.975489-07:00"
 }
