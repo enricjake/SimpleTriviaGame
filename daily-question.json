@@ -1,14 +1,14 @@
 {
   "type": "multiple",
   "difficulty": "hard",
-  "category": "Politics",
-  "question": "Which major bank&#039;s collapse was notable as one of the causes of the Financal Crisis of 2008?",
-  "correct_answer": "Lehman Brothers",
+  "category": "Entertainment: Music",
+  "question": "Which of these is NOT a song featured on the Lockjaw EP released in 2013 by Flume &amp; Chet Faker?",
+  "correct_answer": "Left Alone",
   "incorrect_answers": [
-    "HSBC",
-    "Barclays",
-    "Lloyds"
+    "What About Us",
+    "This Song Is Not About A Girl",
+    "Drop The Game"
   ],
-  "date": "2026-04-26",
-  "generated_at": "2026-04-26T02:08:51.975489-07:00"
+  "date": "2026-04-27",
+  "generated_at": "2026-04-27T03:23:43.977622-07:00"
 }
