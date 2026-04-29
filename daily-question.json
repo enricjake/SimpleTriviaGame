@@ -1,14 +1,14 @@
 {
   "type": "multiple",
   "difficulty": "medium",
-  "category": "Science: Computers",
-  "question": "Laserjet and inkjet printers are both examples of what type of printer?",
-  "correct_answer": "Non-impact printer",
+  "category": "History",
+  "question": "Who is believed to have been the first European to &#039;discover&#039; the land of New Zealand?",
+  "correct_answer": "Abel Tasman",
   "incorrect_answers": [
-    "Impact printer",
-    "Daisywheel printer",
-    "Dot matrix printer"
+    "Christopher Columbus",
+    "Jeanne Bar&eacute;",
+    "John Cabot "
   ],
-  "date": "2026-04-28",
-  "generated_at": "2026-04-28T03:22:25.558594-07:00"
+  "date": "2026-04-29",
+  "generated_at": "2026-04-29T03:12:01.233017-07:00"
 }
