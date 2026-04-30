@@ -1,14 +1,14 @@
 {
   "type": "multiple",
   "difficulty": "medium",
-  "category": "History",
-  "question": "Who is believed to have been the first European to &#039;discover&#039; the land of New Zealand?",
-  "correct_answer": "Abel Tasman",
+  "category": "Entertainment: Film",
+  "question": "In which movie does Robin Williams&#039; character have to disguise themselves into a woman?",
+  "correct_answer": "Mrs. Doubtfire",
   "incorrect_answers": [
-    "Christopher Columbus",
-    "Jeanne Bar&eacute;",
-    "John Cabot "
+    "Old Dogs",
+    "Jumanji",
+    "Awakenings"
   ],
-  "date": "2026-04-29",
-  "generated_at": "2026-04-29T03:12:01.233017-07:00"
+  "date": "2026-04-30",
+  "generated_at": "2026-04-30T03:12:04.018519-07:00"
 }
