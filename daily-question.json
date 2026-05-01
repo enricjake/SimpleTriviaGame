@@ -1,14 +1,14 @@
 {
   "type": "multiple",
   "difficulty": "medium",
-  "category": "Entertainment: Film",
-  "question": "In which movie does Robin Williams&#039; character have to disguise themselves into a woman?",
-  "correct_answer": "Mrs. Doubtfire",
+  "category": "Entertainment: Music",
+  "question": "Who performed the hit single &#039;Call Me&#039; for the 1980 film &#039;American Gigolo&#039;?",
+  "correct_answer": "Blondie",
   "incorrect_answers": [
-    "Old Dogs",
-    "Jumanji",
-    "Awakenings"
+    "Madonna",
+    "Tina Turner",
+    "Janet Jackson"
   ],
-  "date": "2026-04-30",
-  "generated_at": "2026-04-30T03:12:04.018519-07:00"
+  "date": "2026-05-01",
+  "generated_at": "2026-05-01T02:52:50.286492-07:00"
 }
