@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "Entertainment: Music",
-  "question": "Who performed the hit single &#039;Call Me&#039; for the 1980 film &#039;American Gigolo&#039;?",
-  "correct_answer": "Blondie",
+  "difficulty": "easy",
+  "category": "Entertainment: Film",
+  "question": "&quot;The first rule is: you don&#039;t talk about it&quot; is a reference to which movie?",
+  "correct_answer": "Fight Club",
   "incorrect_answers": [
-    "Madonna",
-    "Tina Turner",
-    "Janet Jackson"
+    "The Island",
+    "Unthinkable",
+    "American Pie"
   ],
-  "date": "2026-05-01",
-  "generated_at": "2026-05-01T02:52:50.286492-07:00"
+  "date": "2026-05-02",
+  "generated_at": "2026-05-02T02:13:58.044970-07:00"
 }
