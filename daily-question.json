@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "easy",
-  "category": "Entertainment: Film",
-  "question": "&quot;The first rule is: you don&#039;t talk about it&quot; is a reference to which movie?",
-  "correct_answer": "Fight Club",
+  "difficulty": "medium",
+  "category": "Entertainment: Books",
+  "question": "By what nickname is Jack Dawkins known in the Charles Dickens novel, &#039;Oliver Twist&#039;?",
+  "correct_answer": "The Artful Dodger",
   "incorrect_answers": [
-    "The Island",
-    "Unthinkable",
-    "American Pie"
+    "Fagin",
+    "Bull&rsquo;s-eye",
+    "Mr. Fang"
   ],
-  "date": "2026-05-02",
-  "generated_at": "2026-05-02T02:13:58.044970-07:00"
+  "date": "2026-05-03",
+  "generated_at": "2026-05-03T02:25:45.652236-07:00"
 }
