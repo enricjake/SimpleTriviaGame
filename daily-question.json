@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "Entertainment: Books",
-  "question": "By what nickname is Jack Dawkins known in the Charles Dickens novel, &#039;Oliver Twist&#039;?",
-  "correct_answer": "The Artful Dodger",
+  "difficulty": "hard",
+  "category": "History",
+  "question": "Who was the first man to travel into outer space?",
+  "correct_answer": "Yuri Gagarin",
   "incorrect_answers": [
-    "Fagin",
-    "Bull&rsquo;s-eye",
-    "Mr. Fang"
+    "Virgil Ivan &quot;Gus&quot; Grissom",
+    "Neil Armstrong",
+    "Buzz Aldrin"
   ],
-  "date": "2026-05-03",
-  "generated_at": "2026-05-03T02:25:45.652236-07:00"
+  "date": "2026-05-04",
+  "generated_at": "2026-05-04T03:19:42.829135-07:00"
 }
