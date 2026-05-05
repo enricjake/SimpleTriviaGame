@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "hard",
-  "category": "History",
-  "question": "Who was the first man to travel into outer space?",
-  "correct_answer": "Yuri Gagarin",
+  "difficulty": "medium",
+  "category": "Entertainment: Music",
+  "question": "What is the last song on the first Panic! At the Disco album?",
+  "correct_answer": "Build God, Then We&#039;ll Talk",
   "incorrect_answers": [
-    "Virgil Ivan &quot;Gus&quot; Grissom",
-    "Neil Armstrong",
-    "Buzz Aldrin"
+    "Nails for Breakfast, Tacks for Snacks",
+    "I Write Sins Not Tragedies",
+    "Lying Is The Most Fun A Girl Can Have Without Taking Her Clothes Off"
   ],
-  "date": "2026-05-04",
-  "generated_at": "2026-05-04T03:19:42.829135-07:00"
+  "date": "2026-05-05",
+  "generated_at": "2026-05-05T03:07:57.138627-07:00"
 }
