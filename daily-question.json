@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "Entertainment: Video Games",
-  "question": "The rights to the &quot;Rayman&quot; series are owned by which company?",
-  "correct_answer": "Ubisoft",
+  "difficulty": "easy",
+  "category": "Entertainment: Film",
+  "question": "Which of the following actors has only been in a Quentin Tarantino directed film once?",
+  "correct_answer": "John Travolta",
   "incorrect_answers": [
-    "Nintendo",
-    "EA",
-    "Sony"
+    "Christoph Waltz",
+    "Harvey Keitel",
+    "Samuel L. Jackson"
   ],
-  "date": "2026-05-06",
-  "generated_at": "2026-05-06T03:24:11.057670-07:00"
+  "date": "2026-05-07",
+  "generated_at": "2026-05-07T03:30:42.831468-07:00"
 }
