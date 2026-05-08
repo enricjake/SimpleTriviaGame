@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "easy",
-  "category": "Entertainment: Film",
-  "question": "Which of the following actors has only been in a Quentin Tarantino directed film once?",
-  "correct_answer": "John Travolta",
+  "difficulty": "hard",
+  "category": "Entertainment: Board Games",
+  "question": "In Magic: The Gathering, what term for blocking was established in the Portal set?",
+  "correct_answer": "Intercepting",
   "incorrect_answers": [
-    "Christoph Waltz",
-    "Harvey Keitel",
-    "Samuel L. Jackson"
+    "Blocking",
+    "Resisting",
+    "Shielding"
   ],
-  "date": "2026-05-07",
-  "generated_at": "2026-05-07T03:30:42.831468-07:00"
+  "date": "2026-05-08",
+  "generated_at": "2026-05-08T02:45:38.054832-07:00"
 }
