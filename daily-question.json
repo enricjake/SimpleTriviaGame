@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "hard",
-  "category": "Entertainment: Board Games",
-  "question": "In Magic: The Gathering, what term for blocking was established in the Portal set?",
-  "correct_answer": "Intercepting",
+  "difficulty": "medium",
+  "category": "Entertainment: Video Games",
+  "question": "In WarioWare: Smooth Moves, which one of these is NOT a Form?",
+  "correct_answer": "The Hotshot",
   "incorrect_answers": [
-    "Blocking",
-    "Resisting",
-    "Shielding"
+    "The Discard",
+    "The Elephant",
+    "The Mohawk"
   ],
-  "date": "2026-05-08",
-  "generated_at": "2026-05-08T02:45:38.054832-07:00"
+  "date": "2026-05-09",
+  "generated_at": "2026-05-09T02:25:15.918918-07:00"
 }
