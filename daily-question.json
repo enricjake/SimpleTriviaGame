@@ -2,13 +2,13 @@
   "type": "multiple",
   "difficulty": "medium",
   "category": "Entertainment: Video Games",
-  "question": "How many Wii consoles were sold worldwide?",
-  "correct_answer": "101,630,000",
+  "question": "Which was the first video game to be produced by development company Rare?",
+  "correct_answer": "Slalom",
   "incorrect_answers": [
-    "67,000,000",
-    "148,000,000",
-    "80,000,000"
+    "R.C. Pro-Am",
+    "Donkey Kong Country",
+    "Battletoads"
   ],
-  "date": "2026-05-10",
-  "generated_at": "2026-05-10T02:43:30.275648-07:00"
+  "date": "2026-05-11",
+  "generated_at": "2026-05-11T04:31:03.909412-07:00"
 }
