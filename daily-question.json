@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "Entertainment: Video Games",
-  "question": "Which was the first video game to be produced by development company Rare?",
-  "correct_answer": "Slalom",
+  "difficulty": "easy",
+  "category": "Animals",
+  "question": "How many legs do butterflies have?",
+  "correct_answer": "6",
   "incorrect_answers": [
-    "R.C. Pro-Am",
-    "Donkey Kong Country",
-    "Battletoads"
+    "2",
+    "4",
+    "0"
   ],
-  "date": "2026-05-11",
-  "generated_at": "2026-05-11T04:31:03.909412-07:00"
+  "date": "2026-05-12",
+  "generated_at": "2026-05-12T03:38:18.125057-07:00"
 }
