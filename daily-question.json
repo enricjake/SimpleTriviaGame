@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "easy",
-  "category": "Animals",
-  "question": "How many legs do butterflies have?",
-  "correct_answer": "6",
+  "difficulty": "medium",
+  "category": "Entertainment: Video Games",
+  "question": "How many metal bars does it take to smith a platebody in the MMO &quot;RuneScape&quot;?",
+  "correct_answer": "5 bars",
   "incorrect_answers": [
-    "2",
-    "4",
-    "0"
+    "3 bars",
+    "2 bars",
+    "10 bars"
   ],
-  "date": "2026-05-12",
-  "generated_at": "2026-05-12T03:38:18.125057-07:00"
+  "date": "2026-05-13",
+  "generated_at": "2026-05-13T03:36:13.753195-07:00"
 }
