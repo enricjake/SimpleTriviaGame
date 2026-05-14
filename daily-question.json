@@ -2,13 +2,13 @@
   "type": "multiple",
   "difficulty": "medium",
   "category": "Entertainment: Video Games",
-  "question": "How many metal bars does it take to smith a platebody in the MMO &quot;RuneScape&quot;?",
-  "correct_answer": "5 bars",
+  "question": "Who published the 1998 video game Half-Life?",
+  "correct_answer": "Sierra On-Line",
   "incorrect_answers": [
-    "3 bars",
-    "2 bars",
-    "10 bars"
+    "Valve",
+    "Blizzard",
+    "EA"
   ],
-  "date": "2026-05-13",
-  "generated_at": "2026-05-13T03:36:13.753195-07:00"
+  "date": "2026-05-14",
+  "generated_at": "2026-05-14T03:26:31.941274-07:00"
 }
