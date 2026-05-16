@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "Entertainment: Board Games",
-  "question": "Which of the following characters is not in the board game Clue?",
-  "correct_answer": "Mister Indigo",
+  "difficulty": "easy",
+  "category": "Entertainment: Television",
+  "question": "When Donkey Kong died in the &quot;Donkey Kong Country&quot; episode &quot;It&#039;s a Wonderful Life&quot;, who was his guardian angel?",
+  "correct_answer": "Eddie the Mean Old Yeti",
   "incorrect_answers": [
-    "Colonel Mustard",
-    "Reverend Green",
-    "Miss Scarlet"
+    "Kiddy Kong",
+    "Diddy Kong",
+    "King K. Rool"
   ],
-  "date": "2026-05-15",
-  "generated_at": "2026-05-15T03:32:42.020987-07:00"
+  "date": "2026-05-16",
+  "generated_at": "2026-05-16T02:46:55.672182-07:00"
 }
