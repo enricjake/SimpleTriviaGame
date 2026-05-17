@@ -1,14 +1,14 @@
 {
   "type": "multiple",
   "difficulty": "easy",
-  "category": "Entertainment: Television",
-  "question": "When Donkey Kong died in the &quot;Donkey Kong Country&quot; episode &quot;It&#039;s a Wonderful Life&quot;, who was his guardian angel?",
-  "correct_answer": "Eddie the Mean Old Yeti",
+  "category": "Entertainment: Music",
+  "question": "Which Beatles album does NOT feature any of the band members on it&#039;s cover?",
+  "correct_answer": "The Beatles (White Album)",
   "incorrect_answers": [
-    "Kiddy Kong",
-    "Diddy Kong",
-    "King K. Rool"
+    "Rubber Soul",
+    "Abbey Road",
+    "Magical Mystery Tour"
   ],
-  "date": "2026-05-16",
-  "generated_at": "2026-05-16T02:46:55.672182-07:00"
+  "date": "2026-05-17",
+  "generated_at": "2026-05-17T02:53:24.138793-07:00"
 }
