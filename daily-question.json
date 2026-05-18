@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "easy",
-  "category": "Entertainment: Music",
-  "question": "Which Beatles album does NOT feature any of the band members on it&#039;s cover?",
-  "correct_answer": "The Beatles (White Album)",
+  "difficulty": "hard",
+  "category": "Science: Computers",
+  "question": "What major programming language does Unreal Engine 4 use?",
+  "correct_answer": "C++",
   "incorrect_answers": [
-    "Rubber Soul",
-    "Abbey Road",
-    "Magical Mystery Tour"
+    "Assembly",
+    "C#",
+    "ECMAScript"
   ],
-  "date": "2026-05-17",
-  "generated_at": "2026-05-17T02:53:24.138793-07:00"
+  "date": "2026-05-18",
+  "generated_at": "2026-05-18T04:49:45.587344-07:00"
 }
