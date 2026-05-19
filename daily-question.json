@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "hard",
-  "category": "Science: Computers",
-  "question": "What major programming language does Unreal Engine 4 use?",
-  "correct_answer": "C++",
+  "difficulty": "medium",
+  "category": "Entertainment: Music",
+  "question": "Which popular jazz standard begins with the line &quot;Someday, when I&#039;m awfully low&quot;?",
+  "correct_answer": "The Way You Look Tonight",
   "incorrect_answers": [
-    "Assembly",
-    "C#",
-    "ECMAScript"
+    "Autumn Leaves",
+    "Dream a Little Dream of Me",
+    "All the Things You Are"
   ],
-  "date": "2026-05-18",
-  "generated_at": "2026-05-18T04:49:45.587344-07:00"
+  "date": "2026-05-19",
+  "generated_at": "2026-05-19T04:27:04.516655-07:00"
 }
