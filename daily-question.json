@@ -1,14 +1,14 @@
 {
   "type": "multiple",
   "difficulty": "medium",
-  "category": "Entertainment: Music",
-  "question": "Which popular jazz standard begins with the line &quot;Someday, when I&#039;m awfully low&quot;?",
-  "correct_answer": "The Way You Look Tonight",
+  "category": "General Knowledge",
+  "question": "If a person&#039;s hair is described as &#039;Titian&#039;, what colour is it?",
+  "correct_answer": "Red",
   "incorrect_answers": [
-    "Autumn Leaves",
-    "Dream a Little Dream of Me",
-    "All the Things You Are"
+    "Blonde",
+    "Brunette",
+    "Black"
   ],
-  "date": "2026-05-19",
-  "generated_at": "2026-05-19T04:27:04.516655-07:00"
+  "date": "2026-05-20",
+  "generated_at": "2026-05-20T04:12:43.310663-07:00"
 }
