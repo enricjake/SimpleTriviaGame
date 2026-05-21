@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "General Knowledge",
-  "question": "If a person&#039;s hair is described as &#039;Titian&#039;, what colour is it?",
-  "correct_answer": "Red",
+  "difficulty": "easy",
+  "category": "Entertainment: Music",
+  "question": "Which Disney character sings the song &quot;A Dream is a Wish Your Heart Makes&quot;?",
+  "correct_answer": "Cinderella",
   "incorrect_answers": [
-    "Blonde",
-    "Brunette",
-    "Black"
+    "Belle",
+    "Snow White",
+    "Pocahontas"
   ],
-  "date": "2026-05-20",
-  "generated_at": "2026-05-20T04:12:43.310663-07:00"
+  "date": "2026-05-21",
+  "generated_at": "2026-05-21T04:32:17.481774-07:00"
 }
