@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "easy",
-  "category": "Entertainment: Music",
-  "question": "Which Disney character sings the song &quot;A Dream is a Wish Your Heart Makes&quot;?",
-  "correct_answer": "Cinderella",
+  "difficulty": "medium",
+  "category": "General Knowledge",
+  "question": "What character was once considered to be the 27th letter of the alphabet?",
+  "correct_answer": "Ampersand",
   "incorrect_answers": [
-    "Belle",
-    "Snow White",
-    "Pocahontas"
+    "Interrobang",
+    "Tilde",
+    "Pilcrow"
   ],
-  "date": "2026-05-21",
-  "generated_at": "2026-05-21T04:32:17.481774-07:00"
+  "date": "2026-05-22",
+  "generated_at": "2026-05-22T03:55:52.797344-07:00"
 }
