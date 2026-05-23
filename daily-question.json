@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "General Knowledge",
-  "question": "What character was once considered to be the 27th letter of the alphabet?",
-  "correct_answer": "Ampersand",
+  "difficulty": "hard",
+  "category": "Geography",
+  "question": "What is the largest freshwater lake by volume?",
+  "correct_answer": "Lake Baikal",
   "incorrect_answers": [
-    "Interrobang",
-    "Tilde",
-    "Pilcrow"
+    "Lake Superior",
+    "Lake Huron",
+    "Lake Michigan"
   ],
-  "date": "2026-05-22",
-  "generated_at": "2026-05-22T03:55:52.797344-07:00"
+  "date": "2026-05-23",
+  "generated_at": "2026-05-23T02:59:38.670895-07:00"
 }
