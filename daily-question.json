@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "hard",
-  "category": "Geography",
-  "question": "What is the largest freshwater lake by volume?",
-  "correct_answer": "Lake Baikal",
+  "difficulty": "easy",
+  "category": "Entertainment: Video Games",
+  "question": "In &quot;World of Warcraft,&quot; which of the following can be found outside of every instanced dungeon?",
+  "correct_answer": "A Meeting Stone",
   "incorrect_answers": [
-    "Lake Superior",
-    "Lake Huron",
-    "Lake Michigan"
+    "A Summoning Stone",
+    "A Gathering Stone",
+    "A Hearthstone"
   ],
-  "date": "2026-05-23",
-  "generated_at": "2026-05-23T02:59:38.670895-07:00"
+  "date": "2026-05-24",
+  "generated_at": "2026-05-24T03:00:52.854493-07:00"
 }
