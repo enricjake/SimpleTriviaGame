@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "easy",
-  "category": "General Knowledge",
-  "question": "What is the largest organ of the human body?",
-  "correct_answer": "Skin",
+  "difficulty": "medium",
+  "category": "History",
+  "question": "What is the oldest US state?",
+  "correct_answer": "Delaware",
   "incorrect_answers": [
-    "Heart",
-    "large Intestine",
-    "Liver"
+    "Rhode Island",
+    "Maine",
+    "Virginia"
   ],
-  "date": "2026-05-27",
-  "generated_at": "2026-05-27T04:44:04.406007-07:00"
+  "date": "2026-05-28",
+  "generated_at": "2026-05-28T04:44:00.757281-07:00"
 }
