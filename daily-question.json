@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "History",
-  "question": "What is the oldest US state?",
-  "correct_answer": "Delaware",
+  "question": "What was the Canada&#039;s first capital?",
+  "correct_answer": "Kingston",
   "incorrect_answers": [
-    "Rhode Island",
-    "Maine",
-    "Virginia"
+    "Toronto",
+    "Ottawa",
+    "Montreal"
   ],
-  "date": "2026-05-28",
-  "generated_at": "2026-05-28T04:44:00.757281-07:00"
+  "date": "2026-05-29",
+  "generated_at": "2026-05-29T04:35:01.742065-07:00"
 }
