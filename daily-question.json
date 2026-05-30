@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "hard",
-  "category": "History",
-  "question": "What was the Canada&#039;s first capital?",
-  "correct_answer": "Kingston",
+  "difficulty": "medium",
+  "category": "Entertainment: Music",
+  "question": "&quot;The Genius&quot; is the original and secondary name of which Wu-Tang Clan member?",
+  "correct_answer": "GZA",
   "incorrect_answers": [
-    "Toronto",
-    "Ottawa",
-    "Montreal"
+    "Ghostface Killah",
+    "Ol&#039; Dirty Bastard",
+    "Raekwon the Chef"
   ],
-  "date": "2026-05-29",
-  "generated_at": "2026-05-29T04:35:01.742065-07:00"
+  "date": "2026-05-30",
+  "generated_at": "2026-05-30T03:05:56.292032-07:00"
 }
