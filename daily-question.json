@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "Entertainment: Music",
-  "question": "&quot;The Genius&quot; is the original and secondary name of which Wu-Tang Clan member?",
-  "correct_answer": "GZA",
+  "difficulty": "easy",
+  "category": "Science: Mathematics",
+  "question": "What is the name of a nine sided polygon?",
+  "correct_answer": "Nonagon",
   "incorrect_answers": [
-    "Ghostface Killah",
-    "Ol&#039; Dirty Bastard",
-    "Raekwon the Chef"
+    "Hexagon",
+    "Octagon",
+    "Heptagon"
   ],
-  "date": "2026-05-30",
-  "generated_at": "2026-05-30T03:05:56.292032-07:00"
+  "date": "2026-05-31",
+  "generated_at": "2026-05-31T03:20:43.723429-07:00"
 }
