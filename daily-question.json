@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "easy",
+  "difficulty": "hard",
   "category": "Science: Mathematics",
-  "question": "What is the name of a nine sided polygon?",
-  "correct_answer": "Nonagon",
+  "question": "Which of the following famous mathematicians died in a duel at the age of 20?",
+  "correct_answer": "Galois",
   "incorrect_answers": [
-    "Hexagon",
-    "Octagon",
-    "Heptagon"
+    "Abel",
+    "Euler",
+    "Gauss"
   ],
-  "date": "2026-05-31",
-  "generated_at": "2026-05-31T03:20:43.723429-07:00"
+  "date": "2026-06-01",
+  "generated_at": "2026-06-01T06:47:03.415408-07:00"
 }
