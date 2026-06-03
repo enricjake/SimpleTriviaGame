@@ -1,14 +1,14 @@
 {
   "type": "multiple",
   "difficulty": "medium",
-  "category": "General Knowledge",
-  "question": "Death Valley&#039;s Badwater Basin is North America&#039;s point of lowest elevation at how many feet below sea level?",
-  "correct_answer": "282 feet",
+  "category": "Geography",
+  "question": "What is the northernmost human settlement with year round inhabitants?",
+  "correct_answer": "Alert, Canada",
   "incorrect_answers": [
-    "79 feet",
-    "1,640 feet",
-    "12,092 feet"
+    "Nagurskoye, Russia",
+    "McMurdo Station, Antarctica ",
+    "Honningsv&aring;g, Norway"
   ],
-  "date": "2026-06-02",
-  "generated_at": "2026-06-02T05:11:21.348299-07:00"
+  "date": "2026-06-03",
+  "generated_at": "2026-06-03T05:46:39.007984-07:00"
 }
