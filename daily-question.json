@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "Geography",
-  "question": "What is the northernmost human settlement with year round inhabitants?",
-  "correct_answer": "Alert, Canada",
+  "difficulty": "hard",
+  "category": "Vehicles",
+  "question": "What was the name of the first front-wheel-drive car produced by Datsun (now Nissan)?",
+  "correct_answer": "Cherry",
   "incorrect_answers": [
-    "Nagurskoye, Russia",
-    "McMurdo Station, Antarctica ",
-    "Honningsv&aring;g, Norway"
+    "Sunny",
+    "Bluebird",
+    "Skyline"
   ],
-  "date": "2026-06-03",
-  "generated_at": "2026-06-03T05:46:39.007984-07:00"
+  "date": "2026-06-04",
+  "generated_at": "2026-06-04T04:20:21.718028-07:00"
 }
