@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "hard",
-  "category": "Vehicles",
-  "question": "What was the name of the first front-wheel-drive car produced by Datsun (now Nissan)?",
-  "correct_answer": "Cherry",
+  "difficulty": "medium",
+  "category": "Entertainment: Video Games",
+  "question": "In the game &quot;Cave Story,&quot; what is the character Balrog&#039;s catchphrase?",
+  "correct_answer": "Huzzah!",
   "incorrect_answers": [
-    "Sunny",
-    "Bluebird",
-    "Skyline"
+    "Yes!",
+    "Whoa there!",
+    "Nyeh heh heh!"
   ],
-  "date": "2026-06-04",
-  "generated_at": "2026-06-04T04:20:21.718028-07:00"
+  "date": "2026-06-05",
+  "generated_at": "2026-06-05T04:33:17.346387-07:00"
 }
