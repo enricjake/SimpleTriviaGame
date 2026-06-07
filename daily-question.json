@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "Politics",
-  "question": "Which president erased the national debt of the United States?",
-  "correct_answer": "Andrew Jackson",
+  "difficulty": "easy",
+  "category": "Science &amp; Nature",
+  "question": "How many chromosomes are in your body cells?",
+  "correct_answer": "23",
   "incorrect_answers": [
-    "Ronald Reagan",
-    "John F. Kennedy",
-    "Franklin Roosevelt"
+    "21",
+    "22",
+    "24"
   ],
-  "date": "2026-06-06",
-  "generated_at": "2026-06-06T03:11:45.020973-07:00"
+  "date": "2026-06-07",
+  "generated_at": "2026-06-07T03:33:18.302809-07:00"
 }
