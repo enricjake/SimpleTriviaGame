@@ -1,14 +1,14 @@
 {
   "type": "multiple",
   "difficulty": "easy",
-  "category": "Science &amp; Nature",
-  "question": "How many chromosomes are in your body cells?",
-  "correct_answer": "23",
+  "category": "Entertainment: Japanese Anime &amp; Manga",
+  "question": "In &quot;A Certain Scientific Railgun&quot;, how many &quot;sisters&quot; did Accelerator have to kill to achieve the rumored level 6?",
+  "correct_answer": "20,000",
   "incorrect_answers": [
-    "21",
-    "22",
-    "24"
+    "128",
+    "10,000",
+    "5,000"
   ],
-  "date": "2026-06-07",
-  "generated_at": "2026-06-07T03:33:18.302809-07:00"
+  "date": "2026-06-08",
+  "generated_at": "2026-06-08T05:38:50.861532-07:00"
 }
