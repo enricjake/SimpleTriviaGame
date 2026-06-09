@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "easy",
-  "category": "Entertainment: Japanese Anime &amp; Manga",
-  "question": "In &quot;A Certain Scientific Railgun&quot;, how many &quot;sisters&quot; did Accelerator have to kill to achieve the rumored level 6?",
-  "correct_answer": "20,000",
+  "difficulty": "medium",
+  "category": "Geography",
+  "question": "Which stretch of water connects the Atlantic Ocean to the Mediterranean Sea?",
+  "correct_answer": "Strait of Gibraltar",
   "incorrect_answers": [
-    "128",
-    "10,000",
-    "5,000"
+    "Gibraltar Way",
+    "Spanish Straits",
+    "Channelle de Tangiers"
   ],
-  "date": "2026-06-08",
-  "generated_at": "2026-06-08T05:38:50.861532-07:00"
+  "date": "2026-06-09",
+  "generated_at": "2026-06-09T04:23:12.662175-07:00"
 }
