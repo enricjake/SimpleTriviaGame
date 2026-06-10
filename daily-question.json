@@ -1,14 +1,14 @@
 {
   "type": "multiple",
   "difficulty": "medium",
-  "category": "Geography",
-  "question": "Which stretch of water connects the Atlantic Ocean to the Mediterranean Sea?",
-  "correct_answer": "Strait of Gibraltar",
+  "category": "Celebrities",
+  "question": "Which of these people is NOT a part of the Internet comedy group Mega64?",
+  "correct_answer": "Jon Jafari",
   "incorrect_answers": [
-    "Gibraltar Way",
-    "Spanish Straits",
-    "Channelle de Tangiers"
+    "Rocco Botte",
+    "Derrick Acosta",
+    "Shawn Chatfield"
   ],
-  "date": "2026-06-09",
-  "generated_at": "2026-06-09T04:23:12.662175-07:00"
+  "date": "2026-06-10",
+  "generated_at": "2026-06-10T04:43:04.354799-07:00"
 }
