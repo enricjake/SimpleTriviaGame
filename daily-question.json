@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "Celebrities",
-  "question": "Which of these people is NOT a part of the Internet comedy group Mega64?",
-  "correct_answer": "Jon Jafari",
+  "difficulty": "hard",
+  "category": "Entertainment: Video Games",
+  "question": "In the game Danganronpa: Happy Trigger Havoc, the character Aoi Asahina&#039;s ultimate ability is what?",
+  "correct_answer": "Ultimate Swimmer",
   "incorrect_answers": [
-    "Rocco Botte",
-    "Derrick Acosta",
-    "Shawn Chatfield"
+    "Ultimate Detective",
+    "Ultimate Gambler",
+    "Ultimate Dancer"
   ],
-  "date": "2026-06-10",
-  "generated_at": "2026-06-10T04:43:04.354799-07:00"
+  "date": "2026-06-11",
+  "generated_at": "2026-06-11T05:14:29.071689-07:00"
 }
