@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "hard",
-  "category": "Entertainment: Video Games",
-  "question": "In the game Danganronpa: Happy Trigger Havoc, the character Aoi Asahina&#039;s ultimate ability is what?",
-  "correct_answer": "Ultimate Swimmer",
+  "difficulty": "medium",
+  "category": "Entertainment: Film",
+  "question": "Which of the following James Bond villains is not affiliated with the SPECTRE organization?",
+  "correct_answer": "Auric Goldfinger",
   "incorrect_answers": [
-    "Ultimate Detective",
-    "Ultimate Gambler",
-    "Ultimate Dancer"
+    "Dr. Julius No",
+    "Rosa Klebb",
+    "Emilio Largo"
   ],
-  "date": "2026-06-11",
-  "generated_at": "2026-06-11T05:14:29.071689-07:00"
+  "date": "2026-06-12",
+  "generated_at": "2026-06-12T04:48:34.677628-07:00"
 }
