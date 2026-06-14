@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "Entertainment: Video Games",
-  "question": "What is the name of the first boss the player encounters in the 2017 game, &quot;Little Nightmares&quot;?",
-  "correct_answer": "The Janitor",
+  "difficulty": "hard",
+  "category": "Entertainment: Music",
+  "question": "Which of these is NOT a song featured on the Lockjaw EP released in 2013 by Flume &amp; Chet Faker?",
+  "correct_answer": "Left Alone",
   "incorrect_answers": [
-    "The Warden",
-    "The Caretaker",
-    "The Overseer"
+    "What About Us",
+    "This Song Is Not About A Girl",
+    "Drop The Game"
   ],
-  "date": "2026-06-13",
-  "generated_at": "2026-06-13T03:34:03.905520-07:00"
+  "date": "2026-06-14",
+  "generated_at": "2026-06-14T03:52:21.557079-07:00"
 }
