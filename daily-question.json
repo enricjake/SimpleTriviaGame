@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "hard",
-  "category": "Entertainment: Music",
-  "question": "Which of these is NOT a song featured on the Lockjaw EP released in 2013 by Flume &amp; Chet Faker?",
-  "correct_answer": "Left Alone",
+  "difficulty": "easy",
+  "category": "Entertainment: Video Games",
+  "question": "The Khajiit are a race of cat-like creatures from which epic series of role-playing games, set across the land of Tamriel?",
+  "correct_answer": "The Elder Scrolls",
   "incorrect_answers": [
-    "What About Us",
-    "This Song Is Not About A Girl",
-    "Drop The Game"
+    "Lord of the Rings",
+    "The Witcher",
+    "Neverwinter Nights"
   ],
-  "date": "2026-06-14",
-  "generated_at": "2026-06-14T03:52:21.557079-07:00"
+  "date": "2026-06-15",
+  "generated_at": "2026-06-15T07:32:52.560942-07:00"
 }
