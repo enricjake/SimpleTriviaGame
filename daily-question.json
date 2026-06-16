@@ -1,14 +1,14 @@
 {
   "type": "multiple",
   "difficulty": "easy",
-  "category": "Entertainment: Video Games",
-  "question": "The Khajiit are a race of cat-like creatures from which epic series of role-playing games, set across the land of Tamriel?",
-  "correct_answer": "The Elder Scrolls",
+  "category": "Entertainment: Film",
+  "question": "In the movie Gremlins, after what time of day should you not feed Mogwai?",
+  "correct_answer": "Midnight",
   "incorrect_answers": [
-    "Lord of the Rings",
-    "The Witcher",
-    "Neverwinter Nights"
+    "Evening",
+    "Morning",
+    "Afternoon"
   ],
-  "date": "2026-06-15",
-  "generated_at": "2026-06-15T07:32:52.560942-07:00"
+  "date": "2026-06-16",
+  "generated_at": "2026-06-16T05:59:31.780086-07:00"
 }
