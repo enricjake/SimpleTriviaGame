@@ -1,14 +1,14 @@
 {
   "type": "multiple",
   "difficulty": "easy",
-  "category": "Entertainment: Film",
-  "question": "In the movie Gremlins, after what time of day should you not feed Mogwai?",
-  "correct_answer": "Midnight",
+  "category": "Science &amp; Nature",
+  "question": "Who is the chemical element Curium named after?",
+  "correct_answer": "Marie &amp; Pierre Curie",
   "incorrect_answers": [
-    "Evening",
-    "Morning",
-    "Afternoon"
+    "The Curiosity Rover",
+    "Curious George",
+    "Stephen Curry"
   ],
-  "date": "2026-06-16",
-  "generated_at": "2026-06-16T05:59:31.780086-07:00"
+  "date": "2026-06-17",
+  "generated_at": "2026-06-17T05:21:50.541013-07:00"
 }
