@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "Politics",
-  "question": "The 2014 movie &quot;The Raid 2: Berandal&quot; was mainly filmed in which Asian country?",
-  "correct_answer": "Indonesia",
+  "difficulty": "easy",
+  "category": "Entertainment: Television",
+  "question": "How many seasons did &quot;Stargate SG-1&quot; have?",
+  "correct_answer": "10",
   "incorrect_answers": [
-    "Thailand",
-    "Brunei",
-    "Malaysia"
+    "3",
+    "7",
+    "12"
   ],
-  "date": "2026-06-18",
-  "generated_at": "2026-06-18T04:54:19.055520-07:00"
+  "date": "2026-06-19",
+  "generated_at": "2026-06-19T05:13:51.347185-07:00"
 }
