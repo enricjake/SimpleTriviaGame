@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "easy",
-  "category": "Entertainment: Television",
-  "question": "How many seasons did &quot;Stargate SG-1&quot; have?",
-  "correct_answer": "10",
+  "difficulty": "medium",
+  "category": "General Knowledge",
+  "question": "What is the average life span of a garden ant?",
+  "correct_answer": "15 years",
   "incorrect_answers": [
-    "3",
-    "7",
-    "12"
+    "24 hours",
+    "1 week",
+    "3 years"
   ],
-  "date": "2026-06-19",
-  "generated_at": "2026-06-19T05:13:51.347185-07:00"
+  "date": "2026-06-20",
+  "generated_at": "2026-06-20T03:36:36.454721-07:00"
 }
