@@ -1,14 +1,14 @@
 {
   "type": "multiple",
   "difficulty": "medium",
-  "category": "General Knowledge",
-  "question": "What is the average life span of a garden ant?",
-  "correct_answer": "15 years",
+  "category": "Entertainment: Japanese Anime &amp; Manga",
+  "question": "Which Japanese music group was formed to produce theme music for the anime &quot;Guilty Crown&quot;?",
+  "correct_answer": "Egoist",
   "incorrect_answers": [
-    "24 hours",
-    "1 week",
-    "3 years"
+    "Goose house",
+    "Babymetal",
+    "Garnidelia"
   ],
-  "date": "2026-06-20",
-  "generated_at": "2026-06-20T03:36:36.454721-07:00"
+  "date": "2026-06-21",
+  "generated_at": "2026-06-21T04:20:40.347630-07:00"
 }
