@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "Entertainment: Japanese Anime &amp; Manga",
-  "question": "Which Japanese music group was formed to produce theme music for the anime &quot;Guilty Crown&quot;?",
-  "correct_answer": "Egoist",
+  "difficulty": "easy",
+  "category": "Sports",
+  "question": "Which boxer was banned for taking a bite out of Evander Holyfield&#039;s ear in 1997?",
+  "correct_answer": "Mike Tyson",
   "incorrect_answers": [
-    "Goose house",
-    "Babymetal",
-    "Garnidelia"
+    "Roy Jones Jr.",
+    "Evander Holyfield",
+    "Lennox Lewis"
   ],
-  "date": "2026-06-21",
-  "generated_at": "2026-06-21T04:20:40.347630-07:00"
+  "date": "2026-06-22",
+  "generated_at": "2026-06-22T06:40:03.780370-07:00"
 }
