@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "Entertainment: Television",
-  "question": "In the original Doctor Who series (1963), fourth doctor Tom Baker&#039;s scarf was how long?",
-  "correct_answer": "7 Meters",
+  "difficulty": "hard",
+  "category": "Entertainment: Video Games",
+  "question": "In the Half-Life mod &quot;Afraid of Monsters&quot; what was the name of the main protagonist?",
+  "correct_answer": "David Leatherhoff",
   "incorrect_answers": [
-    "10 Meters",
-    "2 Meters",
-    "5 Meters"
+    "Daniel Featherhoff",
+    "Damon Weatherhoff",
+    "Damien Teatherhoff"
   ],
-  "date": "2026-06-23",
-  "generated_at": "2026-06-23T04:23:39.166779-07:00"
+  "date": "2026-06-24",
+  "generated_at": "2026-06-24T03:56:48.480642-07:00"
 }
