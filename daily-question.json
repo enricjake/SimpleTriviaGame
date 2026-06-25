@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "hard",
+  "difficulty": "medium",
   "category": "Entertainment: Video Games",
-  "question": "In the Half-Life mod &quot;Afraid of Monsters&quot; what was the name of the main protagonist?",
-  "correct_answer": "David Leatherhoff",
+  "question": "In &quot;Call Of Duty: Zombies&quot;, completing which map&#039;s easter egg will reward you with the achievement, &quot;Time Travel Will Tell&quot;?",
+  "correct_answer": "Shangri-La",
   "incorrect_answers": [
-    "Daniel Featherhoff",
-    "Damon Weatherhoff",
-    "Damien Teatherhoff"
+    "Ascension",
+    "Moon",
+    "Die Rise"
   ],
-  "date": "2026-06-24",
-  "generated_at": "2026-06-24T03:56:48.480642-07:00"
+  "date": "2026-06-25",
+  "generated_at": "2026-06-25T03:48:15.557906-07:00"
 }
