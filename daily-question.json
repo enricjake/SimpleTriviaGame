@@ -2,13 +2,13 @@
   "type": "multiple",
   "difficulty": "medium",
   "category": "Entertainment: Video Games",
-  "question": "In &quot;Call Of Duty: Zombies&quot;, completing which map&#039;s easter egg will reward you with the achievement, &quot;Time Travel Will Tell&quot;?",
-  "correct_answer": "Shangri-La",
+  "question": "In &quot;Call Of Duty: Zombies&quot;, completing which map&#039;s main easter egg will reward you with the achievement, &quot;High Maintenance&quot;?",
+  "correct_answer": "Die Rise",
   "incorrect_answers": [
-    "Ascension",
-    "Moon",
-    "Die Rise"
+    "Mob Of The Dead",
+    "Origins",
+    "Ascension"
   ],
-  "date": "2026-06-25",
-  "generated_at": "2026-06-25T03:48:15.557906-07:00"
+  "date": "2026-06-26",
+  "generated_at": "2026-06-26T03:55:57.523806-07:00"
 }
