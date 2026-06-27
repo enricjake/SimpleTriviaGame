@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "Entertainment: Video Games",
-  "question": "In &quot;Call Of Duty: Zombies&quot;, completing which map&#039;s main easter egg will reward you with the achievement, &quot;High Maintenance&quot;?",
-  "correct_answer": "Die Rise",
+  "difficulty": "easy",
+  "category": "Entertainment: Japanese Anime &amp; Manga",
+  "question": "What year did &quot;Attack on Titan&quot; first air?",
+  "correct_answer": "2013",
   "incorrect_answers": [
-    "Mob Of The Dead",
-    "Origins",
-    "Ascension"
+    "2014",
+    "2012",
+    "2015"
   ],
-  "date": "2026-06-26",
-  "generated_at": "2026-06-26T03:55:57.523806-07:00"
+  "date": "2026-06-27",
+  "generated_at": "2026-06-27T03:15:32.345053-07:00"
 }
