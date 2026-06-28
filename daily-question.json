@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "easy",
-  "category": "Entertainment: Japanese Anime &amp; Manga",
-  "question": "What year did &quot;Attack on Titan&quot; first air?",
-  "correct_answer": "2013",
+  "difficulty": "medium",
+  "category": "History",
+  "question": "On which aircraft carrier did the Doolitte Raid launch from on April 18, 1942 during World War II?",
+  "correct_answer": "USS Hornet",
   "incorrect_answers": [
-    "2014",
-    "2012",
-    "2015"
+    "USS Enterprise",
+    "USS Lexington",
+    "USS Saratoga"
   ],
-  "date": "2026-06-27",
-  "generated_at": "2026-06-27T03:15:32.345053-07:00"
+  "date": "2026-06-28",
+  "generated_at": "2026-06-28T03:31:15.303567-07:00"
 }
