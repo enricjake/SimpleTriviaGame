@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "History",
-  "question": "On which aircraft carrier did the Doolitte Raid launch from on April 18, 1942 during World War II?",
-  "correct_answer": "USS Hornet",
+  "difficulty": "easy",
+  "category": "Entertainment: Video Games",
+  "question": "In &quot;Overwatch&quot;, which hero is able to wallride?",
+  "correct_answer": "Lucio",
   "incorrect_answers": [
-    "USS Enterprise",
-    "USS Lexington",
-    "USS Saratoga"
+    "Reinhardt",
+    "Sombra",
+    "Mercy"
   ],
-  "date": "2026-06-28",
-  "generated_at": "2026-06-28T03:31:15.303567-07:00"
+  "date": "2026-06-29",
+  "generated_at": "2026-06-29T05:39:29.944363-07:00"
 }
