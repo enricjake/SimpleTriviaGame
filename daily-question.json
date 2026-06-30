@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "easy",
+  "difficulty": "hard",
   "category": "Entertainment: Video Games",
-  "question": "In &quot;Overwatch&quot;, which hero is able to wallride?",
-  "correct_answer": "Lucio",
+  "question": "In the game Warframe, what Mastery Rank do you need to have to build the Tigris Prime?",
+  "correct_answer": "13",
   "incorrect_answers": [
-    "Reinhardt",
-    "Sombra",
-    "Mercy"
+    "6",
+    "18",
+    "10"
   ],
-  "date": "2026-06-29",
-  "generated_at": "2026-06-29T05:39:29.944363-07:00"
+  "date": "2026-06-30",
+  "generated_at": "2026-06-30T04:14:48.084883-07:00"
 }
