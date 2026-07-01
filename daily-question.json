@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "hard",
-  "category": "Entertainment: Video Games",
-  "question": "In the game Warframe, what Mastery Rank do you need to have to build the Tigris Prime?",
-  "correct_answer": "13",
+  "difficulty": "medium",
+  "category": "Science &amp; Nature",
+  "question": "How many baby/milk teeth does a human child have in total?",
+  "correct_answer": "20",
   "incorrect_answers": [
-    "6",
-    "18",
-    "10"
+    "10",
+    "15",
+    "25"
   ],
-  "date": "2026-06-30",
-  "generated_at": "2026-06-30T04:14:48.084883-07:00"
+  "date": "2026-07-01",
+  "generated_at": "2026-07-01T04:29:27.318695-07:00"
 }
