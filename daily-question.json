@@ -1,14 +1,14 @@
 {
   "type": "multiple",
   "difficulty": "medium",
-  "category": "Science &amp; Nature",
-  "question": "How many baby/milk teeth does a human child have in total?",
-  "correct_answer": "20",
+  "category": "Mythology",
+  "question": "According to the Egyptian Myth of Osiris, who murdered Osiris?",
+  "correct_answer": "Set",
   "incorrect_answers": [
-    "10",
-    "15",
-    "25"
+    "Horus",
+    "Ra",
+    "Anhur"
   ],
-  "date": "2026-07-01",
-  "generated_at": "2026-07-01T04:29:27.318695-07:00"
+  "date": "2026-07-02",
+  "generated_at": "2026-07-02T03:46:54.216938-07:00"
 }
