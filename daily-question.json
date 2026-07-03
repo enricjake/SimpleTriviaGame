@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "Mythology",
-  "question": "According to the Egyptian Myth of Osiris, who murdered Osiris?",
-  "correct_answer": "Set",
+  "difficulty": "hard",
+  "category": "Entertainment: Music",
+  "question": "Who was the first Jazz Musician to win the Pulitzer Prize for Music",
+  "correct_answer": "Wynton Marsalis",
   "incorrect_answers": [
-    "Horus",
-    "Ra",
-    "Anhur"
+    "Michael Brecker",
+    "Herbie Hancock",
+    "Joe Henderson"
   ],
-  "date": "2026-07-02",
-  "generated_at": "2026-07-02T03:46:54.216938-07:00"
+  "date": "2026-07-03",
+  "generated_at": "2026-07-03T03:44:10.924003-07:00"
 }
