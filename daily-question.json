@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "hard",
-  "category": "Entertainment: Music",
-  "question": "Who was the first Jazz Musician to win the Pulitzer Prize for Music",
-  "correct_answer": "Wynton Marsalis",
+  "difficulty": "easy",
+  "category": "Entertainment: Books",
+  "question": "Which famous book is sub-titled &#039;The Modern Prometheus&#039;?",
+  "correct_answer": "Frankenstein",
   "incorrect_answers": [
-    "Michael Brecker",
-    "Herbie Hancock",
-    "Joe Henderson"
+    "Dracula",
+    "The Strange Case of Dr. Jekyll and Mr. Hyde ",
+    "The Legend of Sleepy Hollow"
   ],
-  "date": "2026-07-03",
-  "generated_at": "2026-07-03T03:44:10.924003-07:00"
+  "date": "2026-07-04",
+  "generated_at": "2026-07-04T03:18:22.363389-07:00"
 }
