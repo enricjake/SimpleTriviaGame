@@ -1,14 +1,14 @@
 {
   "type": "multiple",
   "difficulty": "medium",
-  "category": "Entertainment: Film",
-  "question": "Which actor and martial artist starred as Colonel Guile in the 1994 action film adaptation of Street Fighter?",
-  "correct_answer": "Jean-Claude Van Damme",
+  "category": "Entertainment: Comics",
+  "question": "What otherworldly land does Thor come from?",
+  "correct_answer": "Asgard",
   "incorrect_answers": [
-    "Chuck Norris",
-    "Steven Seagal",
-    "Scott Adkins"
+    "Midgard",
+    "Jotunheim",
+    "Sovengarde"
   ],
-  "date": "2026-07-05",
-  "generated_at": "2026-07-05T03:22:38.576991-07:00"
+  "date": "2026-07-06",
+  "generated_at": "2026-07-06T05:09:46.980346-07:00"
 }
