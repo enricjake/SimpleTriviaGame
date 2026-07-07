@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "Entertainment: Comics",
-  "question": "What otherworldly land does Thor come from?",
-  "correct_answer": "Asgard",
+  "difficulty": "easy",
+  "category": "Science &amp; Nature",
+  "question": "What does the letter &#039;S&#039; stand for in &#039;NASA&#039;?",
+  "correct_answer": "Space",
   "incorrect_answers": [
-    "Midgard",
-    "Jotunheim",
-    "Sovengarde"
+    "Science",
+    "Society",
+    "Star"
   ],
-  "date": "2026-07-06",
-  "generated_at": "2026-07-06T05:09:46.980346-07:00"
+  "date": "2026-07-07",
+  "generated_at": "2026-07-07T04:14:36.967804-07:00"
 }
