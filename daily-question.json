@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "Science: Mathematics",
-  "question": "What shape does sin(x) or cos(x) make on a graph?",
-  "correct_answer": "Waves",
+  "difficulty": "hard",
+  "category": "History",
+  "question": "Which country were potatoes originally grown?",
+  "correct_answer": "Peru",
   "incorrect_answers": [
-    "A Parabola",
-    "A Straight Line",
-    "Zig-Zags"
+    "United States ",
+    "Ireland",
+    "New Zealand"
   ],
-  "date": "2026-07-08",
-  "generated_at": "2026-07-08T03:25:13.902364-07:00"
+  "date": "2026-07-09",
+  "generated_at": "2026-07-09T04:11:44.275398-07:00"
 }
