@@ -2,13 +2,13 @@
   "type": "multiple",
   "difficulty": "easy",
   "category": "Animals",
-  "question": "The Kākāpō is a large, flightless, nocturnal parrot native to which country?",
-  "correct_answer": "New Zealand",
+  "question": "Hippocampus is the Latin name for which marine creature?",
+  "correct_answer": "Seahorse",
   "incorrect_answers": [
-    "South Africa",
-    "Australia",
-    "Madagascar"
+    "Dolphin",
+    "Whale",
+    "Octopus"
   ],
-  "date": "2026-07-10",
-  "generated_at": "2026-07-10T04:11:26.081169-07:00"
+  "date": "2026-07-11",
+  "generated_at": "2026-07-11T02:43:30.759545-07:00"
 }
