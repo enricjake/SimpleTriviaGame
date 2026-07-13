@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "Science &amp; Nature",
-  "question": "Which part of the body does glaucoma affect?",
-  "correct_answer": "Eyes",
+  "difficulty": "easy",
+  "category": "Entertainment: Video Games",
+  "question": "In the fighting game &quot;Skullgirls,&quot; which character utilizes a folding chair called the &quot;Hurting&quot; as a weapon?",
+  "correct_answer": "Beowulf",
   "incorrect_answers": [
-    "Throat",
-    "Stomach",
-    "Blood"
+    "Big Band",
+    "Squigly",
+    "Cerebella"
   ],
-  "date": "2026-07-12",
-  "generated_at": "2026-07-12T02:56:42.704333-07:00"
+  "date": "2026-07-13",
+  "generated_at": "2026-07-13T04:20:10.721834-07:00"
 }
