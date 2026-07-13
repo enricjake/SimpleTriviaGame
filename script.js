@@ -110,8 +110,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         elements.highScoresList.innerHTML = highScores.slice(0, 5).map((score, index) => {
-            const date = new Date(score.date).toLocaleDateString();
-            const difficulty = score.difficulty || 'mixed';
+            const date = TriviaUtils.escapeHtml(new Date(score.date).toLocaleDateString());
+            const difficulty = TriviaUtils.escapeHtml(score.difficulty || 'mixed');
             const hintsUsed = score.fiftyFiftyUsed ? ' 💡' : '';
             
             return `
@@ -217,7 +217,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="final-stat-label">Hints Used</div>
             </div>
             <div class="final-stat-item">
-                <div class="final-stat-value">${Math.round((shareData.score / shareData.totalQuestions) * 100)}%</div>
+                <div class="final-stat-value">${shareData.totalQuestions ? Math.round((shareData.score / shareData.totalQuestions) * 100) : 0}%</div>
                 <div class="final-stat-label">Accuracy</div>
             </div>
         `;

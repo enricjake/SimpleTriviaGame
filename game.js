@@ -15,6 +15,8 @@ const TriviaGame = (function() {
     let maxStreak = 0;
     let fiftyFiftyUsed = false;
     let fiftyFiftyCount = 0;
+    let fetchController = null;
+    let fetchTimeoutId = null;
     
     // High scores
     const HIGH_SCORES_KEY = 'triviaHighScores';
@@ -126,9 +128,15 @@ const TriviaGame = (function() {
         const params = TriviaSettings.getQueryParams();
         const url = `${API_URL}?${params.toString()}`;
         
+        // Abort any in-flight request from a previous game/init
+        if (fetchController) fetchController.abort();
+        if (fetchTimeoutId) clearTimeout(fetchTimeoutId);
+        
         // Create abort controller for timeout
         const controller = new AbortController();
+        fetchController = controller;
         const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
+        fetchTimeoutId = timeoutId;
         
         fetch(url, { signal: controller.signal })
             .then(response => {
@@ -220,6 +228,11 @@ const TriviaGame = (function() {
             elements.questionNumber.textContent = currentQuestionIndex + 1;
         }
         
+        // Keep the displayed total in sync with the actual fetched count
+        if (elements.totalQuestions) {
+            elements.totalQuestions.textContent = questions.length;
+        }
+        
         // Update progress bar
         if (elements.progressBar) {
             const progress = ((currentQuestionIndex) / questions.length) * 100;
@@ -258,34 +271,6 @@ const TriviaGame = (function() {
                 elements.options.appendChild(button);
             });
         }
-    }
-
-    /**
-     * Start question timer
-     */
-    function startTimer() {
-        // Timer removed - no longer used
-    }
-
-    /**
-     * Stop question timer
-     */
-    function stopTimer() {
-        // Timer removed - no longer used
-    }
-
-    /**
-     * Update timer display
-     */
-    function updateTimerDisplay() {
-        // Timer removed - no longer used
-    }
-
-    /**
-     * Handle time up (no answer selected)
-     */
-    function handleTimeUp() {
-        // Timer removed - no longer used
     }
 
     /**
@@ -492,6 +477,7 @@ const TriviaGame = (function() {
         // Count correct answers for display and audio
         const correctAnswers = userAnswers.filter(a => a.isCorrect).length;
         if (elements.finalScore) elements.finalScore.textContent = correctAnswers;
+        if (elements.totalQuestionsFinal) elements.totalQuestionsFinal.textContent = questions.length;
         
         // Pass correct answer count (not total points) to audio
         TriviaAudio.playGameOver(correctAnswers, questions.length);
@@ -521,14 +507,15 @@ const TriviaGame = (function() {
             const decodedQuestion = TriviaUtils.decodeHTMLEntities(answer.question);
             const questionText = document.createElement('div');
             questionText.className = 'question-text';
-            questionText.innerHTML = `Q${index + 1}: ${decodedQuestion.substring(0, 50)}${decodedQuestion.length > 50 ? '...' : ''}`;
+            questionText.textContent = `Q${index + 1}: ${decodedQuestion.substring(0, 50)}${decodedQuestion.length > 50 ? '...' : ''}`;
             
             const yourAnswer = document.createElement('div');
             yourAnswer.className = `your-answer ${answer.isCorrect ? 'correct' : 'incorrect'}`;
-            yourAnswer.innerHTML = `
-                Your answer: ${TriviaUtils.decodeHTMLEntities(answer.userAnswer)}
-                ${!answer.isCorrect ? '<br>Correct: ' + TriviaUtils.decodeHTMLEntities(answer.correctAnswer) : ''}
-            `;
+            yourAnswer.appendChild(document.createTextNode(`Your answer: ${TriviaUtils.decodeHTMLEntities(answer.userAnswer)}`));
+            if (!answer.isCorrect) {
+                yourAnswer.appendChild(document.createElement('br'));
+                yourAnswer.appendChild(document.createTextNode(`Correct: ${TriviaUtils.decodeHTMLEntities(answer.correctAnswer)}`));
+            }
             
             item.appendChild(questionText);
             item.appendChild(yourAnswer);
@@ -688,11 +675,12 @@ const TriviaGame = (function() {
             return;
         }
         
-        // Number keys 1-4 to select options
+        // Number keys 1-4 to select options (by visual position)
         if (!answerSelected && event.key >= '1' && event.key <= '4') {
             const index = parseInt(event.key) - 1;
-            if (options[index]) {
-                options[index].click();
+            const optionButtons = elements.options.children;
+            if (optionButtons[index] && !optionButtons[index].disabled) {
+                optionButtons[index].click();
                 focusedOptionIndex = -1;
             }
             return;

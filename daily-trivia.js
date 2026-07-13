@@ -7,6 +7,7 @@ let dailyAnswerSelected = false;
 let dailyTimerInterval = null;
 let apiToken = localStorage.getItem('daily_opentdb_token') || null;
 let focusedDailyOptionIndex = -1;
+let dailySummaryTimeout = null;
 
 // Fallback questions for when API is unavailable
 const fallbackQuestions = [
@@ -110,15 +111,15 @@ function shuffleAnswers(array) {
 
 // Helper: play correct sound (if available)
 function tryPlayCorrectSound() {
-    if (typeof window.playCorrectSound === 'function') {
-        window.playCorrectSound();
+    if (window.TriviaAudio) {
+        window.TriviaAudio.playCorrect();
     }
 }
 
 // Helper: play incorrect sound (if available)
 function tryPlayIncorrectSound() {
-    if (typeof window.playIncorrectSound === 'function') {
-        window.playIncorrectSound();
+    if (window.TriviaAudio) {
+        window.TriviaAudio.playIncorrect();
     }
 }
 
@@ -416,13 +417,12 @@ function selectDailyAnswer(button, selectedOption, correctAnswer) {
     const allButtons = document.getElementById('dailyOptions').querySelectorAll('.option');
     allButtons.forEach(btn => {
         btn.disabled = true;
-        const decodedText = decodeHTMLEntities(btn.textContent);
-        if (decodedText === correctAnswer) {
-            btn.classList.add('correct');
-        } else if (btn === button && !isCorrect) {
-            btn.classList.add('incorrect');
-        }
-    });
+            if (btn.textContent === decodeHTMLEntities(correctAnswer)) {
+                btn.classList.add('correct');
+            } else if (btn === button && !isCorrect) {
+                btn.classList.add('incorrect');
+            }
+        });
     
     // Mark as answered and save
     if (isCorrect) {
@@ -434,7 +434,8 @@ function selectDailyAnswer(button, selectedOption, correctAnswer) {
     markDailyAnswered();
     
     // Show summary screen
-    setTimeout(() => {
+    dailySummaryTimeout = setTimeout(() => {
+        dailySummaryTimeout = null;
         document.getElementById('dailyQuestionContainer').style.display = 'none';
         dailySummaryScreen.style.display = 'block';
         startDailyCountdown();
@@ -496,6 +497,12 @@ function startDailyCountdown() {
  * Show the daily trivia section
  */
 function showDailyTrivia() {
+    // Cancel any pending transition to the summary screen from a previous session
+    if (dailySummaryTimeout) {
+        clearTimeout(dailySummaryTimeout);
+        dailySummaryTimeout = null;
+    }
+
     // Hide other sections
     const gameContainer = document.getElementById('gameContainer');
     const goodbyeMessage = document.getElementById('goodbyeMessage');

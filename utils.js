@@ -224,6 +224,19 @@ const TriviaUtils = (function() {
     };
 
     /**
+     * Escape HTML special characters to prevent XSS when injecting
+     * dynamic strings via innerHTML.
+     */
+    function escapeHtml(str) {
+        return String(str)
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;');
+    }
+
+    /**
      * Shuffle array using Fisher-Yates algorithm
      */
     function shuffleArray(array) {
@@ -236,46 +249,19 @@ const TriviaUtils = (function() {
     }
 
     /**
-     * Format time from milliseconds to HH:MM:SS
-     */
-    function formatTime(ms) {
-        const totalSeconds = Math.floor(ms / 1000);
-        const hours = Math.floor(totalSeconds / 3600);
-        const minutes = Math.floor((totalSeconds % 3600) / 60);
-        const seconds = totalSeconds % 60;
-        return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-    }
-
-    /**
      * Check if user prefers reduced motion
      */
     function prefersReducedMotion() {
         return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     }
 
-    /**
-     * Generate random ID
-     */
-    function generateId(prefix = 'id') {
-        return `${prefix}_${Math.random().toString(36).substr(2, 9)}_${Date.now()}`;
-    }
-
-    /**
-     * Deep clone an object
-     */
-    function deepClone(obj) {
-        return JSON.parse(JSON.stringify(obj));
-    }
-
     return {
         decodeHTMLEntities,
         debounce,
+        escapeHtml,
         safeStorage,
         shuffleArray,
-        formatTime,
-        prefersReducedMotion,
-        generateId,
-        deepClone
+        prefersReducedMotion
     };
 })();
 

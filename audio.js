@@ -166,32 +166,6 @@ const TriviaAudio = (function() {
     }
 
     /**
-     * Play timer warning sound (when time is running low)
-     */
-    function playTimerWarning() {
-        if (!isInitialized) return;
-        ensureContext();
-        
-        try {
-            const osc = audioContext.createOscillator();
-            const gain = audioContext.createGain();
-            
-            osc.type = 'square';
-            osc.connect(gain);
-            gain.connect(audioContext.destination);
-            
-            osc.frequency.setValueAtTime(800, audioContext.currentTime);
-            gain.gain.setValueAtTime(0.15, audioContext.currentTime);
-            gain.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.15);
-            
-            osc.start(audioContext.currentTime);
-            osc.stop(audioContext.currentTime + 0.15);
-        } catch (e) {
-            console.log('Audio playback failed:', e);
-        }
-    }
-
-    /**
      * Play streak sound (escalating pitch based on streak)
      */
     function playStreak(streak) {
@@ -226,7 +200,6 @@ const TriviaAudio = (function() {
         playIncorrect,
         playGameOver,
         playFiftyFifty,
-        playTimerWarning,
         playStreak
     };
 })();
