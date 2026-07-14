@@ -2,13 +2,13 @@
   "type": "multiple",
   "difficulty": "easy",
   "category": "Entertainment: Video Games",
-  "question": "In the fighting game &quot;Skullgirls,&quot; which character utilizes a folding chair called the &quot;Hurting&quot; as a weapon?",
-  "correct_answer": "Beowulf",
+  "question": "What year was the game Dishonored released?",
+  "correct_answer": "2012",
   "incorrect_answers": [
-    "Big Band",
-    "Squigly",
-    "Cerebella"
+    "2011",
+    "2008",
+    "2013"
   ],
-  "date": "2026-07-13",
-  "generated_at": "2026-07-13T04:20:10.721834-07:00"
+  "date": "2026-07-14",
+  "generated_at": "2026-07-14T03:04:35.251227-07:00"
 }
