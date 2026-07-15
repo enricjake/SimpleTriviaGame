@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "easy",
-  "category": "Entertainment: Video Games",
-  "question": "What year was the game Dishonored released?",
-  "correct_answer": "2012",
+  "difficulty": "medium",
+  "category": "History",
+  "question": "In what year did the North American Video Game Crash occur?",
+  "correct_answer": "1983",
   "incorrect_answers": [
-    "2011",
-    "2008",
-    "2013"
+    "1982",
+    "1993",
+    "1970"
   ],
-  "date": "2026-07-14",
-  "generated_at": "2026-07-14T03:04:35.251227-07:00"
+  "date": "2026-07-15",
+  "generated_at": "2026-07-15T03:08:31.520380-07:00"
 }
