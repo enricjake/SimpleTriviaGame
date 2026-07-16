@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "History",
-  "question": "In what year did the North American Video Game Crash occur?",
-  "correct_answer": "1983",
+  "difficulty": "easy",
+  "category": "General Knowledge",
+  "question": "What is the closest planet to our solar system&#039;s sun?",
+  "correct_answer": "Mercury",
   "incorrect_answers": [
-    "1982",
-    "1993",
-    "1970"
+    "Mars",
+    "Jupiter",
+    "Earth"
   ],
-  "date": "2026-07-15",
-  "generated_at": "2026-07-15T03:08:31.520380-07:00"
+  "date": "2026-07-16",
+  "generated_at": "2026-07-16T03:16:17.927176-07:00"
 }
