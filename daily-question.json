@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "easy",
-  "category": "General Knowledge",
-  "question": "What is the closest planet to our solar system&#039;s sun?",
-  "correct_answer": "Mercury",
+  "difficulty": "medium",
+  "category": "Entertainment: Japanese Anime &amp; Manga",
+  "question": "In the anime, &quot;Super Sonico&quot;, what is Super Sonico&#039;s favorite food?",
+  "correct_answer": "Macroons",
   "incorrect_answers": [
-    "Mars",
-    "Jupiter",
-    "Earth"
+    "Ice Cream",
+    "Pizza",
+    "Chips"
   ],
-  "date": "2026-07-16",
-  "generated_at": "2026-07-16T03:16:17.927176-07:00"
+  "date": "2026-07-17",
+  "generated_at": "2026-07-17T03:04:36.856574-07:00"
 }
