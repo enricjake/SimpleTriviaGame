@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "Entertainment: Japanese Anime &amp; Manga",
-  "question": "In the anime, &quot;Super Sonico&quot;, what is Super Sonico&#039;s favorite food?",
-  "correct_answer": "Macroons",
+  "difficulty": "hard",
+  "category": "Science &amp; Nature",
+  "question": "What element on the periodic table has 92 electrons?",
+  "correct_answer": "Uranium",
   "incorrect_answers": [
-    "Ice Cream",
-    "Pizza",
-    "Chips"
+    "Sulfur",
+    "Hydrogen",
+    "Iron"
   ],
-  "date": "2026-07-17",
-  "generated_at": "2026-07-17T03:04:36.856574-07:00"
+  "date": "2026-07-18",
+  "generated_at": "2026-07-18T02:39:24.187900-07:00"
 }
