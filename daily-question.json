@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "hard",
-  "category": "Science &amp; Nature",
-  "question": "What element on the periodic table has 92 electrons?",
-  "correct_answer": "Uranium",
+  "difficulty": "medium",
+  "category": "Entertainment: Music",
+  "question": "Which artist curated the official soundtrack for &quot;The Hunger Games: Mockingjay - Part 1&quot;?",
+  "correct_answer": "Lorde",
   "incorrect_answers": [
-    "Sulfur",
-    "Hydrogen",
-    "Iron"
+    "Kanye West",
+    "Tove Lo",
+    "Charli XCX"
   ],
-  "date": "2026-07-18",
-  "generated_at": "2026-07-18T02:39:24.187900-07:00"
+  "date": "2026-07-19",
+  "generated_at": "2026-07-19T02:57:00.069038-07:00"
 }
