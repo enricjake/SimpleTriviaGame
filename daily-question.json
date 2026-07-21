@@ -1,14 +1,14 @@
 {
   "type": "multiple",
   "difficulty": "medium",
-  "category": "Geography",
-  "question": "Where is the Volga River?",
-  "correct_answer": "Russia",
+  "category": "Entertainment: Video Games",
+  "question": "From the Meme Culture, which Mario game immerged &quot;Weegee&quot;?",
+  "correct_answer": "Mario is Missing! MS-DOS Version ",
   "incorrect_answers": [
-    "Bulgaria",
-    "India",
-    "Sweden"
+    "Mario is Missing! SNES Version",
+    "Mario is Missing! NES Version",
+    "Mario is Missing! MSX Version"
   ],
-  "date": "2026-07-20",
-  "generated_at": "2026-07-20T04:07:18.422096-07:00"
+  "date": "2026-07-21",
+  "generated_at": "2026-07-21T03:29:43.232181-07:00"
 }
