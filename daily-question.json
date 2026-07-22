@@ -1,14 +1,14 @@
 {
   "type": "multiple",
   "difficulty": "medium",
-  "category": "Entertainment: Video Games",
-  "question": "From the Meme Culture, which Mario game immerged &quot;Weegee&quot;?",
-  "correct_answer": "Mario is Missing! MS-DOS Version ",
+  "category": "Science &amp; Nature",
+  "question": "The Sun consists of mostly which two elements?",
+  "correct_answer": "Hydrogen &amp; Helium",
   "incorrect_answers": [
-    "Mario is Missing! SNES Version",
-    "Mario is Missing! NES Version",
-    "Mario is Missing! MSX Version"
+    "Hydrogen &amp; Nitrogen",
+    "Carbon &amp; Nitrogen",
+    "Carbon &amp; Helium"
   ],
-  "date": "2026-07-21",
-  "generated_at": "2026-07-21T03:29:43.232181-07:00"
+  "date": "2026-07-22",
+  "generated_at": "2026-07-22T03:30:32.482334-07:00"
 }
