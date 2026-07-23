@@ -1,14 +1,14 @@
 {
   "type": "multiple",
   "difficulty": "medium",
-  "category": "Science &amp; Nature",
-  "question": "The Sun consists of mostly which two elements?",
-  "correct_answer": "Hydrogen &amp; Helium",
+  "category": "Entertainment: Film",
+  "question": "Who provided a majority of the songs and lyrics for &quot;Spirit: Stallion of the Cimarron&quot;?",
+  "correct_answer": "Bryan Adams",
   "incorrect_answers": [
-    "Hydrogen &amp; Nitrogen",
-    "Carbon &amp; Nitrogen",
-    "Carbon &amp; Helium"
+    "Smash Mouth",
+    "Oasis",
+    "Air Supply"
   ],
-  "date": "2026-07-22",
-  "generated_at": "2026-07-22T03:30:32.482334-07:00"
+  "date": "2026-07-23",
+  "generated_at": "2026-07-23T03:29:21.962925-07:00"
 }
