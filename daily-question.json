@@ -1,14 +1,14 @@
 {
   "type": "multiple",
   "difficulty": "medium",
-  "category": "Entertainment: Film",
-  "question": "Who provided a majority of the songs and lyrics for &quot;Spirit: Stallion of the Cimarron&quot;?",
-  "correct_answer": "Bryan Adams",
+  "category": "Science &amp; Nature",
+  "question": "Which of these choices is not one of the phases of mitosis?",
+  "correct_answer": "Diplophase",
   "incorrect_answers": [
-    "Smash Mouth",
-    "Oasis",
-    "Air Supply"
+    "Metaphase",
+    "Anaphase",
+    "Telophase"
   ],
-  "date": "2026-07-23",
-  "generated_at": "2026-07-23T03:29:21.962925-07:00"
+  "date": "2026-07-24",
+  "generated_at": "2026-07-24T03:24:30.754302-07:00"
 }
