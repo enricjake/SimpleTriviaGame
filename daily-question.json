@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "Science &amp; Nature",
-  "question": "Which of these choices is not one of the phases of mitosis?",
-  "correct_answer": "Diplophase",
+  "difficulty": "easy",
+  "category": "Entertainment: Music",
+  "question": "In an orchestra, what is the lowest member of the brass family?",
+  "correct_answer": "Tuba",
   "incorrect_answers": [
-    "Metaphase",
-    "Anaphase",
-    "Telophase"
+    "Trombone",
+    "Contrabass",
+    "Bassoon"
   ],
-  "date": "2026-07-24",
-  "generated_at": "2026-07-24T03:24:30.754302-07:00"
+  "date": "2026-07-25",
+  "generated_at": "2026-07-25T02:54:29.289086-07:00"
 }
