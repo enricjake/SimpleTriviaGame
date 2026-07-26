@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "category": "Entertainment: Music",
-  "question": "In an orchestra, what is the lowest member of the brass family?",
-  "correct_answer": "Tuba",
+  "question": "Which artist released his third and final studio album &#039;Electric Ladyland&#039; before his death in 1970?",
+  "correct_answer": "Jimi Hendrix",
   "incorrect_answers": [
-    "Trombone",
-    "Contrabass",
-    "Bassoon"
+    "Prince",
+    "Eric Clapton",
+    "Captain Sensible"
   ],
-  "date": "2026-07-25",
-  "generated_at": "2026-07-25T02:54:29.289086-07:00"
+  "date": "2026-07-26",
+  "generated_at": "2026-07-26T03:06:30.058615-07:00"
 }
