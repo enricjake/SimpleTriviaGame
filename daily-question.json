@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "Entertainment: Music",
-  "question": "Which artist released his third and final studio album &#039;Electric Ladyland&#039; before his death in 1970?",
-  "correct_answer": "Jimi Hendrix",
+  "difficulty": "easy",
+  "category": "General Knowledge",
+  "question": "How many fingers does a single human hand have?",
+  "correct_answer": "Four",
   "incorrect_answers": [
-    "Prince",
-    "Eric Clapton",
-    "Captain Sensible"
+    "Five",
+    "Ten",
+    "Eight"
   ],
-  "date": "2026-07-26",
-  "generated_at": "2026-07-26T03:06:30.058615-07:00"
+  "date": "2026-07-27",
+  "generated_at": "2026-07-27T04:31:22.688245-07:00"
 }
