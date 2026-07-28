@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "easy",
-  "category": "General Knowledge",
-  "question": "How many fingers does a single human hand have?",
-  "correct_answer": "Four",
+  "difficulty": "medium",
+  "category": "Entertainment: Video Games",
+  "question": "What is the name of the common, gun-toting enemies of the &quot;Oddworld&quot; video game series?",
+  "correct_answer": "Sligs",
   "incorrect_answers": [
-    "Five",
-    "Ten",
-    "Eight"
+    "Scrabs",
+    "Slogs",
+    "Glukkons"
   ],
-  "date": "2026-07-27",
-  "generated_at": "2026-07-27T04:31:22.688245-07:00"
+  "date": "2026-07-28",
+  "generated_at": "2026-07-28T03:40:59.906745-07:00"
 }
