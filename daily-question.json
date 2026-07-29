@@ -2,13 +2,13 @@
   "type": "multiple",
   "difficulty": "medium",
   "category": "Entertainment: Video Games",
-  "question": "What is the name of the common, gun-toting enemies of the &quot;Oddworld&quot; video game series?",
-  "correct_answer": "Sligs",
+  "question": "What is the final game of the &quot;Zero Escape&quot; series called?",
+  "correct_answer": "Zero Escape Zero Time Dilemma ",
   "incorrect_answers": [
-    "Scrabs",
-    "Slogs",
-    "Glukkons"
+    "Nine Hours, Nine Persons, Nine Doors ",
+    "Zero Escape Virtue&#039;s Last Reward",
+    "The Nonary Game: Sigma&#039;s Last Life"
   ],
-  "date": "2026-07-28",
-  "generated_at": "2026-07-28T03:40:59.906745-07:00"
+  "date": "2026-07-29",
+  "generated_at": "2026-07-29T03:45:07.549095-07:00"
 }
