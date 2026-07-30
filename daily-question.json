@@ -1,14 +1,14 @@
 {
   "type": "multiple",
   "difficulty": "medium",
-  "category": "Entertainment: Video Games",
-  "question": "What is the final game of the &quot;Zero Escape&quot; series called?",
-  "correct_answer": "Zero Escape Zero Time Dilemma ",
+  "category": "History",
+  "question": "In what year did Texas secede from Mexico?",
+  "correct_answer": "1836",
   "incorrect_answers": [
-    "Nine Hours, Nine Persons, Nine Doors ",
-    "Zero Escape Virtue&#039;s Last Reward",
-    "The Nonary Game: Sigma&#039;s Last Life"
+    "1838",
+    "1845",
+    "1844"
   ],
-  "date": "2026-07-29",
-  "generated_at": "2026-07-29T03:45:07.549095-07:00"
+  "date": "2026-07-30",
+  "generated_at": "2026-07-30T03:30:16.668722-07:00"
 }
