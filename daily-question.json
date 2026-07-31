@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "History",
-  "question": "In what year did Texas secede from Mexico?",
-  "correct_answer": "1836",
+  "difficulty": "easy",
+  "category": "Entertainment: Television",
+  "question": "What TV show featured older women named Blanche, Rose, Dorothy and Sophia?",
+  "correct_answer": "The Golden Girls",
   "incorrect_answers": [
-    "1838",
-    "1845",
-    "1844"
+    "Cheers",
+    "The Wonder Years",
+    "Family Ties"
   ],
-  "date": "2026-07-30",
-  "generated_at": "2026-07-30T03:30:16.668722-07:00"
+  "date": "2026-07-31",
+  "generated_at": "2026-07-31T03:45:31.470704-07:00"
 }
