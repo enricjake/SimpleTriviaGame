@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "easy",
-  "category": "Entertainment: Television",
-  "question": "What TV show featured older women named Blanche, Rose, Dorothy and Sophia?",
-  "correct_answer": "The Golden Girls",
+  "difficulty": "medium",
+  "category": "Entertainment: Board Games",
+  "question": "The board game, Nightmare was released in what year?",
+  "correct_answer": "1991",
   "incorrect_answers": [
-    "Cheers",
-    "The Wonder Years",
-    "Family Ties"
+    "1992",
+    "1989",
+    "1995"
   ],
-  "date": "2026-07-31",
-  "generated_at": "2026-07-31T03:45:31.470704-07:00"
+  "date": "2026-08-01",
+  "generated_at": "2026-08-01T03:04:15.830718-07:00"
 }
