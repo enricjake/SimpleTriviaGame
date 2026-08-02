@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "Entertainment: Board Games",
-  "question": "The board game, Nightmare was released in what year?",
-  "correct_answer": "1991",
+  "difficulty": "easy",
+  "category": "Entertainment: Video Games",
+  "question": "What is the most expensive weapon in Counter-Strike: Global Offensive?",
+  "correct_answer": "Scar-20/G3SG1",
   "incorrect_answers": [
-    "1992",
-    "1989",
-    "1995"
+    "M4A1",
+    "AWP",
+    "R8 Revolver"
   ],
-  "date": "2026-08-01",
-  "generated_at": "2026-08-01T03:04:15.830718-07:00"
+  "date": "2026-08-02",
+  "generated_at": "2026-08-02T03:02:46.589717-07:00"
 }
