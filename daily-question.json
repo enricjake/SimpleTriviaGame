@@ -1,14 +1,14 @@
 {
   "type": "multiple",
   "difficulty": "easy",
-  "category": "Entertainment: Video Games",
-  "question": "What is the most expensive weapon in Counter-Strike: Global Offensive?",
-  "correct_answer": "Scar-20/G3SG1",
+  "category": "Sports",
+  "question": "Which year did Jenson Button won his first ever Formula One World Drivers&#039; Championship?",
+  "correct_answer": "2009",
   "incorrect_answers": [
-    "M4A1",
-    "AWP",
-    "R8 Revolver"
+    "2010",
+    "2007",
+    "2006"
   ],
-  "date": "2026-08-02",
-  "generated_at": "2026-08-02T03:02:46.589717-07:00"
+  "date": "2026-08-03",
+  "generated_at": "2026-08-03T04:33:44.170766-07:00"
 }
