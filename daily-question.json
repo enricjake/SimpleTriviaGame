@@ -1,14 +1,14 @@
 {
   "type": "multiple",
   "difficulty": "easy",
-  "category": "Sports",
-  "question": "Which year did Jenson Button won his first ever Formula One World Drivers&#039; Championship?",
-  "correct_answer": "2009",
+  "category": "General Knowledge",
+  "question": "What is the first book of the Old Testament?",
+  "correct_answer": "Genesis",
   "incorrect_answers": [
-    "2010",
-    "2007",
-    "2006"
+    "Exodus",
+    "Leviticus",
+    "Numbers"
   ],
-  "date": "2026-08-03",
-  "generated_at": "2026-08-03T04:33:44.170766-07:00"
+  "date": "2026-08-04",
+  "generated_at": "2026-08-04T03:45:11.482942-07:00"
 }
