@@ -1,14 +1,14 @@
 {
   "type": "multiple",
   "difficulty": "easy",
-  "category": "General Knowledge",
-  "question": "What is the first book of the Old Testament?",
-  "correct_answer": "Genesis",
+  "category": "Mythology",
+  "question": "In most traditions, who was the wife of Zeus?",
+  "correct_answer": "Hera",
   "incorrect_answers": [
-    "Exodus",
-    "Leviticus",
-    "Numbers"
+    "Aphrodite",
+    "Athena",
+    "Hestia"
   ],
-  "date": "2026-08-04",
-  "generated_at": "2026-08-04T03:45:11.482942-07:00"
+  "date": "2026-08-05",
+  "generated_at": "2026-08-05T03:42:05.411564-07:00"
 }
