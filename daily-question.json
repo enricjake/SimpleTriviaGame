@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "easy",
-  "category": "Mythology",
-  "question": "In most traditions, who was the wife of Zeus?",
-  "correct_answer": "Hera",
+  "difficulty": "medium",
+  "category": "Science &amp; Nature",
+  "question": "When was the first mammal successfully cloned?",
+  "correct_answer": "1996",
   "incorrect_answers": [
-    "Aphrodite",
-    "Athena",
-    "Hestia"
+    "2009",
+    "1999",
+    "1985"
   ],
-  "date": "2026-08-05",
-  "generated_at": "2026-08-05T03:42:05.411564-07:00"
+  "date": "2026-08-06",
+  "generated_at": "2026-08-06T03:45:24.109100-07:00"
 }
