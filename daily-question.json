@@ -1,14 +1,14 @@
 {
   "type": "multiple",
   "difficulty": "medium",
-  "category": "Science &amp; Nature",
-  "question": "When was the first mammal successfully cloned?",
-  "correct_answer": "1996",
+  "category": "Entertainment: Comics",
+  "question": "Which issue of the &quot;Sonic the Hedgehog&quot; comic did Scourge the Hedgehog make his first appearance?",
+  "correct_answer": "Sonic the Hedgehog #11",
   "incorrect_answers": [
-    "2009",
-    "1999",
-    "1985"
+    "Sonic Universe #32",
+    "Sonic the Hedgehog #161",
+    "Sonic the Hedgehog #47"
   ],
-  "date": "2026-08-06",
-  "generated_at": "2026-08-06T03:45:24.109100-07:00"
+  "date": "2026-08-07",
+  "generated_at": "2026-08-07T02:06:00.497411-07:00"
 }
