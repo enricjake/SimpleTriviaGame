@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "Entertainment: Comics",
-  "question": "Which issue of the &quot;Sonic the Hedgehog&quot; comic did Scourge the Hedgehog make his first appearance?",
-  "correct_answer": "Sonic the Hedgehog #11",
+  "difficulty": "easy",
+  "category": "Entertainment: Film",
+  "question": "The 2016 Disney animated film &#039;Moana&#039; is based on which culture?",
+  "correct_answer": "Polynesian",
   "incorrect_answers": [
-    "Sonic Universe #32",
-    "Sonic the Hedgehog #161",
-    "Sonic the Hedgehog #47"
+    "Native American",
+    "Japanese",
+    "Nordic"
   ],
-  "date": "2026-08-07",
-  "generated_at": "2026-08-07T02:06:00.497411-07:00"
+  "date": "2026-08-08",
+  "generated_at": "2026-08-08T01:50:04.035209-07:00"
 }
