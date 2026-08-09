@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "easy",
-  "category": "Entertainment: Film",
-  "question": "The 2016 Disney animated film &#039;Moana&#039; is based on which culture?",
-  "correct_answer": "Polynesian",
+  "difficulty": "hard",
+  "category": "Entertainment: Music",
+  "question": "In the Panic! At the Disco&#039;s song &quot;Nothern Downpour&quot;, which lyric follows &#039;I know the world&#039;s a broken bone&#039;.",
+  "correct_answer": "&quot;So melt your headaches call it home&quot;",
   "incorrect_answers": [
-    "Native American",
-    "Japanese",
-    "Nordic"
+    "&quot;So sing your song until you&#039;re home&quot;",
+    "&quot;So let them know they&#039;re on their own&quot;",
+    "&quot;So start a fire in their cold stone&quot;"
   ],
-  "date": "2026-08-08",
-  "generated_at": "2026-08-08T01:50:04.035209-07:00"
+  "date": "2026-08-09",
+  "generated_at": "2026-08-09T01:51:26.345422-07:00"
 }
