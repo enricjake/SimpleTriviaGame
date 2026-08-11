@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "Entertainment: Video Games",
-  "question": "Which of these is not a character in the game, &quot;Lethal League&quot;?",
-  "correct_answer": "Rex",
+  "difficulty": "hard",
+  "category": "Entertainment: Books",
+  "question": "Who wrote the novel &quot;Moby-Dick&quot;?",
+  "correct_answer": "Herman Melville",
   "incorrect_answers": [
-    "Switch",
-    "Candyman",
-    "Sonata"
+    "William Golding",
+    "William Shakespeare",
+    "J. R. R. Tolkien"
   ],
-  "date": "2026-08-10",
-  "generated_at": "2026-08-10T02:39:25.169588-07:00"
+  "date": "2026-08-11",
+  "generated_at": "2026-08-11T02:05:46.794057-07:00"
 }
