@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "hard",
-  "category": "Entertainment: Books",
-  "question": "Who wrote the novel &quot;Moby-Dick&quot;?",
-  "correct_answer": "Herman Melville",
+  "difficulty": "easy",
+  "category": "Science: Mathematics",
+  "question": "What is the symbol for Displacement?",
+  "correct_answer": "&Delta;r",
   "incorrect_answers": [
-    "William Golding",
-    "William Shakespeare",
-    "J. R. R. Tolkien"
+    "dr",
+    "Dp",
+    "r"
   ],
-  "date": "2026-08-11",
-  "generated_at": "2026-08-11T02:05:46.794057-07:00"
+  "date": "2026-08-12",
+  "generated_at": "2026-08-12T02:17:11.891419-07:00"
 }
