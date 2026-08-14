@@ -1,14 +1,14 @@
 {
   "type": "multiple",
   "difficulty": "medium",
-  "category": "Entertainment: Film",
-  "question": "In the 1999 movie Fight Club, which of these is not a rule of the &quot;fight club&quot;?",
-  "correct_answer": "Always wear a shirt",
+  "category": "Geography",
+  "question": "Which islands below have been claimed by both Japan and Russia?",
+  "correct_answer": "Kuril Islands",
   "incorrect_answers": [
-    "You do not talk about FIGHT CLUB",
-    "Only two guys to a fight",
-    "Fights will go on as long as they have to"
+    "Paracel Islands",
+    "Chagos Islands",
+    "Spratly Islands"
   ],
-  "date": "2026-08-13",
-  "generated_at": "2026-08-13T02:18:03.884181-07:00"
+  "date": "2026-08-14",
+  "generated_at": "2026-08-14T02:12:10.436665-07:00"
 }
