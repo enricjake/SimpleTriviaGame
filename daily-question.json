@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "Geography",
-  "question": "Which islands below have been claimed by both Japan and Russia?",
-  "correct_answer": "Kuril Islands",
+  "difficulty": "easy",
+  "category": "Entertainment: Comics",
+  "question": "What is the alter-ego of the DC comics character &quot;Superman&quot;?",
+  "correct_answer": "Clark Kent",
   "incorrect_answers": [
-    "Paracel Islands",
-    "Chagos Islands",
-    "Spratly Islands"
+    "Bruce Wayne",
+    "Arthur Curry",
+    "John Jones"
   ],
-  "date": "2026-08-14",
-  "generated_at": "2026-08-14T02:12:10.436665-07:00"
+  "date": "2026-08-15",
+  "generated_at": "2026-08-15T01:35:44.237020-07:00"
 }
