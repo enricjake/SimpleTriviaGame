@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "easy",
-  "category": "Entertainment: Comics",
-  "question": "What is the alter-ego of the DC comics character &quot;Superman&quot;?",
-  "correct_answer": "Clark Kent",
+  "difficulty": "medium",
+  "category": "Entertainment: Board Games",
+  "question": "About how many Slinkys were sold in their first 60 years (from 1945 to 2005)?",
+  "correct_answer": "300 Million",
   "incorrect_answers": [
-    "Bruce Wayne",
-    "Arthur Curry",
-    "John Jones"
+    "100 Million",
+    "450 Million",
+    "1 Billion"
   ],
-  "date": "2026-08-15",
-  "generated_at": "2026-08-15T01:35:44.237020-07:00"
+  "date": "2026-08-16",
+  "generated_at": "2026-08-16T01:36:21.538272-07:00"
 }
