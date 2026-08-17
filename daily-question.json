@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "Entertainment: Board Games",
-  "question": "About how many Slinkys were sold in their first 60 years (from 1945 to 2005)?",
-  "correct_answer": "300 Million",
+  "difficulty": "hard",
+  "category": "Science &amp; Nature",
+  "question": "Which of these is a stop codon in DNA?",
+  "correct_answer": "TAA",
   "incorrect_answers": [
-    "100 Million",
-    "450 Million",
-    "1 Billion"
+    "ACT",
+    "ACA",
+    "GTA"
   ],
-  "date": "2026-08-16",
-  "generated_at": "2026-08-16T01:36:21.538272-07:00"
+  "date": "2026-08-17",
+  "generated_at": "2026-08-17T01:50:51.940699-07:00"
 }
