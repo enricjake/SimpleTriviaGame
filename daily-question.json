@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "hard",
-  "category": "Science &amp; Nature",
-  "question": "Which of these is a stop codon in DNA?",
-  "correct_answer": "TAA",
+  "difficulty": "easy",
+  "category": "Entertainment: Film",
+  "question": "Who played Deputy Marshal Samuel Gerard in the 1993 film &quot;The Fugitive&quot;?",
+  "correct_answer": "Tommy Lee Jones",
   "incorrect_answers": [
-    "ACT",
-    "ACA",
-    "GTA"
+    "Harrison Ford",
+    "Harvey Keitel",
+    "Martin Landau"
   ],
-  "date": "2026-08-17",
-  "generated_at": "2026-08-17T01:50:51.940699-07:00"
+  "date": "2026-08-18",
+  "generated_at": "2026-08-18T01:43:51.790152-07:00"
 }
