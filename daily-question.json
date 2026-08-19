@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "easy",
-  "category": "Entertainment: Film",
-  "question": "Who played Deputy Marshal Samuel Gerard in the 1993 film &quot;The Fugitive&quot;?",
-  "correct_answer": "Tommy Lee Jones",
+  "difficulty": "medium",
+  "category": "Entertainment: Video Games",
+  "question": "Which of the following is a character in the video game Destiny?",
+  "correct_answer": "Cayde-6",
   "incorrect_answers": [
-    "Harrison Ford",
-    "Harvey Keitel",
-    "Martin Landau"
+    "Ostrava of Boletaria",
+    "Mordecai the Hunter",
+    "Leon S. Kennedy"
   ],
-  "date": "2026-08-18",
-  "generated_at": "2026-08-18T01:43:51.790152-07:00"
+  "date": "2026-08-19",
+  "generated_at": "2026-08-19T01:44:55.056657-07:00"
 }
