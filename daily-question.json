@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "Entertainment: Video Games",
-  "question": "Which of the following is a character in the video game Destiny?",
-  "correct_answer": "Cayde-6",
+  "difficulty": "easy",
+  "category": "Entertainment: Music",
+  "question": "How many albums did King Gizzard &amp; the Lizard Wizard release in 2017?",
+  "correct_answer": "5",
   "incorrect_answers": [
-    "Ostrava of Boletaria",
-    "Mordecai the Hunter",
-    "Leon S. Kennedy"
+    "3",
+    "6",
+    "2"
   ],
-  "date": "2026-08-19",
-  "generated_at": "2026-08-19T01:44:55.056657-07:00"
+  "date": "2026-08-20",
+  "generated_at": "2026-08-20T01:46:45.203752-07:00"
 }
