@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "easy",
-  "category": "Entertainment: Music",
-  "question": "How many albums did King Gizzard &amp; the Lizard Wizard release in 2017?",
-  "correct_answer": "5",
+  "difficulty": "hard",
+  "category": "History",
+  "question": "Which country did the Eureka Rebellion, an 1856 battle against colonial rule, take place in?",
+  "correct_answer": "Australia",
   "incorrect_answers": [
-    "3",
-    "6",
-    "2"
+    "India",
+    "Canada",
+    "Brazil"
   ],
-  "date": "2026-08-20",
-  "generated_at": "2026-08-20T01:46:45.203752-07:00"
+  "date": "2026-08-21",
+  "generated_at": "2026-08-21T01:48:41.028698-07:00"
 }
