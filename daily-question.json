@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "hard",
-  "category": "History",
-  "question": "Which country did the Eureka Rebellion, an 1856 battle against colonial rule, take place in?",
-  "correct_answer": "Australia",
+  "difficulty": "easy",
+  "category": "Entertainment: Film",
+  "question": "What was the first monster to appear alongside Godzilla?",
+  "correct_answer": "Anguirus",
   "incorrect_answers": [
-    "India",
-    "Canada",
-    "Brazil"
+    "King Kong",
+    "Mothra",
+    "King Ghidora"
   ],
-  "date": "2026-08-21",
-  "generated_at": "2026-08-21T01:48:41.028698-07:00"
+  "date": "2026-08-22",
+  "generated_at": "2026-08-22T01:37:13.753284-07:00"
 }
