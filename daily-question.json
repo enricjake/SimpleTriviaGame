@@ -2,13 +2,13 @@
   "type": "multiple",
   "difficulty": "medium",
   "category": "Science &amp; Nature",
-  "question": "What does CPR, the emergency procedure to assist someone who has suffered cardiac arrest, stand for?",
-  "correct_answer": "Cardiopulmonary resuscitation",
+  "question": "Which one of these scientists conducted the Gold Foil Experiment which concluded that atoms are mostly made of empty space?",
+  "correct_answer": "Ernest Rutherford",
   "incorrect_answers": [
-    "Chronic pain relief",
-    "Cancer pain release",
-    "Contraceptive prevalence rate"
+    "Joseph John Thomson",
+    "Archimedes",
+    "Niels Henrik David Bohr"
   ],
-  "date": "2026-08-24",
-  "generated_at": "2026-08-24T01:55:07.407552-07:00"
+  "date": "2026-08-25",
+  "generated_at": "2026-08-25T01:50:20.952006-07:00"
 }
