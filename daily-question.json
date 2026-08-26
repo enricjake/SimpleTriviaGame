@@ -1,14 +1,14 @@
 {
   "type": "multiple",
   "difficulty": "medium",
-  "category": "Science &amp; Nature",
-  "question": "Which one of these scientists conducted the Gold Foil Experiment which concluded that atoms are mostly made of empty space?",
-  "correct_answer": "Ernest Rutherford",
+  "category": "Entertainment: Video Games",
+  "question": "In the Super Mario Bros. series, what game is the  &quot;Carrot&quot; power-up from?",
+  "correct_answer": "Super Mario Land 2: The 6 Golden Coins",
   "incorrect_answers": [
-    "Joseph John Thomson",
-    "Archimedes",
-    "Niels Henrik David Bohr"
+    "Super Mario World",
+    "Super Mario Land",
+    "Super Mario 3D Land"
   ],
-  "date": "2026-08-25",
-  "generated_at": "2026-08-25T01:50:20.952006-07:00"
+  "date": "2026-08-26",
+  "generated_at": "2026-08-26T01:51:30.626173-07:00"
 }
