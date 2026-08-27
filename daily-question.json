@@ -1,14 +1,14 @@
 {
   "type": "multiple",
   "difficulty": "medium",
-  "category": "Entertainment: Video Games",
-  "question": "In the Super Mario Bros. series, what game is the  &quot;Carrot&quot; power-up from?",
-  "correct_answer": "Super Mario Land 2: The 6 Golden Coins",
+  "category": "History",
+  "question": "When did the Crisis of the Third Century begin?",
+  "correct_answer": "235 AD",
   "incorrect_answers": [
-    "Super Mario World",
-    "Super Mario Land",
-    "Super Mario 3D Land"
+    "235 BC",
+    "242 AD",
+    "210 AD"
   ],
-  "date": "2026-08-26",
-  "generated_at": "2026-08-26T01:51:30.626173-07:00"
+  "date": "2026-08-27",
+  "generated_at": "2026-08-27T12:00:04.185934-07:00"
 }
