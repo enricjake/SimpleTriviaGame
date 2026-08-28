@@ -1,14 +1,14 @@
 {
   "type": "multiple",
   "difficulty": "medium",
-  "category": "History",
-  "question": "When did the Crisis of the Third Century begin?",
-  "correct_answer": "235 AD",
+  "category": "Entertainment: Video Games",
+  "question": "What name does the little headcrab in &quot;Half Life 2&quot; have?",
+  "correct_answer": "Lamarr",
   "incorrect_answers": [
-    "235 BC",
-    "242 AD",
-    "210 AD"
+    "Jumperr",
+    "Drett",
+    "Jerry"
   ],
-  "date": "2026-08-27",
-  "generated_at": "2026-08-27T12:00:04.185934-07:00"
+  "date": "2026-08-28",
+  "generated_at": "2026-08-28T13:07:50.942628-07:00"
 }
