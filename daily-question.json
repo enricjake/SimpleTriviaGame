@@ -2,13 +2,13 @@
   "type": "multiple",
   "difficulty": "medium",
   "category": "Entertainment: Video Games",
-  "question": "What name does the little headcrab in &quot;Half Life 2&quot; have?",
-  "correct_answer": "Lamarr",
+  "question": "Which Game Development company made No Man&#039;s Sky?",
+  "correct_answer": "Hello Games",
   "incorrect_answers": [
-    "Jumperr",
-    "Drett",
-    "Jerry"
+    "Dovetail Games",
+    "Valve",
+    "Blizzard Entertainment"
   ],
-  "date": "2026-08-28",
-  "generated_at": "2026-08-28T13:07:50.942628-07:00"
+  "date": "2026-08-29",
+  "generated_at": "2026-08-29T06:45:22.417447-07:00"
 }
