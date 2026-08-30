@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "Entertainment: Video Games",
-  "question": "Which Game Development company made No Man&#039;s Sky?",
-  "correct_answer": "Hello Games",
+  "difficulty": "hard",
+  "category": "Entertainment: Books",
+  "question": "In the book series &quot;Odd Thomas&quot;, Danny Jessup has what genetic disease? ",
+  "correct_answer": " Osteogenesis Imperfecta",
   "incorrect_answers": [
-    "Dovetail Games",
-    "Valve",
-    "Blizzard Entertainment"
+    "Spinocerebellar ataxia",
+    "Adrenoleukodystrophy",
+    "Cystic Fibrosis"
   ],
-  "date": "2026-08-29",
-  "generated_at": "2026-08-29T06:45:22.417447-07:00"
+  "date": "2026-08-30",
+  "generated_at": "2026-08-30T06:43:16.818401-07:00"
 }
