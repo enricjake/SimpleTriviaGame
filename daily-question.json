@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "hard",
-  "category": "Entertainment: Books",
-  "question": "In the book series &quot;Odd Thomas&quot;, Danny Jessup has what genetic disease? ",
-  "correct_answer": " Osteogenesis Imperfecta",
+  "difficulty": "medium",
+  "category": "Entertainment: Video Games",
+  "question": "What is the item required to summon the boss Duke Fishron in the game Terraria?",
+  "correct_answer": "Truffle Worm",
   "incorrect_answers": [
-    "Spinocerebellar ataxia",
-    "Adrenoleukodystrophy",
-    "Cystic Fibrosis"
+    "Suspicious Looking Fish",
+    "King Grasshopper",
+    "Slug"
   ],
-  "date": "2026-08-30",
-  "generated_at": "2026-08-30T06:43:16.818401-07:00"
+  "date": "2026-08-31",
+  "generated_at": "2026-08-31T09:03:02.039730-07:00"
 }
