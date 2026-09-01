@@ -1,14 +1,14 @@
 {
   "type": "multiple",
   "difficulty": "medium",
-  "category": "Entertainment: Video Games",
-  "question": "What is the item required to summon the boss Duke Fishron in the game Terraria?",
-  "correct_answer": "Truffle Worm",
+  "category": "Entertainment: Television",
+  "question": "Dee from &quot;It&#039;s Always Sunny in Philadelphia&quot; has dated all of the following guys EXCEPT",
+  "correct_answer": "Matthew &quot;Rickety Cricket&quot; Mara",
   "incorrect_answers": [
-    "Suspicious Looking Fish",
-    "King Grasshopper",
-    "Slug"
+    "Colin the Thief",
+    "Ben the Soldier",
+    "Kevin Gallagher aka Lil&#039; Kevin"
   ],
-  "date": "2026-08-31",
-  "generated_at": "2026-08-31T09:03:02.039730-07:00"
+  "date": "2026-09-01",
+  "generated_at": "2026-09-01T06:23:15.052794-07:00"
 }
