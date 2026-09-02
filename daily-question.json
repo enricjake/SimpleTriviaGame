@@ -1,14 +1,14 @@
 {
   "type": "multiple",
   "difficulty": "medium",
-  "category": "Entertainment: Television",
-  "question": "Dee from &quot;It&#039;s Always Sunny in Philadelphia&quot; has dated all of the following guys EXCEPT",
-  "correct_answer": "Matthew &quot;Rickety Cricket&quot; Mara",
+  "category": "Science: Computers",
+  "question": "What is the number of keys on a standard Windows Keyboard?",
+  "correct_answer": "104",
   "incorrect_answers": [
-    "Colin the Thief",
-    "Ben the Soldier",
-    "Kevin Gallagher aka Lil&#039; Kevin"
+    "64",
+    "94",
+    "76"
   ],
-  "date": "2026-09-01",
-  "generated_at": "2026-09-01T06:23:15.052794-07:00"
+  "date": "2026-09-02",
+  "generated_at": "2026-09-02T05:41:22.317392-07:00"
 }
