@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "Science: Computers",
-  "question": "What is the number of keys on a standard Windows Keyboard?",
-  "correct_answer": "104",
+  "difficulty": "hard",
+  "category": "Entertainment: Video Games",
+  "question": "What was the name of Sonic the Hedgehog&#039;s original human girlfriend?",
+  "correct_answer": "Madonna",
   "incorrect_answers": [
-    "64",
-    "94",
-    "76"
+    "Celeste",
+    "Sierra",
+    "Nina"
   ],
-  "date": "2026-09-02",
-  "generated_at": "2026-09-02T05:41:22.317392-07:00"
+  "date": "2026-09-03",
+  "generated_at": "2026-09-03T05:44:15.210074-07:00"
 }
