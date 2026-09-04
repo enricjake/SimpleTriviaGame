@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "hard",
+  "difficulty": "easy",
   "category": "Entertainment: Video Games",
-  "question": "What was the name of Sonic the Hedgehog&#039;s original human girlfriend?",
-  "correct_answer": "Madonna",
+  "question": "Who is the leader of the Brotherhood of Nod in the Command and Conquer series?",
+  "correct_answer": "Kane",
   "incorrect_answers": [
-    "Celeste",
-    "Sierra",
-    "Nina"
+    "Joseph Stalin",
+    "CABAL",
+    "Yuri"
   ],
-  "date": "2026-09-03",
-  "generated_at": "2026-09-03T05:44:15.210074-07:00"
+  "date": "2026-09-04",
+  "generated_at": "2026-09-04T05:37:58.671148-07:00"
 }
