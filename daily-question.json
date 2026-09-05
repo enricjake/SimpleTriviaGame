@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "easy",
-  "category": "Entertainment: Video Games",
-  "question": "Who is the leader of the Brotherhood of Nod in the Command and Conquer series?",
-  "correct_answer": "Kane",
+  "difficulty": "medium",
+  "category": "Entertainment: Cartoon &amp; Animations",
+  "question": "What is the name of the Alligator that The Simpsons &quot;killed&quot; in the episode &quot;Kill The Alligator and Run&quot;?",
+  "correct_answer": "Captain Jack",
   "incorrect_answers": [
-    "Joseph Stalin",
-    "CABAL",
-    "Yuri"
+    "Captain Jake",
+    "Captain Hector",
+    "Captain Flynn"
   ],
-  "date": "2026-09-04",
-  "generated_at": "2026-09-04T05:37:58.671148-07:00"
+  "date": "2026-09-05",
+  "generated_at": "2026-09-05T04:45:49.395066-07:00"
 }
