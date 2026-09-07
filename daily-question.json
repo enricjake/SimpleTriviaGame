@@ -2,13 +2,13 @@
   "type": "multiple",
   "difficulty": "medium",
   "category": "Entertainment: Video Games",
-  "question": "In Dota 2, what is Earthshaker&#039;s real name?",
-  "correct_answer": "Raigor Stonehoof",
+  "question": "What&#039;s the famous line Vaas says in &quot;Far Cry 3&quot;?",
+  "correct_answer": "Did I ever tell you the definition of Insanity?",
   "incorrect_answers": [
-    "Banehallow Ambry",
-    "Carl",
-    "Barathrum"
+    "Have I failed to entertain you?",
+    "You&#039;re my b*tch!",
+    "Maybe your best course...would be to tread lightly."
   ],
-  "date": "2026-09-06",
-  "generated_at": "2026-09-06T05:03:43.587759-07:00"
+  "date": "2026-09-07",
+  "generated_at": "2026-09-07T07:09:01.779648-07:00"
 }
