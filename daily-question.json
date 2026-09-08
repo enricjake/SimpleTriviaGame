@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "Entertainment: Video Games",
-  "question": "What&#039;s the famous line Vaas says in &quot;Far Cry 3&quot;?",
-  "correct_answer": "Did I ever tell you the definition of Insanity?",
+  "difficulty": "easy",
+  "category": "Art",
+  "question": "Who painted the biblical fresco The Creation of Adam?",
+  "correct_answer": "Michelangelo",
   "incorrect_answers": [
-    "Have I failed to entertain you?",
-    "You&#039;re my b*tch!",
-    "Maybe your best course...would be to tread lightly."
+    "Leonardo da Vinci",
+    "Caravaggio",
+    "Rembrandt"
   ],
-  "date": "2026-09-07",
-  "generated_at": "2026-09-07T07:09:01.779648-07:00"
+  "date": "2026-09-08",
+  "generated_at": "2026-09-08T05:47:08.283728-07:00"
 }
