@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "hard",
-  "category": "Entertainment: Music",
-  "question": "Who was the first Jazz Musician to win the Pulitzer Prize for Music",
-  "correct_answer": "Wynton Marsalis",
+  "difficulty": "medium",
+  "category": "Entertainment: Video Games",
+  "question": "What was the #1 selling game on Steam by revenue in 2016?",
+  "correct_answer": "Sid Meier&#039;s Civilization VI",
   "incorrect_answers": [
-    "Michael Brecker",
-    "Herbie Hancock",
-    "Joe Henderson"
+    "Grand Theft Auto V",
+    "Counter Strike: Global Offensive",
+    "Dark Souls III"
   ],
-  "date": "2026-09-09",
-  "generated_at": "2026-09-09T05:51:51.354131-07:00"
+  "date": "2026-09-10",
+  "generated_at": "2026-09-10T05:49:42.980696-07:00"
 }
