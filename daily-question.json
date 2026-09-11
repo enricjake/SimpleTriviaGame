@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "category": "Entertainment: Video Games",
-  "question": "What was the #1 selling game on Steam by revenue in 2016?",
-  "correct_answer": "Sid Meier&#039;s Civilization VI",
+  "question": "What was the name of the hero in the 80s animated video game &#039;Dragon&#039;s Lair&#039;?",
+  "correct_answer": "Dirk the Daring",
   "incorrect_answers": [
-    "Grand Theft Auto V",
-    "Counter Strike: Global Offensive",
-    "Dark Souls III"
+    "Arthur",
+    "Sir Toby Belch",
+    "Guy of Gisbourne"
   ],
-  "date": "2026-09-10",
-  "generated_at": "2026-09-10T05:49:42.980696-07:00"
+  "date": "2026-09-11",
+  "generated_at": "2026-09-11T05:44:30.281894-07:00"
 }
