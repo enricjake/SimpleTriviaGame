@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "hard",
-  "category": "Entertainment: Video Games",
-  "question": "What was the name of the hero in the 80s animated video game &#039;Dragon&#039;s Lair&#039;?",
-  "correct_answer": "Dirk the Daring",
+  "difficulty": "easy",
+  "category": "Entertainment: Japanese Anime &amp; Manga",
+  "question": "In &quot;The Melancholy of Haruhi Suzumiya&quot; series, the SOS Brigade club leader is unknowingly treated as a(n) __ by her peers.",
+  "correct_answer": "God",
   "incorrect_answers": [
-    "Arthur",
-    "Sir Toby Belch",
-    "Guy of Gisbourne"
+    "Alien",
+    "Time Traveler",
+    "Esper"
   ],
-  "date": "2026-09-11",
-  "generated_at": "2026-09-11T05:44:30.281894-07:00"
+  "date": "2026-09-12",
+  "generated_at": "2026-09-12T05:04:20.435013-07:00"
 }
