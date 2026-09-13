@@ -1,14 +1,14 @@
 {
   "type": "multiple",
   "difficulty": "easy",
-  "category": "Entertainment: Japanese Anime &amp; Manga",
-  "question": "In &quot;The Melancholy of Haruhi Suzumiya&quot; series, the SOS Brigade club leader is unknowingly treated as a(n) __ by her peers.",
-  "correct_answer": "God",
+  "category": "Science &amp; Nature",
+  "question": "What does LASER stand for?",
+  "correct_answer": "Light amplification by stimulated emission of radiation",
   "incorrect_answers": [
-    "Alien",
-    "Time Traveler",
-    "Esper"
+    "Lite analysing by stereo ecorazer",
+    "Light amplifier by standby energy of radio",
+    "Life antimatter by standing entry of range"
   ],
-  "date": "2026-09-12",
-  "generated_at": "2026-09-12T05:04:20.435013-07:00"
+  "date": "2026-09-13",
+  "generated_at": "2026-09-13T06:14:25.332485-07:00"
 }
