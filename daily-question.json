@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "easy",
-  "category": "Science &amp; Nature",
-  "question": "What does LASER stand for?",
-  "correct_answer": "Light amplification by stimulated emission of radiation",
+  "difficulty": "hard",
+  "category": "Sports",
+  "question": "At which race was the 2018 F1 Drivers Championship won?",
+  "correct_answer": "Mexico",
   "incorrect_answers": [
-    "Lite analysing by stereo ecorazer",
-    "Light amplifier by standby energy of radio",
-    "Life antimatter by standing entry of range"
+    "United States",
+    "Belgium",
+    "Abu Dhabi"
   ],
-  "date": "2026-09-13",
-  "generated_at": "2026-09-13T06:14:25.332485-07:00"
+  "date": "2026-09-14",
+  "generated_at": "2026-09-14T07:55:23.046601-07:00"
 }
