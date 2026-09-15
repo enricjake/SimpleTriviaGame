@@ -1,14 +1,14 @@
 {
   "type": "multiple",
   "difficulty": "hard",
-  "category": "Sports",
-  "question": "At which race was the 2018 F1 Drivers Championship won?",
-  "correct_answer": "Mexico",
+  "category": "Science: Computers",
+  "question": "Which of these was the name of a bug found in April 2014 in the publicly available OpenSSL cryptography library?",
+  "correct_answer": "Heartbleed",
   "incorrect_answers": [
-    "United States",
-    "Belgium",
-    "Abu Dhabi"
+    "Shellshock",
+    "Corrupted Blood",
+    "Shellscript"
   ],
-  "date": "2026-09-14",
-  "generated_at": "2026-09-14T07:55:23.046601-07:00"
+  "date": "2026-09-15",
+  "generated_at": "2026-09-15T06:22:02.228368-07:00"
 }
