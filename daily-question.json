@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "hard",
-  "category": "Science: Computers",
-  "question": "Which of these was the name of a bug found in April 2014 in the publicly available OpenSSL cryptography library?",
-  "correct_answer": "Heartbleed",
+  "difficulty": "medium",
+  "category": "Entertainment: Video Games",
+  "question": "Which of these stages is not playable in &quot;Super Smash Bros. for Wii U&quot;?",
+  "correct_answer": "Fountain of Dreams",
   "incorrect_answers": [
-    "Shellshock",
-    "Corrupted Blood",
-    "Shellscript"
+    "Bridge of Eldin",
+    "75m",
+    "Miiverse"
   ],
-  "date": "2026-09-15",
-  "generated_at": "2026-09-15T06:22:02.228368-07:00"
+  "date": "2026-09-16",
+  "generated_at": "2026-09-16T06:21:03.104983-07:00"
 }
