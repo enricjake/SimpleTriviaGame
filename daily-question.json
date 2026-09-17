@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "Entertainment: Video Games",
-  "question": "Which of these stages is not playable in &quot;Super Smash Bros. for Wii U&quot;?",
-  "correct_answer": "Fountain of Dreams",
+  "difficulty": "easy",
+  "category": "Geography",
+  "question": "Which country is the home of the largest Japanese population outside of Japan?",
+  "correct_answer": "Brazil",
   "incorrect_answers": [
-    "Bridge of Eldin",
-    "75m",
-    "Miiverse"
+    "China",
+    "Russia",
+    "The United States"
   ],
-  "date": "2026-09-16",
-  "generated_at": "2026-09-16T06:21:03.104983-07:00"
+  "date": "2026-09-17",
+  "generated_at": "2026-09-17T06:16:49.037154-07:00"
 }
