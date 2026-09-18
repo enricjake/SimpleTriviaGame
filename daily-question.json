@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "easy",
-  "category": "Geography",
-  "question": "Which country is the home of the largest Japanese population outside of Japan?",
-  "correct_answer": "Brazil",
+  "difficulty": "medium",
+  "category": "Art",
+  "question": "Who painted &quot;The Scream&quot;?",
+  "correct_answer": "Edvard Munch",
   "incorrect_answers": [
-    "China",
-    "Russia",
-    "The United States"
+    "Vincent Van Gogh",
+    "Picasso",
+    "Henri Matisse"
   ],
-  "date": "2026-09-17",
-  "generated_at": "2026-09-17T06:16:49.037154-07:00"
+  "date": "2026-09-18",
+  "generated_at": "2026-09-18T05:51:30.523941-07:00"
 }
