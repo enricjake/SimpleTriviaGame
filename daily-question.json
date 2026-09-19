@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "Art",
-  "question": "Who painted &quot;The Scream&quot;?",
-  "correct_answer": "Edvard Munch",
+  "difficulty": "hard",
+  "category": "Geography",
+  "question": "Which river was dammed to create Gatun Lake and the Panama Canal?",
+  "correct_answer": "Chagres River",
   "incorrect_answers": [
-    "Vincent Van Gogh",
-    "Picasso",
-    "Henri Matisse"
+    "Tuira River",
+    "Chucunaque River",
+    "Chepo River "
   ],
-  "date": "2026-09-18",
-  "generated_at": "2026-09-18T05:51:30.523941-07:00"
+  "date": "2026-09-19",
+  "generated_at": "2026-09-19T05:24:30.603890-07:00"
 }
