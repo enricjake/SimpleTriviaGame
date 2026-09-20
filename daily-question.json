@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "hard",
-  "category": "Geography",
-  "question": "Which river was dammed to create Gatun Lake and the Panama Canal?",
-  "correct_answer": "Chagres River",
+  "difficulty": "medium",
+  "category": "Vehicles",
+  "question": "What was the aircraft registration for the last Concorde built?",
+  "correct_answer": "G-BOAF",
   "incorrect_answers": [
-    "Tuira River",
-    "Chucunaque River",
-    "Chepo River "
+    "F-BTSC",
+    "G-BOAC",
+    "F-BVFF"
   ],
-  "date": "2026-09-19",
-  "generated_at": "2026-09-19T05:24:30.603890-07:00"
+  "date": "2026-09-20",
+  "generated_at": "2026-09-20T05:58:40.146803-07:00"
 }
