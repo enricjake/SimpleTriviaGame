@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "Vehicles",
-  "question": "What was the aircraft registration for the last Concorde built?",
-  "correct_answer": "G-BOAF",
+  "difficulty": "hard",
+  "category": "Science: Computers",
+  "question": "The acronym &quot;RIP&quot; stands for which of these?",
+  "correct_answer": "Routing Information Protocol",
   "incorrect_answers": [
-    "F-BTSC",
-    "G-BOAC",
-    "F-BVFF"
+    "Runtime Instance Processes",
+    "Regular Interval Processes",
+    "Routine Inspection Protocol"
   ],
-  "date": "2026-09-20",
-  "generated_at": "2026-09-20T05:58:40.146803-07:00"
+  "date": "2026-09-21",
+  "generated_at": "2026-09-21T07:59:59.084523-07:00"
 }
