@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "hard",
-  "category": "Science: Computers",
-  "question": "The acronym &quot;RIP&quot; stands for which of these?",
-  "correct_answer": "Routing Information Protocol",
+  "difficulty": "medium",
+  "category": "Celebrities",
+  "question": "Where was Kanye West born?",
+  "correct_answer": "Atlanta, Georgia",
   "incorrect_answers": [
-    "Runtime Instance Processes",
-    "Regular Interval Processes",
-    "Routine Inspection Protocol"
+    "Chicago, Illinois",
+    "Los Angeles, California",
+    "Detroit, Michigan"
   ],
-  "date": "2026-09-21",
-  "generated_at": "2026-09-21T07:59:59.084523-07:00"
+  "date": "2026-09-22",
+  "generated_at": "2026-09-22T06:17:36.261895-07:00"
 }
