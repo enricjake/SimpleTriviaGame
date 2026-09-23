@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "Celebrities",
-  "question": "Where was Kanye West born?",
-  "correct_answer": "Atlanta, Georgia",
+  "difficulty": "easy",
+  "category": "Entertainment: Music",
+  "question": "Which of these is NOT considered a woodwind instrument?",
+  "correct_answer": "Trombone",
   "incorrect_answers": [
-    "Chicago, Illinois",
-    "Los Angeles, California",
-    "Detroit, Michigan"
+    "Oboe",
+    "Clarinet",
+    "Bassoon"
   ],
-  "date": "2026-09-22",
-  "generated_at": "2026-09-22T06:17:36.261895-07:00"
+  "date": "2026-09-23",
+  "generated_at": "2026-09-23T06:31:49.550751-07:00"
 }
