@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "easy",
-  "category": "Entertainment: Music",
-  "question": "Which of these is NOT considered a woodwind instrument?",
-  "correct_answer": "Trombone",
+  "difficulty": "hard",
+  "category": "Science &amp; Nature",
+  "question": "What is the molecular formula of Glucose?",
+  "correct_answer": "C6H12O6",
   "incorrect_answers": [
-    "Oboe",
-    "Clarinet",
-    "Bassoon"
+    "C2H4O2",
+    "K+",
+    "CH4"
   ],
-  "date": "2026-09-23",
-  "generated_at": "2026-09-23T06:31:49.550751-07:00"
+  "date": "2026-09-24",
+  "generated_at": "2026-09-24T06:27:03.189116-07:00"
 }
