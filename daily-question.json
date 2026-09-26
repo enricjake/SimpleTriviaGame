@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "Geography",
-  "question": "What is the smallest country in South America by area?",
-  "correct_answer": "Suriname",
+  "difficulty": "hard",
+  "category": "Entertainment: Cartoon &amp; Animations",
+  "question": "What is Scooby Doo&#039;s full name?",
+  "correct_answer": "Scoobert Doo",
   "incorrect_answers": [
-    "Brazil",
-    "Uruguay",
-    "Chile"
+    "Scooter Doo",
+    "Scooby Dooby Doo",
+    "Scoobity Doo"
   ],
-  "date": "2026-09-25",
-  "generated_at": "2026-09-25T06:32:01.084018-07:00"
+  "date": "2026-09-26",
+  "generated_at": "2026-09-26T05:54:07.456675-07:00"
 }
