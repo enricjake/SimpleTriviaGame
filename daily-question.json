@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "category": "Entertainment: Video Games",
-  "question": "Which Nintendo 64 game did NOT have Luigi in it?",
-  "correct_answer": "Super Mario 64",
+  "question": "Which of these games was NOT a Nintendo Switch launch title in the United States? ",
+  "correct_answer": "Voez",
   "incorrect_answers": [
-    "Mario Party 2",
-    "Paper Mario",
-    "Super Smash Bros."
+    "Just Dance 2017",
+    "Snipperclips",
+    "Fast RMX"
   ],
-  "date": "2026-09-27",
-  "generated_at": "2026-09-27T06:46:22.727202-07:00"
+  "date": "2026-09-28",
+  "generated_at": "2026-09-28T09:39:42.986518-07:00"
 }
