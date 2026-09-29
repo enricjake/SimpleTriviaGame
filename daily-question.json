@@ -1,14 +1,14 @@
 {
   "type": "multiple",
   "difficulty": "medium",
-  "category": "Entertainment: Video Games",
-  "question": "Which of these games was NOT a Nintendo Switch launch title in the United States? ",
-  "correct_answer": "Voez",
+  "category": "Entertainment: Film",
+  "question": "Which 1958 movie starred Kirk Douglas and Tony Curtis as half-brothers Einar and Eric?",
+  "correct_answer": "The Vikings ",
   "incorrect_answers": [
-    "Just Dance 2017",
-    "Snipperclips",
-    "Fast RMX"
+    "The Long Ships",
+    "Prince Valiant",
+    "Spartacus"
   ],
-  "date": "2026-09-28",
-  "generated_at": "2026-09-28T09:39:42.986518-07:00"
+  "date": "2026-09-29",
+  "generated_at": "2026-09-29T07:45:23.723919-07:00"
 }
