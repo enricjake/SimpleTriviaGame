@@ -1,14 +1,14 @@
 {
   "type": "multiple",
   "difficulty": "hard",
-  "category": "History",
-  "question": "What Southeast Asian country was formerly known as &#039;Lan Xang&#039;?",
-  "correct_answer": "Laos",
+  "category": "Geography",
+  "question": "Which of the following landlocked countries is entirely contained within another country?",
+  "correct_answer": "Lesotho",
   "incorrect_answers": [
-    "Cambodia",
-    "Vietnam",
-    "Thailand"
+    "Burkina Faso",
+    "Mongolia",
+    "Luxembourg"
   ],
-  "date": "2026-10-01",
-  "generated_at": "2026-10-01T08:18:27.208633-07:00"
+  "date": "2026-10-02",
+  "generated_at": "2026-10-02T07:37:54.758123-07:00"
 }
