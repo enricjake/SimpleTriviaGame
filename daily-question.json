@@ -2,13 +2,13 @@
   "type": "multiple",
   "difficulty": "hard",
   "category": "Geography",
-  "question": "Which of the following landlocked countries is entirely contained within another country?",
-  "correct_answer": "Lesotho",
+  "question": "Bir Tawil, an uninhabited track of land claimed by no country, is located along the border of which two countries?",
+  "correct_answer": "Egypt and Sudan",
   "incorrect_answers": [
-    "Burkina Faso",
-    "Mongolia",
-    "Luxembourg"
+    "Israel and Jordan",
+    "Chad and Libya",
+    "Iraq and Saudi Arabia"
   ],
-  "date": "2026-10-02",
-  "generated_at": "2026-10-02T07:37:54.758123-07:00"
+  "date": "2026-10-03",
+  "generated_at": "2026-10-03T06:13:50.789048-07:00"
 }
