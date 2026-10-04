@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "hard",
-  "category": "Geography",
-  "question": "Bir Tawil, an uninhabited track of land claimed by no country, is located along the border of which two countries?",
-  "correct_answer": "Egypt and Sudan",
+  "difficulty": "medium",
+  "category": "Sports",
+  "question": "Who won NFL Super Bowl LI? (51)",
+  "correct_answer": "Patriots",
   "incorrect_answers": [
-    "Israel and Jordan",
-    "Chad and Libya",
-    "Iraq and Saudi Arabia"
+    "Falcons",
+    "Broncos",
+    "Eagles"
   ],
-  "date": "2026-10-03",
-  "generated_at": "2026-10-03T06:13:50.789048-07:00"
+  "date": "2026-10-04",
+  "generated_at": "2026-10-04T06:51:43.143245-07:00"
 }
