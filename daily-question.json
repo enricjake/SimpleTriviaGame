@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "Sports",
-  "question": "Who won NFL Super Bowl LI? (51)",
-  "correct_answer": "Patriots",
+  "difficulty": "hard",
+  "category": "Entertainment: Video Games",
+  "question": "What video game company developed the 2004 racing game &quot;Burnout 3: Takedown&quot;?",
+  "correct_answer": "Criterion Games",
   "incorrect_answers": [
-    "Falcons",
-    "Broncos",
-    "Eagles"
+    "EA Black Box",
+    "Codemasters",
+    "Rockstar Games"
   ],
-  "date": "2026-10-04",
-  "generated_at": "2026-10-04T06:51:43.143245-07:00"
+  "date": "2026-10-05",
+  "generated_at": "2026-10-05T10:01:20.557678-07:00"
 }
