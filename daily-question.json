@@ -1,14 +1,14 @@
 {
   "type": "multiple",
   "difficulty": "hard",
-  "category": "Entertainment: Video Games",
-  "question": "What video game company developed the 2004 racing game &quot;Burnout 3: Takedown&quot;?",
-  "correct_answer": "Criterion Games",
+  "category": "Entertainment: Board Games",
+  "question": "Which of these cards from &quot;Magic: The Gathering&quot; has a flavor text that begins with &quot;Oi oi oi&quot;?",
+  "correct_answer": "Uthden Troll",
   "incorrect_answers": [
-    "EA Black Box",
-    "Codemasters",
-    "Rockstar Games"
+    "Lotleth Troll",
+    "Albino Troll",
+    "Harvester Troll"
   ],
-  "date": "2026-10-05",
-  "generated_at": "2026-10-05T10:01:20.557678-07:00"
+  "date": "2026-10-06",
+  "generated_at": "2026-10-06T07:57:12.684430-07:00"
 }
