@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "hard",
-  "category": "Entertainment: Board Games",
-  "question": "Which of these cards from &quot;Magic: The Gathering&quot; has a flavor text that begins with &quot;Oi oi oi&quot;?",
-  "correct_answer": "Uthden Troll",
+  "difficulty": "easy",
+  "category": "Entertainment: Television",
+  "question": "What country is Cory in the House set in?",
+  "correct_answer": "The United States of America",
   "incorrect_answers": [
-    "Lotleth Troll",
-    "Albino Troll",
-    "Harvester Troll"
+    "Canada",
+    "Venezuala",
+    "England"
   ],
-  "date": "2026-10-06",
-  "generated_at": "2026-10-06T07:57:12.684430-07:00"
+  "date": "2026-10-07",
+  "generated_at": "2026-10-07T08:25:14.702399-07:00"
 }
