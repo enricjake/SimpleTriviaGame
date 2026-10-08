@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "easy",
-  "category": "Entertainment: Television",
-  "question": "What country is Cory in the House set in?",
-  "correct_answer": "The United States of America",
+  "difficulty": "medium",
+  "category": "History",
+  "question": "The Battle of the Somme in World War I took place in which country?",
+  "correct_answer": "France",
   "incorrect_answers": [
-    "Canada",
-    "Venezuala",
-    "England"
+    "Germany",
+    "Italy",
+    "Austria"
   ],
-  "date": "2026-10-07",
-  "generated_at": "2026-10-07T08:25:14.702399-07:00"
+  "date": "2026-10-08",
+  "generated_at": "2026-10-08T08:27:18.403326-07:00"
 }
