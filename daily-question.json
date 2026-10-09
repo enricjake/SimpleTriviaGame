@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "History",
-  "question": "The Battle of the Somme in World War I took place in which country?",
-  "correct_answer": "France",
+  "difficulty": "hard",
+  "category": "Politics",
+  "question": "Which US state was the first to allow women to vote in 1869?",
+  "correct_answer": "Wyoming",
   "incorrect_answers": [
-    "Germany",
-    "Italy",
-    "Austria"
+    "California",
+    "Delaware",
+    "Virginia"
   ],
-  "date": "2026-10-08",
-  "generated_at": "2026-10-08T08:27:18.403326-07:00"
+  "date": "2026-10-09",
+  "generated_at": "2026-10-09T08:10:06.766305-07:00"
 }
