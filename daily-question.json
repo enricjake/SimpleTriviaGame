@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "hard",
-  "category": "Politics",
-  "question": "Which US state was the first to allow women to vote in 1869?",
-  "correct_answer": "Wyoming",
+  "difficulty": "easy",
+  "category": "Entertainment: Japanese Anime &amp; Manga",
+  "question": "What was Ash Ketchum&#039;s second Pokemon?",
+  "correct_answer": "Caterpie",
   "incorrect_answers": [
-    "California",
-    "Delaware",
-    "Virginia"
+    "Charmander",
+    "Pikachu",
+    "Pidgey"
   ],
-  "date": "2026-10-09",
-  "generated_at": "2026-10-09T08:10:06.766305-07:00"
+  "date": "2026-10-10",
+  "generated_at": "2026-10-10T07:23:08.924669-07:00"
 }
