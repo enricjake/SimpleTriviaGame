@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "easy",
-  "category": "Entertainment: Japanese Anime &amp; Manga",
-  "question": "What was Ash Ketchum&#039;s second Pokemon?",
-  "correct_answer": "Caterpie",
+  "difficulty": "hard",
+  "category": "Vehicles",
+  "question": "Which of the following Union Pacific &#039;Big Boy&#039; locomotives was restored to working order in 2019?",
+  "correct_answer": "4014",
   "incorrect_answers": [
-    "Charmander",
-    "Pikachu",
-    "Pidgey"
+    "4012",
+    "4004",
+    "4000"
   ],
-  "date": "2026-10-10",
-  "generated_at": "2026-10-10T07:23:08.924669-07:00"
+  "date": "2026-10-11",
+  "generated_at": "2026-10-11T07:49:41.743294-07:00"
 }
