@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "hard",
-  "category": "Vehicles",
-  "question": "Which of the following Union Pacific &#039;Big Boy&#039; locomotives was restored to working order in 2019?",
-  "correct_answer": "4014",
+  "difficulty": "medium",
+  "category": "Entertainment: Board Games",
+  "question": "What special item did the creators of Cards Against Humanity ship for their Black Friday pack?",
+  "correct_answer": "Bull Feces",
   "incorrect_answers": [
-    "4012",
-    "4004",
-    "4000"
+    "A Card Expansion",
+    "A Racist Toy",
+    "Cat Urine"
   ],
-  "date": "2026-10-11",
-  "generated_at": "2026-10-11T07:49:41.743294-07:00"
+  "date": "2026-10-12",
+  "generated_at": "2026-10-12T10:39:56.661261-07:00"
 }
