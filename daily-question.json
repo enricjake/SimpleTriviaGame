@@ -1,14 +1,14 @@
 {
   "type": "multiple",
   "difficulty": "medium",
-  "category": "Entertainment: Board Games",
-  "question": "What special item did the creators of Cards Against Humanity ship for their Black Friday pack?",
-  "correct_answer": "Bull Feces",
+  "category": "Celebrities",
+  "question": "In 2014, this new top 100 rapper who featured in &quot;Computers&quot; and &quot;Body Dance&quot; was arrested in a NYPD sting for murder.",
+  "correct_answer": "Bobby Shmurda",
   "incorrect_answers": [
-    "A Card Expansion",
-    "A Racist Toy",
-    "Cat Urine"
+    "DJ Snake",
+    "Swae Lee",
+    "Young Thug"
   ],
-  "date": "2026-10-12",
-  "generated_at": "2026-10-12T10:39:56.661261-07:00"
+  "date": "2026-10-13",
+  "generated_at": "2026-10-13T08:48:19.974244-07:00"
 }
