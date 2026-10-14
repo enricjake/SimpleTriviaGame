@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "Celebrities",
-  "question": "In 2014, this new top 100 rapper who featured in &quot;Computers&quot; and &quot;Body Dance&quot; was arrested in a NYPD sting for murder.",
-  "correct_answer": "Bobby Shmurda",
+  "difficulty": "hard",
+  "category": "Geography",
+  "question": "How many countries share a land border with Russia? (Not including disputed territories)",
+  "correct_answer": "14",
   "incorrect_answers": [
-    "DJ Snake",
-    "Swae Lee",
-    "Young Thug"
+    "12",
+    "10",
+    "8"
   ],
-  "date": "2026-10-13",
-  "generated_at": "2026-10-13T08:48:19.974244-07:00"
+  "date": "2026-10-14",
+  "generated_at": "2026-10-14T06:31:59.152091-07:00"
 }
