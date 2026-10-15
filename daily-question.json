@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "hard",
-  "category": "Geography",
-  "question": "How many countries share a land border with Russia? (Not including disputed territories)",
-  "correct_answer": "14",
+  "difficulty": "easy",
+  "category": "Entertainment: Music",
+  "question": "The four strings on a violin are the G string, D string, A string, and...",
+  "correct_answer": "E string",
   "incorrect_answers": [
-    "12",
-    "10",
-    "8"
+    "C string",
+    "B string",
+    "F string"
   ],
-  "date": "2026-10-14",
-  "generated_at": "2026-10-14T06:31:59.152091-07:00"
+  "date": "2026-10-15",
+  "generated_at": "2026-10-15T06:15:41.948039-07:00"
 }
