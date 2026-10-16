@@ -1,14 +1,14 @@
 {
   "type": "multiple",
   "difficulty": "easy",
-  "category": "Entertainment: Music",
-  "question": "The four strings on a violin are the G string, D string, A string, and...",
-  "correct_answer": "E string",
+  "category": "General Knowledge",
+  "question": "What is the name of the Jewish New Year?",
+  "correct_answer": "Rosh Hashanah",
   "incorrect_answers": [
-    "C string",
-    "B string",
-    "F string"
+    "Elul",
+    "New Year",
+    "Succoss"
   ],
-  "date": "2026-10-15",
-  "generated_at": "2026-10-15T06:15:41.948039-07:00"
+  "date": "2026-10-16",
+  "generated_at": "2026-10-16T06:08:08.440719-07:00"
 }
