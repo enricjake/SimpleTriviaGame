@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "easy",
-  "category": "General Knowledge",
-  "question": "What is the name of the Jewish New Year?",
-  "correct_answer": "Rosh Hashanah",
+  "difficulty": "medium",
+  "category": "Entertainment: Video Games",
+  "question": "In the &quot;Call Of Duty: Zombies&quot; map &quot;Origins&quot;, how many steps are there to upgrade a Staff?",
+  "correct_answer": "4",
   "incorrect_answers": [
-    "Elul",
-    "New Year",
-    "Succoss"
+    "7",
+    "5",
+    "3"
   ],
-  "date": "2026-10-16",
-  "generated_at": "2026-10-16T06:08:08.440719-07:00"
+  "date": "2026-10-17",
+  "generated_at": "2026-10-17T05:04:14.296397-07:00"
 }
