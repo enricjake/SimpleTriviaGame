@@ -1,14 +1,14 @@
 {
   "type": "multiple",
   "difficulty": "medium",
-  "category": "Entertainment: Video Games",
-  "question": "In the &quot;Call Of Duty: Zombies&quot; map &quot;Origins&quot;, how many steps are there to upgrade a Staff?",
-  "correct_answer": "4",
+  "category": "Entertainment: Music",
+  "question": "Who is the lead singer of Bastille?",
+  "correct_answer": "Dan Smith",
   "incorrect_answers": [
-    "7",
-    "5",
-    "3"
+    "Will Farquarson",
+    "Kyle Simmons",
+    "Chris Wood"
   ],
-  "date": "2026-10-17",
-  "generated_at": "2026-10-17T05:04:14.296397-07:00"
+  "date": "2026-10-18",
+  "generated_at": "2026-10-18T05:32:29.127376-07:00"
 }
