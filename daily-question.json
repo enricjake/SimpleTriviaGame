@@ -2,13 +2,13 @@
   "type": "multiple",
   "difficulty": "medium",
   "category": "Entertainment: Music",
-  "question": "Who is the lead singer of Bastille?",
-  "correct_answer": "Dan Smith",
+  "question": "Which European capital city gives its name to a 1981 song by Ultravox?",
+  "correct_answer": "Vienna",
   "incorrect_answers": [
-    "Will Farquarson",
-    "Kyle Simmons",
-    "Chris Wood"
+    "Berlin",
+    "Paris",
+    "Brussels"
   ],
-  "date": "2026-10-18",
-  "generated_at": "2026-10-18T05:32:29.127376-07:00"
+  "date": "2026-10-19",
+  "generated_at": "2026-10-19T08:26:47.836758-07:00"
 }
