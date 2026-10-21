@@ -1,14 +1,14 @@
 {
   "type": "multiple",
   "difficulty": "medium",
-  "category": "Entertainment: Books",
-  "question": "Which American author was also a budding travel writer and wrote of his adventures with his dog Charley?",
-  "correct_answer": "John Steinbeck",
+  "category": "History",
+  "question": "Against which country did the Dutch Republic fight the Eighty Years&#039; War?",
+  "correct_answer": "Spain",
   "incorrect_answers": [
-    "F. Scott Fitzgerald",
-    "Ernest Hemingway",
-    "William Faulkner"
+    "France",
+    "England",
+    "Portugal"
   ],
-  "date": "2026-10-20",
-  "generated_at": "2026-10-20T06:28:25.445246-07:00"
+  "date": "2026-10-21",
+  "generated_at": "2026-10-21T06:38:05.773835-07:00"
 }
