@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "History",
-  "question": "Against which country did the Dutch Republic fight the Eighty Years&#039; War?",
-  "correct_answer": "Spain",
+  "difficulty": "easy",
+  "category": "Entertainment: Music",
+  "question": "Which group performs the song &quot;Crash into Me&quot;?",
+  "correct_answer": "Dave Matthews Band",
   "incorrect_answers": [
-    "France",
-    "England",
-    "Portugal"
+    "Phish",
+    "The Grateful Dead",
+    "Destiny&#039;s Child"
   ],
-  "date": "2026-10-21",
-  "generated_at": "2026-10-21T06:38:05.773835-07:00"
+  "date": "2026-10-22",
+  "generated_at": "2026-10-22T06:39:55.786323-07:00"
 }
