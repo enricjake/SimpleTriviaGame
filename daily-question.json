@@ -1,14 +1,14 @@
 {
   "type": "multiple",
   "difficulty": "easy",
-  "category": "Entertainment: Music",
-  "question": "Which group performs the song &quot;Crash into Me&quot;?",
-  "correct_answer": "Dave Matthews Band",
+  "category": "Entertainment: Video Games",
+  "question": "What was the first game in the &quot;Battlefield&quot; series?",
+  "correct_answer": "Battlefield 1942",
   "incorrect_answers": [
-    "Phish",
-    "The Grateful Dead",
-    "Destiny&#039;s Child"
+    "Battlefield Vietnam",
+    "Battlefield 2",
+    "Battlefield 1"
   ],
-  "date": "2026-10-22",
-  "generated_at": "2026-10-22T06:39:55.786323-07:00"
+  "date": "2026-10-23",
+  "generated_at": "2026-10-23T06:15:48.317259-07:00"
 }
