@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "easy",
-  "category": "Entertainment: Video Games",
-  "question": "What was the first game in the &quot;Battlefield&quot; series?",
-  "correct_answer": "Battlefield 1942",
+  "difficulty": "medium",
+  "category": "Science &amp; Nature",
+  "question": "What causes Lyme disease?",
+  "correct_answer": "A bacteria",
   "incorrect_answers": [
-    "Battlefield Vietnam",
-    "Battlefield 2",
-    "Battlefield 1"
+    "A virus",
+    "A parasitic worm",
+    "An amoeba"
   ],
-  "date": "2026-10-23",
-  "generated_at": "2026-10-23T06:15:48.317259-07:00"
+  "date": "2026-10-24",
+  "generated_at": "2026-10-24T05:33:59.374268-07:00"
 }
