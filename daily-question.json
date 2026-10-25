@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "Science &amp; Nature",
-  "question": "What causes Lyme disease?",
-  "correct_answer": "A bacteria",
+  "difficulty": "easy",
+  "category": "Entertainment: Music",
+  "question": "Which artist released the 2012 single &quot;Harlem Shake&quot;, which was used in numerous YouTube videos in 2013?",
+  "correct_answer": "Baauer",
   "incorrect_answers": [
-    "A virus",
-    "A parasitic worm",
-    "An amoeba"
+    "RL Grime",
+    "NGHTMRE",
+    "Flosstradamus"
   ],
-  "date": "2026-10-24",
-  "generated_at": "2026-10-24T05:33:59.374268-07:00"
+  "date": "2026-10-25",
+  "generated_at": "2026-10-25T06:06:32.813035-07:00"
 }
