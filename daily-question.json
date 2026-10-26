@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "easy",
-  "category": "Entertainment: Music",
-  "question": "Which artist released the 2012 single &quot;Harlem Shake&quot;, which was used in numerous YouTube videos in 2013?",
-  "correct_answer": "Baauer",
+  "difficulty": "hard",
+  "category": "Entertainment: Japanese Anime &amp; Manga",
+  "question": "Which studio animated Afro Samurai?",
+  "correct_answer": "Gonzo",
   "incorrect_answers": [
-    "RL Grime",
-    "NGHTMRE",
-    "Flosstradamus"
+    "Kyoto Animation",
+    "xebec",
+    "Production I.G"
   ],
-  "date": "2026-10-25",
-  "generated_at": "2026-10-25T06:06:32.813035-07:00"
+  "date": "2026-10-26",
+  "generated_at": "2026-10-26T08:02:53.243180-07:00"
 }
