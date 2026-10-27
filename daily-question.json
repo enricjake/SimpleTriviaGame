@@ -1,14 +1,14 @@
 {
   "type": "multiple",
   "difficulty": "hard",
-  "category": "Entertainment: Japanese Anime &amp; Manga",
-  "question": "Which studio animated Afro Samurai?",
-  "correct_answer": "Gonzo",
+  "category": "Science &amp; Nature",
+  "question": "What is the molecular formula of Ozone?",
+  "correct_answer": "O3",
   "incorrect_answers": [
-    "Kyoto Animation",
-    "xebec",
-    "Production I.G"
+    "C6H2O6",
+    "N2O",
+    "SO4"
   ],
-  "date": "2026-10-26",
-  "generated_at": "2026-10-26T08:02:53.243180-07:00"
+  "date": "2026-10-27",
+  "generated_at": "2026-10-27T07:16:52.479966-07:00"
 }
