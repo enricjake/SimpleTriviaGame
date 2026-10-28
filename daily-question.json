@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "hard",
-  "category": "Science &amp; Nature",
-  "question": "What is the molecular formula of Ozone?",
-  "correct_answer": "O3",
+  "difficulty": "medium",
+  "category": "Entertainment: Video Games",
+  "question": "Which of these is not a Fallout protagonist?",
+  "correct_answer": "Tunnel Snake",
   "incorrect_answers": [
-    "C6H2O6",
-    "N2O",
-    "SO4"
+    "Courier",
+    "Lone Wanderer",
+    "Vault Dweller"
   ],
-  "date": "2026-10-27",
-  "generated_at": "2026-10-27T07:16:52.479966-07:00"
+  "date": "2026-10-28",
+  "generated_at": "2026-10-28T07:59:21.922537-07:00"
 }
