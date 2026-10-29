@@ -1,14 +1,14 @@
 {
   "type": "multiple",
   "difficulty": "medium",
-  "category": "Entertainment: Video Games",
-  "question": "Which of these is not a Fallout protagonist?",
-  "correct_answer": "Tunnel Snake",
+  "category": "Science &amp; Nature",
+  "question": "Au on the Periodic Table refers to which element?",
+  "correct_answer": "Gold",
   "incorrect_answers": [
-    "Courier",
-    "Lone Wanderer",
-    "Vault Dweller"
+    "Silver",
+    "Oxygen",
+    "Nickel"
   ],
-  "date": "2026-10-28",
-  "generated_at": "2026-10-28T07:59:21.922537-07:00"
+  "date": "2026-10-29",
+  "generated_at": "2026-10-29T08:06:14.585483-07:00"
 }
