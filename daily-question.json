@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "Science &amp; Nature",
-  "question": "Au on the Periodic Table refers to which element?",
-  "correct_answer": "Gold",
+  "difficulty": "easy",
+  "category": "Science: Mathematics",
+  "question": "Which of the following is not one of the seven Millennium Prize Problems?",
+  "correct_answer": "Navi&eacute;r conjecture",
   "incorrect_answers": [
-    "Silver",
-    "Oxygen",
-    "Nickel"
+    "Birch and Swinnerton-Dyer Conjecture",
+    "Riemann hypothesis",
+    "Poincar&eacute; conjecture"
   ],
-  "date": "2026-10-29",
-  "generated_at": "2026-10-29T08:06:14.585483-07:00"
+  "date": "2026-10-30",
+  "generated_at": "2026-10-30T07:57:32.165007-07:00"
 }
