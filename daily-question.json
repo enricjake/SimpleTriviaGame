@@ -1,14 +1,14 @@
 {
   "type": "multiple",
   "difficulty": "medium",
-  "category": "General Knowledge",
-  "question": "The website &quot;Shut Up &amp; Sit Down&quot; reviews which form of media?",
-  "correct_answer": "Board Games",
+  "category": "Entertainment: Video Games",
+  "question": "In No Man&#039;s Sky (as of the Beyond update), what two resources do you need to craft Antimatter?",
+  "correct_answer": "Condensed Carbon and Chromatic Metal",
   "incorrect_answers": [
-    "Television Shows",
-    "Video Games",
-    "Films"
+    "Starship Launch Fuel and Condensed Carbon",
+    "Pure Ferrite and Sodium",
+    "Storm Crystal and Antimatter Housing"
   ],
-  "date": "2026-10-31",
-  "generated_at": "2026-10-31T07:26:31.372898-07:00"
+  "date": "2026-11-01",
+  "generated_at": "2026-11-01T06:53:23.995693-08:00"
 }
