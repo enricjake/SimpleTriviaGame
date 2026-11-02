@@ -1,14 +1,14 @@
 {
   "type": "multiple",
   "difficulty": "medium",
-  "category": "Entertainment: Video Games",
-  "question": "In No Man&#039;s Sky (as of the Beyond update), what two resources do you need to craft Antimatter?",
-  "correct_answer": "Condensed Carbon and Chromatic Metal",
+  "category": "Geography",
+  "question": "How tall is One World Trade Center in New York City?",
+  "correct_answer": "1,776 ft",
   "incorrect_answers": [
-    "Starship Launch Fuel and Condensed Carbon",
-    "Pure Ferrite and Sodium",
-    "Storm Crystal and Antimatter Housing"
+    "1,888 ft",
+    "1,225 ft",
+    "1,960 ft"
   ],
-  "date": "2026-11-01",
-  "generated_at": "2026-11-01T06:53:23.995693-08:00"
+  "date": "2026-11-02",
+  "generated_at": "2026-11-02T10:05:38.177542-08:00"
 }
