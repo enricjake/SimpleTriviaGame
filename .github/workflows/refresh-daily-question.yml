@@ -45,7 +45,8 @@ jobs:
       - name: Flatten to single question object
         run: |
           python3 -c "
-          import json, datetime, pytz
+          import json, datetime
+          from zoneinfo import ZoneInfo
 
           with open('daily-question.json') as f:
               data = json.load(f)
@@ -53,8 +54,7 @@ jobs:
           question = data['results'][0]
 
           # Add metadata
-          pt = pytz.timezone('America/Los_Angeles')
-          now_pt = datetime.datetime.now(pt)
+          now_pt = datetime.datetime.now(ZoneInfo('America/Los_Angeles'))
           question['date'] = now_pt.strftime('%Y-%m-%d')
           question['generated_at'] = now_pt.isoformat()
 
@@ -63,9 +63,6 @@ jobs:
 
           print('Saved question:', question['question'][:80])
           "
-
-      - name: Install pytz if needed
-        run: pip install pytz -q
 
       - name: Commit and push daily-question.json
         run: |
