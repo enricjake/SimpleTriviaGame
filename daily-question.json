@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "hard",
-  "category": "Entertainment: Video Games",
-  "question": "Which game was exclusive to Dreamcast?",
-  "correct_answer": "Pen Pen TriIcelon",
+  "difficulty": "easy",
+  "category": "Science: Computers",
+  "question": "The Electron computer was released in Britain during 1983 for the home computing market, by which company? ",
+  "correct_answer": "Acorn Computers",
   "incorrect_answers": [
-    "Sylvester &amp; Tweety in Cagey Capers",
-    "Perfect Dark",
-    "Tetrisphere"
+    "Sinclair Research",
+    "Amstrad PLC",
+    "Commodore Business Machines"
   ],
-  "date": "2026-11-03",
-  "generated_at": "2026-11-03T08:01:07.211540-08:00"
+  "date": "2026-11-07",
+  "generated_at": "2026-11-07T09:41:02.421760-08:00"
 }
