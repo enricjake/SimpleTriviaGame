@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "easy",
-  "category": "Science: Computers",
-  "question": "The Electron computer was released in Britain during 1983 for the home computing market, by which company? ",
-  "correct_answer": "Acorn Computers",
+  "difficulty": "hard",
+  "category": "Geography",
+  "question": "Which of the following landlocked countries is entirely contained within another country?",
+  "correct_answer": "Lesotho",
   "incorrect_answers": [
-    "Sinclair Research",
-    "Amstrad PLC",
-    "Commodore Business Machines"
+    "Burkina Faso",
+    "Mongolia",
+    "Luxembourg"
   ],
-  "date": "2026-11-07",
-  "generated_at": "2026-11-07T09:41:02.421760-08:00"
+  "date": "2026-11-08",
+  "generated_at": "2026-11-08T06:55:42.677067-08:00"
 }
