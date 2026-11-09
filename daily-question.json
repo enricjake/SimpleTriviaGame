@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "hard",
-  "category": "Geography",
-  "question": "Which of the following landlocked countries is entirely contained within another country?",
-  "correct_answer": "Lesotho",
+  "difficulty": "medium",
+  "category": "Entertainment: Music",
+  "question": "Which of these albums is a Wu-Tang Clan album?",
+  "correct_answer": "Iron Flag",
   "incorrect_answers": [
-    "Burkina Faso",
-    "Mongolia",
-    "Luxembourg"
+    "Perfect Hair",
+    "The Low End Theory",
+    "Licensed to Ill"
   ],
-  "date": "2026-11-08",
-  "generated_at": "2026-11-08T06:55:42.677067-08:00"
+  "date": "2026-11-09",
+  "generated_at": "2026-11-09T10:36:25.164312-08:00"
 }
