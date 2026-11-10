@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "Entertainment: Music",
-  "question": "Which of these albums is a Wu-Tang Clan album?",
-  "correct_answer": "Iron Flag",
+  "difficulty": "easy",
+  "category": "Entertainment: Video Games",
+  "question": "What&#039;s the Team Fortress 2 Scout&#039;s city of origin?",
+  "correct_answer": "Boston",
   "incorrect_answers": [
-    "Perfect Hair",
-    "The Low End Theory",
-    "Licensed to Ill"
+    "Sydney",
+    "Detroit",
+    "New York"
   ],
-  "date": "2026-11-09",
-  "generated_at": "2026-11-09T10:36:25.164312-08:00"
+  "date": "2026-11-10",
+  "generated_at": "2026-11-10T08:18:48.822405-08:00"
 }
