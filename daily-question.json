@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "easy",
-  "category": "Entertainment: Japanese Anime &amp; Manga",
-  "question": "Who is the author of the manga series &quot;Astro Boy&quot;?",
-  "correct_answer": "Osamu Tezuka",
+  "difficulty": "medium",
+  "category": "Entertainment: Music",
+  "question": "Which one of these artists appears in the album Deltron 3030?",
+  "correct_answer": "Dan the Automater",
   "incorrect_answers": [
-    "Mitsuteri Yokoyama",
-    "Takao Saito",
-    "Yoshihiro Tatsumi"
+    "Lamarr Kendrick",
+    "Danger Mouse",
+    "CeeLo Green"
   ],
-  "date": "2026-11-11",
-  "generated_at": "2026-11-11T07:59:21.746696-08:00"
+  "date": "2026-11-12",
+  "generated_at": "2026-11-12T08:42:38.323372-08:00"
 }
