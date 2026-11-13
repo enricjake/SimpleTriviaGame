@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "Entertainment: Music",
-  "question": "Which one of these artists appears in the album Deltron 3030?",
-  "correct_answer": "Dan the Automater",
+  "difficulty": "easy",
+  "category": "Entertainment: Board Games",
+  "question": "Which of these games includes the phrase &quot;Do not pass Go, do not collect $200&quot;?",
+  "correct_answer": "Monopoly",
   "incorrect_answers": [
-    "Lamarr Kendrick",
-    "Danger Mouse",
-    "CeeLo Green"
+    "Pay Day",
+    "Cluedo",
+    "Coppit"
   ],
-  "date": "2026-11-12",
-  "generated_at": "2026-11-12T08:42:38.323372-08:00"
+  "date": "2026-11-13",
+  "generated_at": "2026-11-13T08:01:25.785481-08:00"
 }
