@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "Geography",
-  "question": "What is the capital city of New Zealand?",
-  "correct_answer": "Wellington",
+  "difficulty": "easy",
+  "category": "Mythology",
+  "question": "What weakpoint of Achilles was expoited by the Trojan prince, Paris?",
+  "correct_answer": "Heel",
   "incorrect_answers": [
-    "Auckland",
-    "Christchurch",
-    "Melbourne"
+    "Neck",
+    "Back",
+    "Calf"
   ],
-  "date": "2026-11-14",
-  "generated_at": "2026-11-14T06:54:37.658529-08:00"
+  "date": "2026-11-15",
+  "generated_at": "2026-11-15T07:31:36.609361-08:00"
 }
