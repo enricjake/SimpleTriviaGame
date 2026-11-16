@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "easy",
-  "category": "Mythology",
-  "question": "What weakpoint of Achilles was expoited by the Trojan prince, Paris?",
-  "correct_answer": "Heel",
+  "difficulty": "hard",
+  "category": "Entertainment: Japanese Anime &amp; Manga",
+  "question": "Which animation studio animated &quot;Psycho Pass&quot;?",
+  "correct_answer": "Production I.G",
   "incorrect_answers": [
-    "Neck",
-    "Back",
-    "Calf"
+    "Kyoto Animation",
+    "Shaft",
+    "Trigger"
   ],
-  "date": "2026-11-15",
-  "generated_at": "2026-11-15T07:31:36.609361-08:00"
+  "date": "2026-11-16",
+  "generated_at": "2026-11-16T10:14:32.075834-08:00"
 }
