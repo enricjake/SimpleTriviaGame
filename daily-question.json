@@ -1,14 +1,14 @@
 {
   "type": "multiple",
   "difficulty": "easy",
-  "category": "Entertainment: Music",
-  "question": "Which of these is NOT the name of an album released by English singer-songwriter Adele?",
-  "correct_answer": "12",
+  "category": "Sports",
+  "question": "Who won the 2016 Formula 1 World Driver&#039;s Championship?",
+  "correct_answer": "Nico Rosberg",
   "incorrect_answers": [
-    "19",
-    "21",
-    "25"
+    "Lewis Hamilton",
+    "Max Verstappen",
+    "Kimi Raikkonen"
   ],
-  "date": "2026-11-19",
-  "generated_at": "2026-11-19T09:13:43.605844-08:00"
+  "date": "2026-11-20",
+  "generated_at": "2026-11-20T08:52:11.674047-08:00"
 }
