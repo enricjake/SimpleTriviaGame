@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "easy",
-  "category": "Sports",
-  "question": "Who won the 2016 Formula 1 World Driver&#039;s Championship?",
-  "correct_answer": "Nico Rosberg",
+  "difficulty": "medium",
+  "category": "Entertainment: Video Games",
+  "question": "When Halo 3: ODST was unveiled in 2008, it had a different title. What was the game formally called?",
+  "correct_answer": "Halo 3: Recon",
   "incorrect_answers": [
-    "Lewis Hamilton",
-    "Max Verstappen",
-    "Kimi Raikkonen"
+    "Halo 3: Helljumpers",
+    "Halo 3: Phantom",
+    "Halo 3: Guerilla"
   ],
-  "date": "2026-11-20",
-  "generated_at": "2026-11-20T08:52:11.674047-08:00"
+  "date": "2026-11-21",
+  "generated_at": "2026-11-21T08:00:43.231201-08:00"
 }
