@@ -2,13 +2,13 @@
   "type": "multiple",
   "difficulty": "medium",
   "category": "Entertainment: Video Games",
-  "question": "When Halo 3: ODST was unveiled in 2008, it had a different title. What was the game formally called?",
-  "correct_answer": "Halo 3: Recon",
+  "question": "In which game did the Konami Code make its first appearance?",
+  "correct_answer": "Gradius",
   "incorrect_answers": [
-    "Halo 3: Helljumpers",
-    "Halo 3: Phantom",
-    "Halo 3: Guerilla"
+    "Contra",
+    "Castlevania",
+    "Dance Dance Revolution"
   ],
-  "date": "2026-11-21",
-  "generated_at": "2026-11-21T08:00:43.231201-08:00"
+  "date": "2026-11-22",
+  "generated_at": "2026-11-22T08:06:55.707287-08:00"
 }
