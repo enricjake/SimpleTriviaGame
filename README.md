@@ -2,6 +2,8 @@
 
 A fun and interactive web-based trivia game that tests your knowledge with questions fetched from the Open Trivia Database API. Challenge yourself with various difficulty levels, categories, and customize your gaming experience!
 
+![Simple Trivia gameplay](assets/gameplay.png)
+
 ## 🎮 Features
 
 - **Dynamic Question Loading**: Trivia questions fetched from [Open Trivia DB](https://opentdb.com)
