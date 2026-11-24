@@ -2,73 +2,178 @@ name: Refresh Daily Trivia Question
 
 on:
   schedule:
-    # Runs at 08:00 UTC = 00:00 midnight Pacific Time (PT = UTC-8)
+    # Runs at 08:00 UTC = 00:00 PST / 01:00 PDT
     - cron: '0 8 * * *'
   # Allow manual trigger from the GitHub Actions UI for testing
   workflow_dispatch:
+    inputs:
+      force:
+        description: 'Fetch a new question even if one already exists for today'
+        type: boolean
+        default: false
 
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+concurrency:
+  # Never run two refreshes at once (scheduled run + manual dispatch, retries, ...)
+  group: refresh-daily-question
+  cancel-in-progress: false
 
 jobs:
   refresh-question:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     permissions:
       contents: write
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
-      - name: Fetch today's trivia question from OpenTDB
-        id: fetch
+      - name: Check whether today's question already exists
+        id: check
+        env:
+          FORCE: ${{ inputs.force }}
         run: |
-          # Retry up to 5 times with exponential backoff
-          for i in 1 2 3 4 5; do
-            RESPONSE=$(curl -sf "https://opentdb.com/api.php?amount=1&type=multiple" || true)
-            CODE=$(echo "$RESPONSE" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('response_code', -1))" 2>/dev/null || echo "-1")
-            if [ "$CODE" = "0" ]; then
-              echo "Successfully fetched question (attempt $i)"
-              echo "$RESPONSE" > daily-question.json
-              break
-            fi
-            echo "Attempt $i failed (response_code=$CODE), retrying in $((i * 5))s..."
-            sleep $((i * 5))
-          done
+          set -euo pipefail
 
-          # Verify the file was written with valid JSON
-          if ! python3 -c "import json; f=open('daily-question.json'); d=json.load(f); assert d['response_code']==0 and len(d['results'])==1" 2>/dev/null; then
-            echo "ERROR: Failed to fetch a valid question after 5 attempts."
-            exit 1
+          today=$(TZ=America/Los_Angeles date +%F)
+          existing_date=$(python3 -c '
+          import json
+          with open("daily-question.json") as f:
+              print(json.load(f).get("date", ""))
+          ' 2>/dev/null || echo "")
+
+          echo "Today (Pacific): $today, daily-question.json: ${existing_date:-<missing>}"
+
+          if [ "${FORCE:-false}" != "true" ] && [ "$existing_date" = "$today" ]; then
+            echo "Today's question is already present; nothing to do."
+            echo "needed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "needed=true" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Flatten to single question object
+      - name: Fetch today's trivia question from OpenTDB
+        if: steps.check.outputs.needed == 'true'
+        id: fetch
+        env:
+          RAW_QUESTION: ${{ runner.temp }}/opentdb-question.json
         run: |
-          python3 -c "
-          import json, datetime
+          set -uo pipefail
+
+          url='https://opentdb.com/api.php?amount=1&type=multiple'
+          max_attempts=6
+
+          # Retry with bounded requests so a hung connection cannot stall the job.
+          for attempt in $(seq 1 "$max_attempts"); do
+            http_status=$(curl \
+              --silent --show-error --location \
+              --connect-timeout 10 --max-time 45 \
+              --header 'Accept: application/json' \
+              --user-agent 'SimpleTriviaGame-CI/1.0' \
+              --output "$RAW_QUESTION" \
+              --write-out '%{http_code}' \
+              "$url" || true)
+
+            response_code=-1
+            if [ "$http_status" = "200" ]; then
+              response_code=$(python3 -c '
+          import json, sys
+          with open(sys.argv[1]) as f:
+              data = json.load(f)
+          print(data.get("response_code", -1))
+          ' "$RAW_QUESTION" 2>/dev/null || echo "-1")
+            fi
+
+            # response_code 0 means success; also validate the payload itself.
+            if [ "$response_code" = "0" ] && python3 -c '
+          import json, sys
+          with open(sys.argv[1]) as f:
+              data = json.load(f)
+          results = data.get("results")
+          assert isinstance(results, list) and len(results) == 1, "expected exactly one result"
+          question = results[0]
+          for key in ("question", "correct_answer", "type", "category"):
+              assert isinstance(question.get(key), str) and question[key], f"missing {key}"
+          assert isinstance(question.get("incorrect_answers"), list)
+          assert len(question["incorrect_answers"]) == 3, "expected three incorrect answers"
+          ' "$RAW_QUESTION" 2>/dev/null; then
+              echo "Fetched a valid question on attempt $attempt."
+              exit 0
+            fi
+
+            if [ "$response_code" = "5" ]; then
+              # OpenTDB asks clients to wait a few seconds between requests.
+              delay=30
+            else
+              delay=$((attempt * 10))
+              [ "$delay" -gt 60 ] && delay=60
+            fi
+
+            if [ "$attempt" -lt "$max_attempts" ]; then
+              echo "Attempt $attempt/$max_attempts failed (http=$http_status, response_code=$response_code); retrying in ${delay}s..."
+              sleep "$delay"
+            else
+              echo "Attempt $attempt/$max_attempts failed (http=$http_status, response_code=$response_code)."
+            fi
+          done
+
+          echo "::error::Failed to fetch a valid question from OpenTDB after $max_attempts attempts."
+          exit 1
+
+      - name: Flatten to single question object
+        if: steps.check.outputs.needed == 'true'
+        env:
+          RAW_QUESTION: ${{ runner.temp }}/opentdb-question.json
+        run: |
+          set -euo pipefail
+          python3 - "$RAW_QUESTION" <<'PY'
+          import datetime
+          import json
+          import sys
           from zoneinfo import ZoneInfo
 
-          with open('daily-question.json') as f:
+          with open(sys.argv[1]) as f:
               data = json.load(f)
 
-          question = data['results'][0]
+          question = data["results"][0]
 
           # Add metadata
-          now_pt = datetime.datetime.now(ZoneInfo('America/Los_Angeles'))
-          question['date'] = now_pt.strftime('%Y-%m-%d')
-          question['generated_at'] = now_pt.isoformat()
+          now_pt = datetime.datetime.now(ZoneInfo("America/Los_Angeles"))
+          question["date"] = now_pt.strftime("%Y-%m-%d")
+          question["generated_at"] = now_pt.isoformat()
 
-          with open('daily-question.json', 'w') as f:
+          with open("daily-question.json", "w") as f:
               json.dump(question, f, indent=2, ensure_ascii=False)
+              f.write("\n")
 
-          print('Saved question:', question['question'][:80])
-          "
+          print("Saved question:", question["question"][:80])
+          PY
 
       - name: Commit and push daily-question.json
+        if: steps.check.outputs.needed == 'true'
         run: |
+          set -euo pipefail
+
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+
           git add daily-question.json
-          # Only commit if there are changes
-          git diff --cached --quiet || git commit -m "chore: refresh daily trivia question [skip ci]"
-          git push
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
+          git commit -m "chore: refresh daily trivia question [skip ci]"
+
+          # A push can race with another commit; rebase and retry a few times.
+          for attempt in 1 2 3; do
+            if git push origin HEAD:main; then
+              echo "Pushed on attempt $attempt."
+              exit 0
+            fi
+            echo "Push failed; rebasing onto origin/main and retrying..."
+            git pull --rebase --autostash origin main
+            sleep 5
+          done
+
+          echo "::error::Failed to push daily-question.json after 3 attempts."
+          exit 1
