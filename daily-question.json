@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "medium",
-  "category": "Sports",
-  "question": "How many French Open&#039;s did Bj&ouml;rn Borg win?",
-  "correct_answer": "6",
+  "difficulty": "easy",
+  "category": "History",
+  "question": "How was Socrates executed?",
+  "correct_answer": "Poison",
   "incorrect_answers": [
-    "4",
-    "9",
-    "2"
+    "Decapitation",
+    "Firing squad",
+    "Crucifixion "
   ],
-  "date": "2026-11-24",
-  "generated_at": "2026-11-24T11:26:38.829636-08:00"
+  "date": "2026-11-25",
+  "generated_at": "2026-11-25T10:33:48.428776-08:00"
 }
