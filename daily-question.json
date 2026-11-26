@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "easy",
-  "category": "History",
-  "question": "How was Socrates executed?",
-  "correct_answer": "Poison",
+  "difficulty": "hard",
+  "category": "Science: Computers",
+  "question": "Who invented the &quot;Spanning Tree Protocol&quot;?",
+  "correct_answer": "Radia Perlman",
   "incorrect_answers": [
-    "Decapitation",
-    "Firing squad",
-    "Crucifixion "
+    "Paul Vixie",
+    "Vint Cerf",
+    "Michael Roberts"
   ],
-  "date": "2026-11-25",
-  "generated_at": "2026-11-25T10:33:48.428776-08:00"
+  "date": "2026-11-26",
+  "generated_at": "2026-11-26T10:17:22.030682-08:00"
 }
