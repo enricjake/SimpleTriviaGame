@@ -1,14 +1,14 @@
 {
   "type": "multiple",
-  "difficulty": "hard",
-  "category": "Science: Computers",
-  "question": "Who invented the &quot;Spanning Tree Protocol&quot;?",
-  "correct_answer": "Radia Perlman",
+  "difficulty": "easy",
+  "category": "Science: Gadgets",
+  "question": "What is the name of a simple machine that is made up of a stiff arm that can move freely around a fixed point?",
+  "correct_answer": "Lever",
   "incorrect_answers": [
-    "Paul Vixie",
-    "Vint Cerf",
-    "Michael Roberts"
+    "Wedge",
+    "Screw",
+    "Pulley"
   ],
-  "date": "2026-11-26",
-  "generated_at": "2026-11-26T10:17:22.030682-08:00"
+  "date": "2026-11-27",
+  "generated_at": "2026-11-27T10:00:15.296667-08:00"
 }
